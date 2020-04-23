@@ -15,8 +15,7 @@ body {
 	font-family: Georgia, serif;
 	padding-bottom: 0px;
 	margin: 0;
-        background-image:url('Image_network.jpg');
-	background-repeat:repeat;
+        background-image:url('Imag_maths.jpg');
 	background-position:right top;
 
 }
@@ -32,10 +31,6 @@ body {
 	white-space: nowrap;
     	text-align: left;
     	vertical-align: top;
-        background-image:url('Imag_maths.jpg');
-	background-repeat:repeat;
-	background-position:left top;
-
 }
 
 #layout-menu td {
