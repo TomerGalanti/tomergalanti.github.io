@@ -10,6 +10,7 @@ body {
 	background: white;
 	font-family: Georgia, serif;
 	padding-bottom: 8px;
+	padding-right: 50px;
 	margin: 0;
 }
 
@@ -186,7 +187,6 @@ dt {
 
 dl {
 	margin-left: 200px;
-	margin-right: 200px;
 }
 
 dd {
