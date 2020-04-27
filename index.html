@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pierfrancesco Beneventano</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CDN for bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Pierfrancesco Beneventano</h3>
+            </div>
+            <div class="center">
+                <ul class="side-links">
+                    <li class="nav-links">
+                        <a href="#" >Home</a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="#">Task</a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="#">Teaching</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+
+            <div class="nav-content">
+
+                <!-- Hamburger Menu -->
+                <div class="bt-menu-trigger">
+                    <span></span>
+                </div>
+
+                <div id="toptitle">
+                    <h3>Pierfrancesco Beneventano</h3>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 text-center">
+                    <div class="profile">
+                        <img src="./assets/images/avatar.jpg" alt="alt text" class="avatar">
+                        <ul class="list-unstyled links">
+                            <li><h5>Contacts</h5></li>
+                            <li><img height="20" width="20" src="./assets/icons/mail.svg" /><a class="contact-link"href="">pb29@princeton.edu</a></li>
+                            <li><img height="20" width="20" src="./assets/icons/view-apps.svg" /><a class="contact-link"href="https://pierbeneventano.github.io/index.html">Google Scholar</a></li>
+                            <li><img height="20" width="20" src="./assets/icons/user.svg" /><a class="contact-link"href="https://pierbeneventano.github.io/CV_Beneventano.pdf">Curriculum vitae</a></li>
+                        </ul>
+                    <div class="row mb-4 text-center social-icon-container">
+                        <div class="col">
+                            <a href="https://www.facebook.com/PierBene"><span
+                                    class="social-icon fa fa-facebook"></span></a>
+                            <a href="https://twitter.com/PierBeneventano"><span
+                                    class="social-icon fa fa-twitter"></span></a>
+                            <a href="https://www.linkedin.com/in/pierfrancesco-beneventano-336b75b4/"><span
+                                    class="social-icon fa fa-linkedin"></span></a>
+                            <a href="https://www.instagram.com/pierbene96/"><span
+                                    class="social-icon fa fa-instagram"></span></a>
+                            <a href="https://join.skype.com/invite/kobWyHxDkzse"><span
+                                    class="social-icon fa fa-skype"></span></a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 text-container">
+                    <p>I am a master student at the Department of <a href="https://math.ethz.ch/">Mathematics</a> of ETH
+                        Zurich where I have the pleasure
+                        to work under the supervision of <a href="http://www.ajentzen.de/">Prof. Arnulf
+                            Jentzen</a>.
+                        <br>
+                        I am now writing my master thesis on high-dimensional functions approximation
+                        capabilities for Deep Neural Networks under the supervision of <a
+                            href="http://www.ajentzen.de/">Prof. Arnulf Jentzen</a> and <a
+                            href="https://people.math.ethz.ch/~patrickc/">Prof. Patrick Cheridito</a>. <br>
+                        <br>
+                        Starting from the fall 2020 I will be a PhD candidate in the Department of <a
+                            href="https://orfe.princeton.edu/home">Operations Research and Financial
+                            Engineering</a> at Princeton University. <br>
+                        <br>
+                        Prior to attending ETH, I received my bachelor's degree in Mathematics from Università
+                        di Pisa in 2018. <br>
+                        <br>
+                        I am broadly interested in Mathematics of Data Science, Machine Learning, Deep Learning,
+                        from the point of view of Numerical Analysis and Statistics. <br></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CDN Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <!-- CDN jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        var button = document.querySelector('.bt-menu-trigger');
+        button.addEventListener('click', function () {
+            button.classList.toggle('bt-menu-open');
+            $('#sidebar').toggleClass('active');
+        });
+    </script>
+</body>
+
+</html>
