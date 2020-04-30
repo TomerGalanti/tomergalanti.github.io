@@ -23,6 +23,10 @@ a, a:hover, a:focus {
     transition: all 0.3s;
 }
 
+.links{
+    color: #007bff;
+}
+
 .navbar {
     padding: 15px 10px;
     background: #fff;
