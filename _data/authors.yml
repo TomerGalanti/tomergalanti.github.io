@@ -1,10 +1,11 @@
 # Authors
 
-John_Joseph:
-  name        : "Gabriele Di Ubaldo"
-  bio         : "École Normale Supérieure"
-  location    : "Paris, France"
-  avatar      : "me.jpg"
+# John_Joseph:
+PierBeneventano:
+  name        : "Pierfrancesco Beneventano"
+  bio         : "PhD student at Princeton University"
+  location    : "Greater New York Area"
+  avatar      : "face_016.jpg"
   twitter     : 
   facebook    :
   linkedin    : 
@@ -12,9 +13,9 @@ John_Joseph:
   github      : 
   impactstory : 
   inspirehep  : 
-  email       : "gabriele.di.ubaldo@ens.fr"
+  email       : "pierb@princeton.edu"
   google_scholar     : 
   google_plus : 
 
-FourOhFour:
-  avatar        : "reimann.jpg"
+# FourOhFour:
+#   avatar        : "reimann.jpg"
