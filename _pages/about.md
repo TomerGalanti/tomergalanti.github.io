@@ -3,7 +3,7 @@ title: "About me"
 layout: single
 tags:
 permalink: /about/
-modified: 2020-05-1
+modified: 2021-01-23
 header:
   overlay_color: "#5e616c"
   overlay_image: Image_network.jpg
@@ -20,5 +20,5 @@ I was born and raised in Madrid, Spain but my family is italian. I moved to Pisa
 When I'm not checking out some interesting physics I like to enjoy food: cooking it, learning about it and (most importantly) eating it! I enjoy reading literature, mostly if I haven't spent the day reading physics. Some authors/movements I have read lately are Murakami and French literature/poetry from the end of the XIX century and start of the XX. Recently I have started playing chess, at first because I found it great to freshen your mind while taking a break from physics but now I like to play more and more, although I'm still a newbie.  When in Paris I love to explore the city, just wandering around and letting it surprise me. 
 
 
-You can find my academic CV right here!
- <b> <a href="https://philosophysics.github.io/site//CV/CV_V4.pdf" target="_blank">CV</a> </b> 
+You can find my CV right here!
+ <b> <a href="https://pierbeneventano.github.io/site//CV/CV_Beneventano.pdf" target="_blank">CV</a> </b> 

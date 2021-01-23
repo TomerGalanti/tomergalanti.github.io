@@ -107,7 +107,7 @@ analytics:
 # Site Author
 author:
   name             : *name
-  avatar           : "face_016.jpg" #"michael-rose.jpg"
+  avatar           : "images/face_016.jpg" #"michael-rose.jpg"
   bio              : "PhD student at Princeton University"
   location         : "Greater New York Area"
   email            : "pierb@princeton.edu"
@@ -175,6 +175,9 @@ footer:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/PierBeneventano"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin-square"
+      url: "https://www.linkedin.com/in/pierbeneventano/"
 
 
 # Reading Files
