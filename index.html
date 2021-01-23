@@ -1,0 +1,40 @@
+---
+layout: single
+title: "Into Theoretical Physics"
+header:
+#  overlay_color: "#5e616c"
+  overlay_image: crabnebhd-1.png
+#  overlay_filter: .4
+  caption: "[Image credit: **NASA/ESA**](https://www.spacetelescope.org/images/heic0515a/)"
+#excerpt: ""
+author: John_Joseph
+---
+
+{% include base_path %}
+<p>Welcome!</p>
+
+I am a Theoretical Physics student at Ecole Normale Supérieure in Paris.  <br />
+On this site you will find more about me and my path through the beautiful subject that is Theoretical Physics.  <br />
+I will also share resources which I find particularly interesting, useful and well done along with other various items related to Theoretical Physics. 
+ <br />  <br />
+Please explore, enjoy and I hope you find something of your interest!
+
+ <br /> <p>
+   
+&#8211;<a href="mailto:gabriele.di.ubaldo@ens.fr">GDU</a>, </p>
+
+
+
+
+<h2 class="archive__title">{{ site.data.ui-text[site.locale].recent_posts | default: "Latest Blog Posts" }}</h3>
+
+{% for post in paginator.posts %}
+  {% include archive-single.html %}
+{% endfor %}
+
+{% include paginator.html %}
+
+
+<div>
+
+</div>

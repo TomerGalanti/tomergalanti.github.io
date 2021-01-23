@@ -1,0 +1,28 @@
+<!-- start custom head snippets -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+{% if page.jsxgraph %}
+<!-- JSXGraph -->
+<script src="{{ site.url }}/assets/js/vendor/jsxgraphcore.js"></script>
+<link rel="stylesheet" href="{{ site.url }}/assets/css/vendor/jsxgraph.css">
+{% endif %}
+
+
+<link rel="stylesheet" href="{{ site.url }}/assets/css/vendor/prettify.css"/>
+<link rel="stylesheet" href="{{ site.url }}/assets/css/vendor/prettify-mma.min.css"/>
+<link rel="stylesheet" href="{{ site.url }}/assets/css/vendor/prettify-addon.css"/>
+<script type="text/javascript" src="{{ site.url }}/assets/js/prettify.js"></script>
+<script type="text/javascript" src="{{ site.url }}/assets/js/lang-mma.min.js"></script>
+<script type="text/javascript" src="{{ site.url }}/assets/js/lang-scm.js"></script>
+
+<!-- Academicons -->
+<link rel="stylesheet" href="{{ site.url }}/assets/css/academicons.min.css"/>
+
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
