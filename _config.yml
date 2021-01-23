@@ -176,8 +176,8 @@ footer:
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/PierBeneventano"
     - label: "Linkedin"
-     icon: "fab fa-fw fa-linkedin"
-     url: "https://www.linkedin.com/in/pierbeneventano/"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/pierbeneventano/"
 
 
 # # Site Footer
