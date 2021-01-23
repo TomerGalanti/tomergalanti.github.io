@@ -4,12 +4,11 @@ layout: single
 title: "Credits"
 modified: 2017-08-07
 header:
- overlay_color: "#5e616c"
- overlay_image: crabnebhd-1.png
- caption: "[Image credit: **NASA/ESA**](https://www.spacetelescope.org/images/heic0515a/)"
- overlay_filter: .4
- caption: ""
-author: John_Joseph
+  overlay_color: "#5e616c"
+  overlay_image: Image_network.jpg
+  # caption: "[Image credit: **NASA/ESA**](https://www.spacetelescope.org/images/heic0515a/)"
+excerpt: 
+author: PierBeneventano
 ---
 
 Github is a very easy way to create a personal website, there are thousands of repositories with templates. 

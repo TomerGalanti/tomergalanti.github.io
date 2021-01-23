@@ -4,11 +4,10 @@ permalink: /research/
 title: "Research"
 header:
   overlay_color: "#5e616c"
-  overlay_image: crabnebhd-1.png
-  caption: "[Image credit: **NASA/ESA**](https://www.spacetelescope.org/images/heic0515a/)"
-  overlay_filter: .1
+  overlay_image: Image_network.jpg
+  # caption: "[Image credit: **NASA/ESA**](https://www.spacetelescope.org/images/heic0515a/)"
 excerpt: 
-author: John_Joseph
+author: PierBeneventano
 comments: false
 ---
 

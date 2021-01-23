@@ -104,33 +104,64 @@ analytics:
     tracking_id          :
     anonymize_ip         : # true, false (default)
 
-
 # Site Author
 author:
-  name             : "Pierfrancesco Beneventano"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  name             : *name
+  avatar           : "face_016.jpg" #"michael-rose.jpg"
   bio              : "PhD student at Princeton University"
   location         : "Greater New York Area"
-  email            :
-  links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-       url: "mailto:pierb@princeton.edu"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://pierbeneventano.github.io"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/PierBeneventano"
-    # - # label: "Facebook"
-      # icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
-    # - label: "GitHub"
-    #   icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
-    # - label: "Instagram"
-    #   icon: "fab fa-fw fa-instagram"
-    #   # url: "https://instagram.com/"
+  email            : "pierb@princeton.edu"
+  uri              : #"https://mademistakes.com"
+  bitbucket        :
+  codepen          :
+  dribbble         :
+  flickr           :
+  facebook         : *facebook
+  foursquare       :
+  github           : 
+  google_plus      :
+  keybase          :
+  instagram        :
+  lastfm           :
+  linkedin         :
+  pinterest        :
+  soundcloud       :
+  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  steam            :
+  tumblr           :
+  twitter          : *twitter
+  vine             :
+  weibo            :
+  xing             :
+  youtube          :
+
+
+# # Site Author
+# author:
+#   name             : "Pierfrancesco Beneventano"
+#   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+#   bio              : "PhD student at Princeton University"
+#   location         : "Greater New York Area"
+#   email            :
+#   links:
+#     - label: "Email"
+#       icon: "fas fa-fw fa-envelope-square"
+#        url: "mailto:pierb@princeton.edu"
+#     - label: "Website"
+#       icon: "fas fa-fw fa-link"
+#       url: "https://pierbeneventano.github.io"
+#     - label: "Twitter"
+#       icon: "fab fa-fw fa-twitter-square"
+#       url: "https://twitter.com/PierBeneventano"
+#     # - # label: "Facebook"
+#       # icon: "fab fa-fw fa-facebook-square"
+#       # url: "https://facebook.com/"
+#     # - label: "GitHub"
+#     #   icon: "fab fa-fw fa-github"
+#       # url: "https://github.com/"
+#     # - label: "Instagram"
+#     #   icon: "fab fa-fw fa-instagram"
+#     #   # url: "https://instagram.com/"
 
 # Site Footer
 footer:

@@ -5,10 +5,11 @@ tags:
 permalink: /resources/
 modified: 2020-05-01
 header:
-  overlay_image:  	crabnebhd-1.png
-  caption: "[Image credit: **NASA/ESA**](https://www.spacetelescope.org/images/heic0515a/)"
+  overlay_color: "#5e616c"
+  overlay_image: Image_network.jpg
+  # caption: "[Image credit: **NASA/ESA**](https://www.spacetelescope.org/images/heic0515a/)"
 excerpt: 
-author: John_Joseph
+author: PierBeneventano
 comments: true
 ---
 
