@@ -10,8 +10,8 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-theme                    : minimal-mistakes-jekyll
-# remote_theme           : "mmistakes/minimal-mistakes"
+#theme                    : minimal-mistakes-jekyll
+remote_theme             : "mmistakes/minimal-mistakes@4.21.0"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
@@ -22,7 +22,7 @@ subtitle                 : # site tagline that appears below site title in masth
 name                     : "Pierfrancesco Beneventano"
 description              : "PhD student at Princeton University."
 url                      : "https://pierbeneventano.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
+baseurl                  : "/home"
 repository               : "PierBeneventano/PierBeneventano.github.io"
 teaser                   : "Image_network.jpg"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
