@@ -175,9 +175,23 @@ footer:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/PierBeneventano"
-    #- label: "Linkedin"
-    #  icon: "fab fa-fw fa-linkedin-square"
-    #  url: "https://www.linkedin.com/in/pierbeneventano/"
+    - label: "Linkedin"
+     icon: "fab fa-fw fa-linkedin"
+     url: "https://www.linkedin.com/in/pierbeneventano/"
+
+
+# # Site Footer
+# footer:
+#   links:
+#     - label: "Twitter"
+#       icon: "fab fa-fw fa-twitter-square"
+#       url: "https://twitter.com/mmistakes"
+#     - label: "GitHub"
+#       icon: "fab fa-fw fa-github"
+#       url: "https://github.com/mmistakes"
+#     - label: "Instagram"
+#       icon: "fab fa-fw fa-instagram"
+#       url: "https://instagram.com/mmistakes"
 
 
 # Reading Files
