@@ -3,7 +3,7 @@ layout: single
 title: "Pierfrancesco Beneventano"
 modified: 2021-01-23
 header:
-#  overlay_color: "#5e616c"
+  overlay_color: "#5e616c"
   overlay_image: images/Image_network.jpg
 #  overlay_filter: .4
 #  caption: "[Image credit: **NASA/ESA**](https://www.spacetelescope.org/images/heic0515a/)"
