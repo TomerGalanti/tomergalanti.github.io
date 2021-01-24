@@ -32,17 +32,16 @@ I worked on Exlplainability of AI and the generalization properties of the neura
 
 - During the high school I had fun with maths competitions and with soccer refereeing.
 
-
-
+<!-- 
 **Social**  &nbsp  
-<!--  <a href="https://www.facebook.com/PierBene"><span class="social-icon fa fa-facebook"></span></a> -->
-<!-- <a href="https://twitter.com/PierBeneventano"><span class="social-icon fa fa-twitter"></span></a>  -->
+ <a href="https://www.facebook.com/PierBene"><span class="social-icon fa fa-facebook"></span></a>
+<a href="https://twitter.com/PierBeneventano"><span class="social-icon fa fa-twitter"></span></a> 
 <a href="https://www.linkedin.com/in/pierbeneventano/"><span class="social-icon fa fa-linkedin"></span></a> &nbsp  
-<!--  <a href="https://www.instagram.com/pierbene96/"><span class="social-icon fa fa-instagram"></span></a> -->
+ <a href="https://www.instagram.com/pierbene96/"><span class="social-icon fa fa-instagram"></span></a>
 <a href="https://join.skype.com/invite/kobWyHxDkzse"><span  class="social-icon fa fa-skype"></span></a> &nbsp  
 <a href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf" class="links"> CV </a> &nbsp  
 <a class="contact-link" href="https://scholar.google.com/citations?user=spL439oAAAAJ&hl=en"> <img height="20" width="20" src="./assets/icons/graduation.svg" /> </a> &nbsp  
 <a href="mailto:pierb@princeton.edu"><span class="social-icon fa fa-envelope"></span></a> &nbsp  
+ -->
 
-
- 
+**Social:**  <a href="https://www.linkedin.com/in/pierbeneventano/"><span class="social-icon fa fa-linkedin"></span></a>  <a href="https://join.skype.com/invite/kobWyHxDkzse"><span  class="social-icon fa fa-skype"></span></a>  <a href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf" class="links"> CV </a>  <a class="contact-link" href="https://scholar.google.com/citations?user=spL439oAAAAJ&hl=en"> <img height="20" width="20" src="./assets/icons/graduation.svg" /> </a>  <a href="mailto:pierb@princeton.edu"><span class="social-icon fa fa-envelope"></span></a>  
