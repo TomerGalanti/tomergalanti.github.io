@@ -2,7 +2,7 @@
 title: "About me"
 layout: single
 tags:
-permalink: /about/
+permalink: /about
 modified: 2021-01-23
 header:
   overlay_color: "#5e616c"

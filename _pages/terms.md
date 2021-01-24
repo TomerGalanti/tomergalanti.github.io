@@ -1,7 +1,7 @@
 ---
-permalink: /terms/
+permalink: /terms
 title: "Terms and Privacy Policy"
-modified: 2018-06-01
+modified: 2021-01-23
 author_profile: false
 read_time: true
 ---

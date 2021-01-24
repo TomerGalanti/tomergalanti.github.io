@@ -2,7 +2,7 @@
 title: "Physics Resources"
 layout: single
 tags:
-permalink: /resources/
+permalink: /resources
 modified: 2020-05-01
 header:
   overlay_color: "#5e616c"

@@ -1,5 +1,5 @@
 ---
-permalink: /credits/
+permalink: /credits
 layout: single
 title: "Credits"
 modified: 2021-01-23
