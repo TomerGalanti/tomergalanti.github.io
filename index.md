@@ -20,7 +20,7 @@ I am a PhD student at <a href="https://orfe.princeton.edu/home" class="links">Pr
 
 
 
-<img height="40" width="40" src="./images/face_016.jpg" alt="alt text" class="avatar">
+<img src="./images/face_016.jpg" height="40">
 # Contacts
 - <img height="20" width="20" src="./assets/icons/mail.svg" />pierb@princeton.edu
 
