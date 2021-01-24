@@ -2,8 +2,8 @@
 title: "Resources"
 layout: single
 tags:
-permalink: /resources
-modified: 2020-05-01
+permalink: /resources/
+modified: 2021-01-23
 header:
   overlay_color: "#5e616c"
   overlay_image: Image_network.jpg
@@ -15,15 +15,15 @@ comments: true
 
 Here I collect lecture notes and resources which I have found to be valuable (if I have studied from them) or that struck me as well written and which I plan to read at some point.
 
-I try to divide when possible by subject but, especially for advanced topics, they tend to mix a little. You will also find links to other collections of notes. I will try to follow an order of increasing difficulty, which can be useful to fellow students. The notes are mostly of "graduate" level and forwards, basically meaning from the 4th year of physics education onwards. 
+<!-- I try to divide when possible by subject but, especially for advanced topics, they tend to mix a little. You will also find links to other collections of notes. I will try to follow an order of increasing difficulty, which can be useful to fellow students. The notes are mostly of "graduate" level and forwards, basically meaning from the 4th year of physics education onwards.  -->
 
 
-Finally, the following are ultimately the opinions of a student, not of a theoretical physicist so even if I try my best to give an informative assessment of these resources based on my experience, it is rather probable that I will make some wrong or inaccurate or biased considerations. 
-Please do reach out with any constructive criticism you might have, I will appreciate it!
+<!-- Finally, the following are ultimately the opinions of a student, not of a theoretical physicist so even if I try my best to give an informative assessment of these resources based on my experience, it is rather probable that I will make some wrong or inaccurate or biased considerations. 
+Please do reach out with any constructive criticism you might have, I will appreciate it! -->
 
 
 
-<details><summary>QFT</summary><br>
+<!-- <details><summary>QFT</summary><br>
   
  
 <p>  <span>&#8226;</span>  David Tong's introductory <a href="http://www.damtp.cam.ac.uk/user/tong/qft.html"> QFT </a> notes. <br><br>
@@ -103,7 +103,7 @@ Please do reach out with any constructive criticism you might have, I will appre
 
 
 
-</details>
+</details> -->
 
 I must recognize I was inspired in doing this by Gabriele di Ubaldo website <a href="https://philosophysics.github.io/site//"> /Resources </a> that has been inspired by
 <a href="http://www.staff.science.uu.nl/~gadda001/goodtheorist/index.html"> How to become a good Theoretical Physicist </a>.
