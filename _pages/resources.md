@@ -112,5 +112,6 @@ I must recognize I was inspired in doing this by Gabriele di Ubaldo website <a h
 
 
 
+<hr>
 
-<p style="text-align: center;">**Social:**  <a href="https://www.linkedin.com/in/pierbeneventano/"><span class="social-icon fa fa-linkedin"></span></a> <pre>    </pre>  <a href="https://join.skype.com/invite/kobWyHxDkzse"><span  class="social-icon fa fa-skype"></span></a> <pre>    </pre> <a href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf" class="links"> CV </a> <pre>    </pre> <a class="contact-link" href="https://scholar.google.com/citations?user=spL439oAAAAJ&hl=en"> <img height="20" width="20" src="https://pierbeneventano.github.io/assets/icons/graduation.svg" /> </a> <pre>    </pre> <a href="mailto:pierb@princeton.edu"><span class="social-icon fa fa-envelope"></span></a> </p>
+<p style="text-align: center;"> <b>Contact me: </b>  <a href="https://www.linkedin.com/in/pierbeneventano/"><span class="social-icon fa fa-linkedin"></span></a>  <a href="https://join.skype.com/invite/kobWyHxDkzse"><span  class="social-icon fa fa-skype"></span></a>  <a href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf" class="links"> CV </a>  <a class="contact-link" href="https://scholar.google.com/citations?user=spL439oAAAAJ&hl=en"> <img height="20" width="20" src="https://pierbeneventano.github.io/assets/icons/graduation.svg" /> </a>  <a href="mailto:pierb@princeton.edu"><span class="social-icon fa fa-envelope"></span></a> </p>
