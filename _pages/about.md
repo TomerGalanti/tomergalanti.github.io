@@ -23,14 +23,14 @@ comments: true
                         
 - At ETH I worked under the supervision of <a href="https://scholar.google.de/citations?user=fymm-XQAAAAJ&hl=en" class="links">Prof. Arnulf Jentzen</a>, writing my master thesis on high-dimensional functions approximation capabilities for Deep Neural Networks (also under the supervision of <a href="https://people.math.ethz.ch/~patrickc/" class="links">Prof. Patrick Cheridito</a>). Two papers resulting from that work will be out on arXiv soon.
 
-- In summer 2020 I had the opportunity to join <a href="https://daedalean.ai/" class="links">Daedalean AG</a> as a Machine Learning Research Intern.
+- In summer 2020 I joined <a href="https://daedalean.ai/" class="links">Daedalean AG</a> as a Machine Learning Research Intern.
 I worked on Exlplainability of AI and the generalization properties of the neural networks they use.
 
-- In Zurich I also had the pleasure to be a teaching assistant at master and bachelor level courses (see <a href="https://pierbeneventano.github.io/teaching" class="links">the teaching page</a>).
+- In Zurich I have been a teaching assistant at master and bachelor level courses (see <a href="https://pierbeneventano.github.io/teaching" class="links">the teaching page</a>).
 
 - In Pisa I worked, under the supervision of <a href="https://scholar.google.com/citations?user=lbtyxsMAAAAJ&hl=en" class="links">Prof. Dario Andrea Bini</a>, on my thesis on Numerical Linear algebra for Markov Chains computations. <br>
 
-- During the high school I had fun with maths competitions and with soccer refereeing.
+- During the high school I had fun with maths competitions and with soccer refereeing. In my free time I enjoy traveling, cooking, and watching soccer matches.
 
 <!-- 
 **Social**  &nbsp  
