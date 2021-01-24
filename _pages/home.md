@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Pierfrancesco Beneventano"
-permalink: /about
+permalink: /home/
 modified: 2021-01-23
 header:
 #  overlay_color: "#5e616c"

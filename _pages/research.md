@@ -1,6 +1,6 @@
 ---
 layout: single
-permalink: /research
+permalink: /research/
 title: "Research"
 header:
   overlay_color: "#5e616c"
