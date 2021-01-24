@@ -19,5 +19,5 @@ The template for this site is the [minimal mistakes Jekyll theme](https://mademi
 
 <hr>
 
-<p style="text-align: center;"> <b>Contact me: </b>  <a href="https://www.linkedin.com/in/pierbeneventano/"><span class="social-icon fa fa-linkedin"></span></a>  <a href="https://join.skype.com/invite/kobWyHxDkzse"><span  class="social-icon fa fa-skype"></span></a>  <a href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf" class="links"> CV </a>  <a class="contact-link" href="https://scholar.google.com/citations?user=spL439oAAAAJ&hl=en"> <img height="20" width="20" src="https://pierbeneventano.github.io/assets/icons/graduation.svg" /> </a>  <a href="mailto:pierb@princeton.edu"><span class="social-icon fa fa-envelope"></span></a> </p>
+<p style="text-align: center;"> <b>Contact me: </b>  <a href="https://www.linkedin.com/in/pierbeneventano/"><span class="social-icon fa fa-linkedin"></span></a>  <a href="https://join.skype.com/invite/kobWyHxDkzse"><span  class="social-icon fa fa-skype"></span></a>  <a href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf" class="links"> CV </a>  <a href="https://scholar.google.com/citations?user=spL439oAAAAJ&hl=en"><span class="ai ai-fw ai-google-scholar-square"></span></a>  <a href="mailto:pierb@princeton.edu"><span class="social-icon fa fa-envelope"></span></a> </p>
 
