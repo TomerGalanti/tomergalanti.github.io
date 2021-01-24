@@ -13,12 +13,7 @@ author: PierBeneventano
 comments: true
 ---
 
-During the course of my studies I have realized how invaluable a well written set of lecture notes can be. Good lecture notes mean you learn the material well, faster and easier. This doesn't mean however that the notes are easy or that they dumb down the subject, not at all. 
-
-
-
-Here I collect lecture notes and resources which I have found to be valuable (if I have studied from them) or that struck me as well written and which I plan to read at some point. I must recognize I was somewhat inspired by Gerard 't Hooft's website
-<a href="http://www.staff.science.uu.nl/~gadda001/goodtheorist/index.html"> How to become a good Theoretical Physicist </a> and I encourage you to visit it. 
+Here I collect lecture notes and resources which I have found to be valuable (if I have studied from them) or that struck me as well written and which I plan to read at some point.
 
 I try to divide when possible by subject but, especially for advanced topics, they tend to mix a little. You will also find links to other collections of notes. I will try to follow an order of increasing difficulty, which can be useful to fellow students. The notes are mostly of "graduate" level and forwards, basically meaning from the 4th year of physics education onwards. 
 
@@ -110,4 +105,6 @@ Please do reach out with any constructive criticism you might have, I will appre
 
 </details>
 
+I must recognize I was inspired in doing this by Gabriele di Ubaldo website <a href="https://philosophysics.github.io/site//"> /Resources </a> that has been inspired by
+<a href="http://www.staff.science.uu.nl/~gadda001/goodtheorist/index.html"> How to become a good Theoretical Physicist </a>.
 
