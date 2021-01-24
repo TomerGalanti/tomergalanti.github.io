@@ -51,4 +51,4 @@ During the high school I had fun with maths competitions and with soccer referee
 </div>
 
 You can find my CV right here!
- <b> <a href="https://pierbeneventano.github.io/site//CV/CV_Beneventano.pdf" target="_blank">CV</a> </b> 
+ <b> <a href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf" target="_blank">CV</a> </b> 

@@ -14,15 +14,14 @@ author_profile: true
 ---
 
 {% include base_path %}
-<p>Welcome!</p>
+<!-- <p>Welcome!</p> -->
 
 
 
 I am a PhD student at <a href="https://orfe.princeton.edu/home" class="links">Princeton University</a>, my interests lie in Machine Learning Theory and the mathematics to develop it. 
 
 
-<div>
-<img src="./images/face_016.jpg" height="40">
+<img height="160" src="./images/face_016.jpg">
 # Contacts
 - <img height="20" width="20" src="./assets/icons/mail.svg" />pierb@princeton.edu
 
@@ -41,7 +40,6 @@ I am a PhD student at <a href="https://orfe.princeton.edu/home" class="links">Pr
                   class="social-icon fa fa-instagram"></span></a> -->
 <a href="https://join.skype.com/invite/kobWyHxDkzse"><span
                   class="social-icon fa fa-skype"></span></a>
-/center> </div>
 
 
 
