@@ -31,7 +31,7 @@ During my studies at <a href="https://math.ethz.ch/" class="links">ETH Zurich</a
 ## Translator and Proofreader, Summer 2019
 As part of a project at <a href="https://math.ethz.ch/" class="links">ETH Zurich</a>, I was part of translation team and I have been selected as the final proofreader of a Calculus book (German to Italian).
 
-# Previously
+## Previously
 - Hold classes on mathematics for highschool olympiads
 - Tutored a number of students from high school to advanced university courses in Master and College level Statistics, Operations Research, Algorithms, College-level Mathematics, etc.
 
