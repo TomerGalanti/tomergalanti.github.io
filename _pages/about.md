@@ -49,7 +49,7 @@ I worked on Exlplainability of AI and the generalization properties of the neura
 <hr>
 
 <div class="col-lg-4 text-center">
-  <a href="https://www.linkedin.com/in/pierbeneventano/"><span class="social-icon fa fa-linkedin"></span></a> &nbsp  &nbsp   <a href="https://join.skype.com/invite/kobWyHxDkzse"><span  class="social-icon fa fa-skype"></span></a> &nbsp  &nbsp  <a href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf" class="links"> CV </a> &nbsp  &nbsp <a class="contact-link" href="https://scholar.google.com/citations?user=spL439oAAAAJ&hl=en"> <img height="20" width="20" src="./assets/icons/graduation.svg" /> </a> &nbsp  &nbsp <a href="mailto:pierb@princeton.edu"><span class="social-icon fa fa-envelope"></span></a>
+  <a href="https://www.linkedin.com/in/pierbeneventano/"><span class="social-icon fa fa-linkedin"></span></a> &nbsp  &nbsp   <a href="https://join.skype.com/invite/kobWyHxDkzse"><span  class="social-icon fa fa-skype"></span></a> &nbsp  &nbsp  <a href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf" class="links"> CV </a> <b>&nbsp  &nbsp</b> <a class="contact-link" href="https://scholar.google.com/citations?user=spL439oAAAAJ&hl=en"> <img height="20" width="20" src="./assets/icons/graduation.svg" /> </a> &nbsp  &nbsp <a href="mailto:pierb@princeton.edu"><span class="social-icon fa fa-envelope"></span></a>
 </div>
 
 <hr>
