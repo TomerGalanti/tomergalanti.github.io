@@ -14,11 +14,40 @@ comments: true
 ---
 
 
-## Short Bio
-I was born and raised in Madrid, Spain but my family is italian. I moved to Pisa, Italy for my undergrad, partly because I wanted to experience living in my country of origin.  In 2018 I left behind the beautiful sunsets over the Tuscanian hills and I moved to Paris to pursue my master's in theoretical physics at École Normale Supérieure. Living at the hsitorical ENS dorms in Rue d'Ulm, right next to the Pantheon, was an extraordiinary way to experience Paris. I don't know yet where physics and life might take me but for sure one day ending up in Paris is very appealing.
+<H5>Short bio</H5>
+                        
+Prior to attending Princeton, I obtained an MSc Mathematics at <a href="https://math.ethz.ch/" class="links">ETH Zurich</a>, and I received a BSc Mathematics (Computational curriculum) from Università di Pisa in 2018.
+                        
+At ETH I had the pleasure to work under the supervision of <a href="https://scholar.google.de/citations?user=fymm-XQAAAAJ&hl=en" class="links">Prof. Arnulf Jentzen</a>, writing my master thesis on high-dimensional functions approximation capabilities for Deep Neural Networks (also under the supervision of <a href="https://people.math.ethz.ch/~patrickc/" class="links">Prof. Patrick Cheridito</a>).
 
-When I'm not checking out some interesting physics I like to enjoy food: cooking it, learning about it and (most importantly) eating it! I enjoy reading literature, mostly if I haven't spent the day reading physics. Some authors/movements I have read lately are Murakami and French literature/poetry from the end of the XIX century and start of the XX. Recently I have started playing chess, at first because I found it great to freshen your mind while taking a break from physics but now I like to play more and more, although I'm still a newbie.  When in Paris I love to explore the city, just wandering around and letting it surprise me. 
+In Pisa I worked, under the supervision of <a href="https://scholar.google.com/citations?user=lbtyxsMAAAAJ&hl=en" class="links">Prof. Dario Andrea Bini</a>, on my thesis on Numerical Linear algebra for Markov Chains computations. <br>
 
+During the high school I had fun with maths competitions and with soccer refereeing.
+
+<div class="col-lg-4 text-center">
+  <div class="profile">
+      <img src="./assets/images/avatar.jpg" alt="alt text" class="avatar">
+      <ul class="list-unstyled links">
+          <li><h5>Contacts</h5></li>
+          <li><img height="20" width="20" src="./assets/icons/mail.svg" /><a class="contact-link"href="">pierb@princeton.edu</a></li>
+          <li><img height="20" width="20" src="./assets/icons/graduation.svg" /><a class="contact-link"href="https://scholar.google.com/citations?user=spL439oAAAAJ&hl=en">Google Scholar</a></li>
+          <li><img height="20" width="20" src="./assets/icons/user.svg" /><a class="contact-link"href="https://pierbeneventano.github.io/CV_Beneventano.pdf">Curriculum vitae</a></li>
+      </ul>
+  <div class="row mb-4 text-center social-icon-container">
+      <div class="col">
+          <!--  <a href="https://www.facebook.com/PierBene"><span
+                  class="social-icon fa fa-facebook"></span></a> -->
+          <a href="https://twitter.com/PierBeneventano"><span
+                  class="social-icon fa fa-twitter"></span></a>
+          <a href="https://www.linkedin.com/in/pierbeneventano/"><span
+                  class="social-icon fa fa-linkedin"></span></a>
+          <!--  <a href="https://www.instagram.com/pierbene96/"><span
+                  class="social-icon fa fa-instagram"></span></a> -->
+          <a href="https://join.skype.com/invite/kobWyHxDkzse"><span
+                  class="social-icon fa fa-skype"></span></a>
+      </div>
+  </div>
+</div>
 
 You can find my CV right here!
  <b> <a href="https://pierbeneventano.github.io/site//CV/CV_Beneventano.pdf" target="_blank">CV</a> </b> 
