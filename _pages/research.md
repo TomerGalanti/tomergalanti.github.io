@@ -12,7 +12,7 @@ author_profile: true
 comments: false
 ---
 
-I ahve been involved in the following research projects. 
+I have been involved in the following research projects. 
 
 
 

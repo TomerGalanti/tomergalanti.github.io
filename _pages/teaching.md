@@ -15,7 +15,7 @@ comments: false
 During my studies at <a href="https://math.ethz.ch/" class="links">ETH Zurich</a> and now during my PhD at <a href="https://orfe.princeton.edu/home" class="links">Princeton</a> I have been and will be involved in teaching. 
 
 
-# ETH Zurich <a href="https://math.ethz.ch/" class="links">ETH Zurich</a>
+# ETH Zurich 
 
 ## Spring 2019
 - <a href="http://vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?lerneinheitId=136107&semkez=2020S&ansicht=KATALOGDATEN&lang=en" class="links">Numerical Methods for Partial Differential Equations</a>, 
