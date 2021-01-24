@@ -14,8 +14,10 @@ author_profile: true
 comments: true
 ---
 
-- You can find my full <a href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf" target="_blank">CV here</a>.
 
+<hr>
+<h2> <a href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf" target="_blank">My CV here</a>. </h2>
+<hr>
 
 # About me
                         
