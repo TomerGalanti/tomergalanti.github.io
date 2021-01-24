@@ -109,3 +109,16 @@ Please do reach out with any constructive criticism you might have, I will appre
 I must recognize I was inspired in doing this by Gabriele di Ubaldo website <a href="https://philosophysics.github.io/site//"> /Resources </a> that has been inspired by
 <a href="http://www.staff.science.uu.nl/~gadda001/goodtheorist/index.html"> How to become a good Theoretical Physicist </a>.
 
+
+
+
+**Social**  &nbsp  
+<!--  <a href="https://www.facebook.com/PierBene"><span class="social-icon fa fa-facebook"></span></a> -->
+<!-- <a href="https://twitter.com/PierBeneventano"><span class="social-icon fa fa-twitter"></span></a>  -->
+<a href="https://www.linkedin.com/in/pierbeneventano/"><span class="social-icon fa fa-linkedin"></span></a> &nbsp  
+<!--  <a href="https://www.instagram.com/pierbene96/"><span class="social-icon fa fa-instagram"></span></a> -->
+<a href="https://join.skype.com/invite/kobWyHxDkzse"><span  class="social-icon fa fa-skype"></span></a> &nbsp  
+<a href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf" class="links"> CV </a> &nbsp  
+<a class="contact-link" href="https://scholar.google.com/citations?user=spL439oAAAAJ&hl=en"> <img height="20" width="20" src="./assets/icons/graduation.svg" /> </a> &nbsp  
+<a href="mailto:pierb@princeton.edu"><span class="social-icon fa fa-envelope"></span></a> &nbsp  
+
