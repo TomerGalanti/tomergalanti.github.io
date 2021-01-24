@@ -1,6 +1,8 @@
 ---
 layout: single
 title: "Pierfrancesco Beneventano"
+permalink: /about
+modified: 2021-01-23
 header:
 #  overlay_color: "#5e616c"
   overlay_image: images/Image_network.jpg
@@ -10,7 +12,6 @@ header:
 author: PierBeneventano
 ---
 
-{% include base_path %}
 <p>Welcome!</p>
 
 
