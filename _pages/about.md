@@ -14,8 +14,10 @@ author_profile: true
 comments: true
 ---
 
+You can find my full <a href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf" target="_blank">CV here</a>.
 
 # About me
+
                         
 Prior to attending Princeton, I obtained an MSc Mathematics at <a href="https://math.ethz.ch/" class="links">ETH Zurich</a>, and I received a BSc Mathematics (Computational curriculum) from Università di Pisa in 2018.
                         
@@ -25,9 +27,6 @@ In Pisa I worked, under the supervision of <a href="https://scholar.google.com/c
 
 During the high school I had fun with maths competitions and with soccer refereeing.
 
-
-
-You can find my full <a href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf" target="_blank">CV here</a>.
 
 
 # Social
@@ -41,7 +40,6 @@ You can find my full <a href="https://pierbeneventano.github.io/CV/CV_Beneventan
                   class="social-icon fa fa-instagram"></span></a> -->
 <a href="https://join.skype.com/invite/kobWyHxDkzse"><span
                   class="social-icon fa fa-skype"></span></a>
-<img height="20" width="20" src="./assets/icons/mail.svg" />pierb@princeton.edu
 
 
  
