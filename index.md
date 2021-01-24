@@ -20,18 +20,13 @@ I am a PhD student at <a href="https://orfe.princeton.edu/home" class="links">Pr
 
 
 
-<div class="col-lg-4 text-center">
-  <div class="profile">
-      <img src="./images/face_016.jpg" alt="alt text" class="avatar">
-      # Contacts
-      <ul class="list-unstyled links">
-          <li><img height="20" width="20" src="./assets/icons/mail.svg" /><a class="contact-link"href="">pierb@princeton.edu</a></li>
-          <li><img height="20" width="20" src="./assets/icons/graduation.svg" /><a class="contact-link"href="https://scholar.google.com/citations?user=spL439oAAAAJ&hl=en">Google Scholar</a></li>
-          <li><img height="20" width="20" src="./assets/icons/user.svg" /><a class="contact-link"href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf">Curriculum vitae</a></li>
-      </ul>
-      # Social
-  <div class="row mb-4 text-center social-icon-container">
-      <div class="col">
+<img src="./images/face_016.jpg" alt="alt text" class="avatar">
+# Contacts
+-<img height="20" width="20" src="./assets/icons/mail.svg" /><a class="contact-link"href="">pierb@princeton.edu</a>
+-<img height="20" width="20" src="./assets/icons/graduation.svg" /><a class="contact-link"href="https://scholar.google.com/citations?user=spL439oAAAAJ&hl=en">Google Scholar</a>
+-<img height="20" width="20" src="./assets/icons/user.svg" /><a class="contact-link"href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf">Curriculum vitae</a>
+</ul>
+# Social
           <!--  <a href="https://www.facebook.com/PierBene"><span
                   class="social-icon fa fa-facebook"></span></a> -->
           <a href="https://twitter.com/PierBeneventano"><span
@@ -42,9 +37,7 @@ I am a PhD student at <a href="https://orfe.princeton.edu/home" class="links">Pr
                   class="social-icon fa fa-instagram"></span></a> -->
           <a href="https://join.skype.com/invite/kobWyHxDkzse"><span
                   class="social-icon fa fa-skype"></span></a>
-      </div>
-  </div>
-</div>
+
 
 
 
