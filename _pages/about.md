@@ -14,7 +14,7 @@ comments: true
 ---
 
 
-<H5>Short bio</H5>
+<H5>About me</H5>
                         
 Prior to attending Princeton, I obtained an MSc Mathematics at <a href="https://math.ethz.ch/" class="links">ETH Zurich</a>, and I received a BSc Mathematics (Computational curriculum) from Università di Pisa in 2018.
                         

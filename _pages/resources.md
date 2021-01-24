@@ -1,5 +1,5 @@
 ---
-title: "Physics Resources"
+title: "Resources"
 layout: single
 tags:
 permalink: /resources
