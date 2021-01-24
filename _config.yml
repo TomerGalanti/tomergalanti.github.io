@@ -24,7 +24,7 @@ description              : &description "PhD student at Princeton University"
 url                      : "https://pierbeneventano.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "PierBeneventano/PierBeneventano.github.io"
-teaser                   : "crabnebhd-1.png" # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
+teaser                   : "Image_network.jpg" # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
@@ -164,20 +164,20 @@ author:
 #     #   # url: "https://instagram.com/"
 
 # Site Footer
-footer:
-  links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-       url: "mailto:pierb@princeton.edu"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://pierbeneventano.github.io"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/PierBeneventano"
-    - label: "Linkedin"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/pierbeneventano/"
+# footer:
+#   links:
+#     - label: "Email"
+#       icon: "fas fa-fw fa-envelope-square"
+#        url: "mailto:pierb@princeton.edu"
+#     - label: "Website"
+#       icon: "fas fa-fw fa-link"
+#       url: "https://pierbeneventano.github.io"
+#     - label: "Twitter"
+#       icon: "fab fa-fw fa-twitter-square"
+#       url: "https://twitter.com/PierBeneventano"
+#     - label: "Linkedin"
+#       icon: "fab fa-fw fa-linkedin"
+#       url: "https://www.linkedin.com/in/pierbeneventano/"
 
 
 # # Site Footer
