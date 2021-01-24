@@ -1,6 +1,8 @@
 
 # main links links
 main:
+  # - title: "Home"
+  #   url: home/
 
   - title: "About"
     url: about/
@@ -11,8 +13,8 @@ main:
   - title: "Resources"
     url: resources/
 
-  - title: "Blog"
-    url: blog/
+  # - title: "Blog"
+  #   url: blog/
 
   - title: "Credits"
     url: credits/
