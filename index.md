@@ -22,22 +22,22 @@ I am a PhD student at <a href="https://orfe.princeton.edu/home" class="links">Pr
 
 <img height="40" width="40" src="./images/face_016.jpg" alt="alt text" class="avatar">
 # Contacts
-- <a src="./assets/icons/mail.svg"> pierb@princeton.edu</a>
+- <img height="20" width="20" src="./assets/icons/mail.svg" />pierb@princeton.edu
 
-<img height="20" width="20" src="./assets/icons/mail.svg" /><a class="contact-link"href="">pierb@princeton.edu</a>
--<img height="20" width="20" src="./assets/icons/graduation.svg" /><a class="contact-link"href="https://scholar.google.com/citations?user=spL439oAAAAJ&hl=en">Google Scholar</a>
--<img height="20" width="20" src="./assets/icons/user.svg" /><a class="contact-link"href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf">Curriculum vitae</a>
-</ul>
+-<img height="20" width="20" src="./assets/icons/graduation.svg" /><a href="https://scholar.google.com/citations?user=spL439oAAAAJ&hl=en">Google Scholar</a>
+
+-<img height="20" width="20" src="./assets/icons/user.svg" /><a href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf">Curriculum vitae</a>
+
 # Social
-          <!--  <a href="https://www.facebook.com/PierBene"><span
+<!--  <a href="https://www.facebook.com/PierBene"><span
                   class="social-icon fa fa-facebook"></span></a> -->
-          <a href="https://twitter.com/PierBeneventano"><span
+<a href="https://twitter.com/PierBeneventano"><span
                   class="social-icon fa fa-twitter"></span></a>
-          <a href="https://www.linkedin.com/in/pierbeneventano/"><span
+<a href="https://www.linkedin.com/in/pierbeneventano/"><span
                   class="social-icon fa fa-linkedin"></span></a>
-          <!--  <a href="https://www.instagram.com/pierbene96/"><span
+<!--  <a href="https://www.instagram.com/pierbene96/"><span
                   class="social-icon fa fa-instagram"></span></a> -->
-          <a href="https://join.skype.com/invite/kobWyHxDkzse"><span
+<a href="https://join.skype.com/invite/kobWyHxDkzse"><span
                   class="social-icon fa fa-skype"></span></a>
 
 
