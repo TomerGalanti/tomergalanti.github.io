@@ -16,7 +16,7 @@ comments: true
 
 
 <p style="text-align: center;">
-<h2> <a href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf" target="_blank">My CV here</a>. </h2> </p>
+<h2> <a href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf" target="_blank">My CV here</a> </h2> </p>
 
 # About me
                         
