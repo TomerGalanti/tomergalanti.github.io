@@ -9,6 +9,8 @@ header:
 #  caption: "[Image credit: **NASA/ESA**](https://www.spacetelescope.org/images/heic0515a/)"
 #excerpt: ""
 author: PierBeneventano
+author_profile: true
+author_profile: true
 ---
 
 {% include base_path %}
