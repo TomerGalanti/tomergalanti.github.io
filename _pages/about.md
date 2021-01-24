@@ -15,7 +15,7 @@ comments: true
 ---
 
 
-<p style="text-align: center; font-size:300%;"> <a href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf" class="links">My CV here</a> </p>
+<p style="text-align: center; font-size:150%;"> <a href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf" class="links">My CV here</a> </p>
 
 # About me
                         
