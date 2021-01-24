@@ -17,22 +17,19 @@ author: PierBeneventano
 
 
 I am a PhD student at <a href="https://orfe.princeton.edu/home" class="links">Princeton University</a>, my interests lie in Machine Learning Theory and the mathematics to develop it. 
-<!-- On this site you will find more about me and my path through the beautiful subject that is Theoretical Physics.  <br />
-I will also share resources which I find particularly interesting, useful and well done along with other various items related to Theoretical Physics. 
- <br />  <br /> -->
-<!-- Please explore, enjoy and I hope you find something of your interest! -->
 
 
 
 <div class="col-lg-4 text-center">
   <div class="profile">
-      <img src="./assets/images/avatar.jpg" alt="alt text" class="avatar">
-      <h3>Contacts</h3>
+      <img src="./images/face_016.jpg" alt="alt text" class="avatar">
+      # Contacts
       <ul class="list-unstyled links">
           <li><img height="20" width="20" src="./assets/icons/mail.svg" /><a class="contact-link"href="">pierb@princeton.edu</a></li>
           <li><img height="20" width="20" src="./assets/icons/graduation.svg" /><a class="contact-link"href="https://scholar.google.com/citations?user=spL439oAAAAJ&hl=en">Google Scholar</a></li>
           <li><img height="20" width="20" src="./assets/icons/user.svg" /><a class="contact-link"href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf">Curriculum vitae</a></li>
       </ul>
+      # Social
   <div class="row mb-4 text-center social-icon-container">
       <div class="col">
           <!--  <a href="https://www.facebook.com/PierBene"><span
