@@ -28,14 +28,14 @@ I have been involved in the following research projects.
 ## Neural network approximation theory
 The goal is to understand which is the family of functions which are approximable without curse of dimensionality.
 Coauthors: <a href="https://scholar.google.de/citations?user=fymm-XQAAAAJ&hl=en" class="links">Prof. Arnulf Jentzen</a>, <a href="https://people.math.ethz.ch/~patrickc/" class="links">Prof. Patrick Cheridito</a>, <a href="https://scholar.google.com/citations?user=Dc8yKjUAAAAJ&hl=en" class="links">Philippe von Wurstemberger</a>, Robin Graeber.
-- <a href="https://arxiv.org/abs/2012.04326" class="links">High-dimensional approximation spaces of artificial neural networks and applications to partial differential equations.</a>
+- {<a href="https://arxiv.org/abs/2012.04326" class="links">High-dimensional approximation spaces of artificial neural networks and applications to partial differential equations.</a>
 
 This work has been my "semester paper" during my degree at ETH.
 
 In this work we develop a new machinery to study the capacity of neural networks to approximate high-dimensional functions without suffering from the curse of dimensionality.
-We then use our machinery to prove that the solutions of certain easy PDEs are arbitrarily approximable without the curse of dimensionality.
+We then use our machinery to prove that the solutions of certain easy PDEs are arbitrarily approximable without the curse of dimensionality.}
 
-- Deep neural network approximations for high-dimensional functions.
+- {Deep neural network approximations for high-dimensional functions.
 
 Soon on arXiv, this work has been my "semester paper" during my degree at ETH.
 
@@ -46,6 +46,6 @@ introduction of some DNN approximation spaces of functions and the proof
 that they are closed for some operations, and, as a consequence, (c) the proof
 that DNNs overcome the curse of dimensionality in the approximation on
 any compact set of products, maxima or the combination of both applied to
-low dimensional locally Lipschitz continuous functions.
+low dimensional locally Lipschitz continuous functions.}
 
 ## Errors in modelling - Hubrys of the scientist
