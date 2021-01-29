@@ -39,7 +39,7 @@ Coauthors: <a href="https://scholar.google.de/citations?user=fymm-XQAAAAJ&hl=en"
 <details>
   <summary>Deep neural network approximations for high-dimensional functions.</summary>
 
-  Soon on arXiv, this work has been my "semester paper" during my degree at ETH.
+  Soon on arXiv, this work has been my thesis during my degree at ETH.
 
   On the line of the previous work, but more general, we provide a suitable large class of functions that can be approximated by DNNs without the curse of dimensionality. The main contributions of this thesis are the following: (a) the discovery of new cost bounds in the approximation of the product of d ∈ N real numbers and of representation the maximum of d real numbers, (b) the introduction of some DNN approximation spaces of functions and the proof that they are closed for some operations, and, as a consequence, (c) the proof that DNNs overcome the curse of dimensionality in the approximation on any compact set of products, maxima or the combination of both applied to low dimensional locally Lipschitz continuous functions.
 </details>
