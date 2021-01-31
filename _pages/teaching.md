@@ -49,10 +49,10 @@ During my studies at <a href="https://math.ethz.ch/" class="links">ETH Zurich</a
   <br> <br>
 </details>
   
-<details>
+<!-- <details>
   <summary> Previously </summary>
   <ul>
     <li>Hold classes on mathematics for highschool olympiads</li>
     <li>Tutored a number of students from high school to advanced university courses in Master and College level Statistics, Operations Research, Algorithms, College-level Mathematics, etc.</li>
   </ul>
-</details>
+</details> -->
