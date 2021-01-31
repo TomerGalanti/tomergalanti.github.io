@@ -46,7 +46,7 @@ During my studies at <a href="https://math.ethz.ch/" class="links">ETH Zurich</a
 <details>
   <summary> Translator and Proofreader, Summer 2019 </summary>
   As part of a project at <a href="https://math.ethz.ch/" class="links">ETH Zurich</a>, I was part of translation team and I have been selected as the final proofreader of a Calculus book (German to Italian).
-  <br>
+  <br> <br>
 </details>
   
 <details>
