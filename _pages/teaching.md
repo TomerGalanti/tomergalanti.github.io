@@ -22,7 +22,9 @@ During my studies at <a href="https://math.ethz.ch/" class="links">ETH Zurich</a
   - *Master* in Physics, Data Science, Computational Biology. Computational Science and Engineering Bachelor.
   - I taught at the exercise classes and corrected the homeworks (in C++).
   - *Contents:* Derivation, properties, and implementation of fundamental numerical methods for a few key partial differential equations: convection-diffusion, heat equation, wave equation, conservation laws. Implementation in C++ based on a finite element library.
-
+</details>
+  
+<details>
   <summary> <a href="http://vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?lerneinheitId=132349&semkez=2019W&ansicht=KATALOGDATEN&lang=en" class="links">Computational Methods for Engineering Applications</a>, Fall 2019 
   </summary>
 
