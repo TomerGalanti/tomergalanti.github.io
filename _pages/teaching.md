@@ -30,10 +30,15 @@ During my studies at <a href="https://math.ethz.ch/" class="links">ETH Zurich</a
   - I taught at the exercise classes (also explaining part of the theory) and corrected the homeworks (in C++).
   - *Contents:* introduction to the numerical methods for the solution of ordinary and partial differential equations that play a central role in engineering applications. Both basic theoretical concepts and implementation techniques necessary to understand and master the methods will be addressed.
 
-
+</details>
+  
+<details>
   <summary> Translator and Proofreader, Summer 2019 </summary>
   As part of a project at <a href="https://math.ethz.ch/" class="links">ETH Zurich</a>, I was part of translation team and I have been selected as the final proofreader of a Calculus book (German to Italian).
 
+</details>
+  
+<details>
   <summary> Previously </summary>
   - Hold classes on mathematics for highschool olympiads
   - Tutored a number of students from high school to advanced university courses in Master and College level Statistics, Operations Research, Algorithms, College-level Mathematics, etc.
