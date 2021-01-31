@@ -19,9 +19,9 @@ During my studies at <a href="https://math.ethz.ch/" class="links">ETH Zurich</a
 <details>
   <summary> <a href="http://vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?lerneinheitId=136107&semkez=2020S&ansicht=KATALOGDATEN&lang=en" class="links">Numerical Methods for Partial Differential Equations</a>, Spring 2020 </summary>
   <ul>
-    <li> *Master* in Physics, Data Science, Computational Biology. Computational Science and Engineering Bachelor. </li>
+    <li> <em>Master</em> in Physics, Data Science, Computational Biology. Computational Science and Engineering Bachelor. </li>
     <li> I taught at the exercise classes and corrected the homeworks (in C++). </li>
-    <li> *Contents:* Derivation, properties, and implementation of fundamental numerical methods for a few key partial differential equations: convection-diffusion, heat equation, wave equation, conservation laws. Implementation in C++ based on a finite element library.</li>
+    <li> <em>Contents:</em> Derivation, properties, and implementation of fundamental numerical methods for a few key partial differential equations: convection-diffusion, heat equation, wave equation, conservation laws. Implementation in C++ based on a finite element library.</li>
   </ul>
 </details>
   
@@ -31,7 +31,7 @@ During my studies at <a href="https://math.ethz.ch/" class="links">ETH Zurich</a
 
   - Mechanical Engineering Bachelor, third year.
   - I taught at the exercise classes (also explaining part of the theory) and corrected the homeworks (in C++).
-  - *Contents:* introduction to the numerical methods for the solution of ordinary and partial differential equations that play a central role in engineering applications. Both basic theoretical concepts and implementation techniques necessary to understand and master the methods will be addressed.
+  - <em>Contents:</em> introduction to the numerical methods for the solution of ordinary and partial differential equations that play a central role in engineering applications. Both basic theoretical concepts and implementation techniques necessary to understand and master the methods will be addressed.
 </details>
   
 <details>
