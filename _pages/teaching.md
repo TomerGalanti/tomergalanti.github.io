@@ -18,10 +18,11 @@ During my studies at <a href="https://math.ethz.ch/" class="links">ETH Zurich</a
 # ETH Zurich 
 <details>
   <summary> <a href="http://vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?lerneinheitId=136107&semkez=2020S&ansicht=KATALOGDATEN&lang=en" class="links">Numerical Methods for Partial Differential Equations</a>, Spring 2020 </summary>
-
-  - *Master* in Physics, Data Science, Computational Biology. Computational Science and Engineering Bachelor.
-  - I taught at the exercise classes and corrected the homeworks (in C++).
-  - *Contents:* Derivation, properties, and implementation of fundamental numerical methods for a few key partial differential equations: convection-diffusion, heat equation, wave equation, conservation laws. Implementation in C++ based on a finite element library.
+  <ul>
+    <li> *Master* in Physics, Data Science, Computational Biology. Computational Science and Engineering Bachelor. </li>
+    <li> I taught at the exercise classes and corrected the homeworks (in C++). </li>
+    <li> *Contents:* Derivation, properties, and implementation of fundamental numerical methods for a few key partial differential equations: convection-diffusion, heat equation, wave equation, conservation laws. Implementation in C++ based on a finite element library.</li>
+  </ul>
 </details>
   
 <details>
