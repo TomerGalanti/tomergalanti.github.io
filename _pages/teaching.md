@@ -23,17 +23,17 @@ During my studies at <a href="https://math.ethz.ch/" class="links">ETH Zurich</a
     <li> I taught at the exercise classes and corrected the homeworks (in C++). </li>
     <li> <em>Contents:</em> Derivation, properties, and implementation of fundamental numerical methods for a few key partial differential equations: convection-diffusion, heat equation, wave equation, conservation laws. Implementation in C++ based on a finite element library.</li>
   </ul>
-  <br>
 </details>
   
 <details>
   <summary> <a href="http://vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?lerneinheitId=132349&semkez=2019W&ansicht=KATALOGDATEN&lang=en" class="links">Computational Methods for Engineering Applications</a>, Fall 2019 
   </summary>
 
-  - Mechanical Engineering Bachelor, third year.
-  - I taught at the exercise classes (also explaining part of the theory) and corrected the homeworks (in C++).
-  - <em>Contents:</em> introduction to the numerical methods for the solution of ordinary and partial differential equations that play a central role in engineering applications. Both basic theoretical concepts and implementation techniques necessary to understand and master the methods will be addressed.
-  <br>
+  <ul>
+    <li> Mechanical Engineering Bachelor, third year.</li>
+    <li>I taught at the exercise classes (also explaining part of the theory) and corrected the homeworks (in C++).</li>
+    <li><em>Contents:</em> introduction to the numerical methods for the solution of ordinary and partial differential equations that play a central role in engineering applications. Both basic theoretical concepts and implementation techniques necessary to understand and master the methods will be addressed.</li>
+  </ul>
 </details>
   
 <details>
@@ -44,9 +44,10 @@ During my studies at <a href="https://math.ethz.ch/" class="links">ETH Zurich</a
   
 <details>
   <summary> Previously </summary>
-  - Hold classes on mathematics for highschool olympiads
-  - Tutored a number of students from high school to advanced university courses in Master and College level Statistics, Operations Research, Algorithms, College-level Mathematics, etc.
-  <br>
+  <ul>
+    <li>Hold classes on mathematics for highschool olympiads</li>
+    <li>Tutored a number of students from high school to advanced university courses in Master and College level Statistics, Operations Research, Algorithms, College-level Mathematics, etc.</li>
+  </ul>
 </details>
 
 <!-- 
