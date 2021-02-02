@@ -28,7 +28,7 @@ I worked on Exlplainability of AI and the generalization properties of the neura
 
 - In Zurich I have been a teaching assistant at master and bachelor level courses (see <a href="https://pierbeneventano.github.io/teaching" class="links">the teaching page</a>).
 
-And I received a BSc Mathematics (Computational curriculum) from Università di Pisa in 2018, where I wrote my thesis on Numerical Linear algebra for Markov Chains computations under the supervision of <a href="https://scholar.google.com/citations?user=lbtyxsMAAAAJ&hl=en" class="links">Prof. Dario Andrea Bini</a>.
+And I received a BSc Mathematics (Computational curriculum) from <a href="http://www.dm.unipi.it/webnew/en/info/introduction" class="links">Università di Pisa</a> in 2018, where I wrote my thesis on Numerical Linear algebra for Markov Chains computations under the supervision of <a href="https://scholar.google.com/citations?user=lbtyxsMAAAAJ&hl=en" class="links">Prof. Dario Andrea Bini</a>.
 
 In my free time I enjoy traveling, cooking, and watching soccer matches. During the high school I had fun with maths competitions and with soccer refereeing. 
 
