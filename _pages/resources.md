@@ -14,17 +14,15 @@ author_profile: true
 comments: true
 ---
 
+## WORK IN PROGRESS
+
 Here I collect lecture notes and resources which I have found to be valuable (if I have studied from them) or that struck me as well written and which I plan to read at some point.
 
 <details><summary>Math tools for data</summary><br>
 <ul>
-  <il> High dimensional probability <a href="https://scholar.google.de/citations?user=fymm-XQAAAAJ&hl=en" class="links">Boris Hanin</a>
-  on theory of neural networks,</il>
-  <il>One with <a href="https://scholar.google.de/citations?user=fymm-XQAAAAJ&hl=en" class="links">Arnulf Jentzen</a>
-    again on the mathematics of neural networks</il>
-  <il>One With <a href="https://scholar.google.de/citations?user=fymm-XQAAAAJ&hl=en" class="links">Saltelli, Portaluri, gli altri 2</a>
-    on the limits and the epistemology of mathematical modeling, statistics, and machine learning.</il>
+<il> <a href="https://www.math.uci.edu/~rvershyn/papers/HDP-book/HDP-book.html" class="links">High dimensional probability by Roman Vershynin</a> </il>
 </ul>
+</details>
 
 <details><summary>Neural network theory</summary><br>
   

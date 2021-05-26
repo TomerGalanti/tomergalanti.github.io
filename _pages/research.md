@@ -51,4 +51,4 @@ Coauthors: <a href="https://scholar.google.de/citations?user=fymm-XQAAAAJ&hl=en"
 ## Responsible mathematical modeling
 We are writing a short comment on the on the limits of mathematical modeling, statistics, and machine learning. The focus is on the O'neil conjecture and the fact that it happens that modeler do not account for it, in a sort of <em>modeler hubris</em>.
 
-Coauthors: <a href="https://scholar.google.de/citations?user=fymm-XQAAAAJ&hl=en" class="links">Andrea Saltelli</a>, <a href="https://people.math.ethz.ch/~patrickc/" class="links">Prof. Patrick Cheridito</a>, <a href="https://scholar.google.com/citations?user=Dc8yKjUAAAAJ&hl=en" class="links">Philippe von Wurstemberger</a>, Robin Graeber.
+Coauthors: <a href="https://scholar.google.com/citations?user=vqhLsGkAAAAJ&hl=en" class="links">Andrea Saltelli</a>, <a href="https://scholar.google.com/citations?user=3h35F_4AAAAJ&hl=en" class="links">Tommaso Potaluri</a>, <a href="https://scholar.google.com/citations?user=lGgh0DoAAAAJ&hl=en" class="links">Arnald Puy</a>, and <a href="https://scholar.google.com/citations?user=NyVVh7kAAAAJ&hl=en" class="links">Samuele Lo Piano</a>.
