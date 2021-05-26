@@ -12,7 +12,7 @@ author_profile: true
 comments: false
 ---
 
-I have been involved in the following research projects. 
+<!-- # Current research  -->
 
 
 
@@ -25,9 +25,10 @@ I have been involved in the following research projects.
 
 <hr>
 
+<!-- # Past research -->
+
 ## Neural network approximation theory
-The goal is to understand which is the family of functions which are approximable without curse of dimensionality.
-Coauthors: <a href="https://scholar.google.de/citations?user=fymm-XQAAAAJ&hl=en" class="links">Prof. Arnulf Jentzen</a>, <a href="https://people.math.ethz.ch/~patrickc/" class="links">Prof. Patrick Cheridito</a>, <a href="https://scholar.google.com/citations?user=Dc8yKjUAAAAJ&hl=en" class="links">Philippe von Wurstemberger</a>, Robin Graeber.
+
 <details>
   <summary><a href="https://arxiv.org/abs/2012.04326" class="links">High-dimensional approximation spaces of artificial neural networks and applications to partial differential equations.</a></summary>
 
@@ -37,11 +38,17 @@ Coauthors: <a href="https://scholar.google.de/citations?user=fymm-XQAAAAJ&hl=en"
 </details>
 
 <details>
-  <summary>Deep neural network approximations for high-dimensional functions.</summary>
+  <summary>Deep neural network approximations for high-dimensional functions. (to appear soon)</summary>
 
   Soon on arXiv, this work has been my thesis during my degree at ETH.
 
   On the line of the previous work, but more general, we provide a suitable large class of functions that can be approximated by DNNs without the curse of dimensionality. The main contributions of this thesis are the following: (a) the discovery of new cost bounds in the approximation of the product of d ∈ N real numbers and of representation the maximum of d real numbers, (b) the introduction of some DNN approximation spaces of functions and the proof that they are closed for some operations, and, as a consequence, (c) the proof that DNNs overcome the curse of dimensionality in the approximation on any compact set of products, maxima or the combination of both applied to low dimensional locally Lipschitz continuous functions.
 </details>
+The goal is to understand which is the family of functions which are approximable without curse of dimensionality.
+Coauthors: <a href="https://scholar.google.de/citations?user=fymm-XQAAAAJ&hl=en" class="links">Prof. Arnulf Jentzen</a>, <a href="https://people.math.ethz.ch/~patrickc/" class="links">Prof. Patrick Cheridito</a>, <a href="https://scholar.google.com/citations?user=Dc8yKjUAAAAJ&hl=en" class="links">Philippe von Wurstemberger</a>, Robin Graeber.
 
-## Errors in modelling - Hubris of the scientist
+
+## Responsible mathematical modeling
+We are writing a short comment on the on the limits of mathematical modeling, statistics, and machine learning. The focus is on the O'neil conjecture and the fact that it happens that modeler do not account for it, in a sort of <em>modeler hubris</em>.
+
+Coauthors: <a href="https://scholar.google.de/citations?user=fymm-XQAAAAJ&hl=en" class="links">Andrea Saltelli</a>, <a href="https://people.math.ethz.ch/~patrickc/" class="links">Prof. Patrick Cheridito</a>, <a href="https://scholar.google.com/citations?user=Dc8yKjUAAAAJ&hl=en" class="links">Philippe von Wurstemberger</a>, Robin Graeber.
