@@ -26,12 +26,12 @@ The template for this site is the [minimal mistakes Jekyll theme](https://mademi
       <!-- <img height="20" width="20" src="./assets/icons/mail.svg" /> <a class="contact-link"href=""> pierb@princeton.edu</a>
       <img height="20" width="20" src="./assets/icons/graduation.svg" /> <a class="contact-link"href="https://scholar.google.com/citations?user=spL439oAAAAJ&hl=en"> Google Scholar</a>
       <img height="20" width="20" src="./assets/icons/user.svg" /> <a class="contact-link"href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf"> Curriculum vitae</a> -->
-      <a href="https://www.linkedin.com/in/pierbeneventano/"><span class="social-icon fa fa-linkedin"></span></a> &nbsp  &nbsp  
-      <a href="https://join.skype.com/invite/kobWyHxDkzse"><span  class="social-icon fa fa-skype"></span></a> &nbsp  &nbsp 
-      <a href="https://www.instagram.com/prbn96/?hl=en"><span  class="social-icon fa fa-instagram"></span></a> &nbsp  &nbsp 
-      <a href="https://github.com/PierBeneventano"><span  class="social-icon fa fa-github"></span></a> &nbsp  &nbsp 
-      <a href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf" class="links"> CV </a> &nbsp  &nbsp 
-      <a href="https://scholar.google.com/citations?user=spL439oAAAAJ&hl=en"><span class="ai ai-fw ai-google-scholar-square"></span></a> &nbsp  &nbsp 
+      <a href="https://www.linkedin.com/in/pierbeneventano/"><span class="social-icon fa fa-linkedin"></span></a> &nbsp;  &nbsp;  
+      <a href="https://join.skype.com/invite/kobWyHxDkzse"><span  class="social-icon fa fa-skype"></span></a> &nbsp;  &nbsp; 
+      <a href="https://www.instagram.com/prbn96/?hl=en"><span  class="social-icon fa fa-instagram"></span></a> &nbsp;  &nbsp; 
+      <a href="https://github.com/PierBeneventano"><span  class="social-icon fa fa-github"></span></a> &nbsp;  &nbsp; 
+      <a href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf" class="links"> CV </a> &nbsp;  &nbsp; 
+      <a href="https://scholar.google.com/citations?user=spL439oAAAAJ&hl=en"><span class="ai ai-fw ai-google-scholar-square"></span></a> &nbsp;  &nbsp; 
       <a href="mailto:pierb@princeton.edu"><span class="social-icon fa fa-envelope"></span></a>
   </div>
 </div>
