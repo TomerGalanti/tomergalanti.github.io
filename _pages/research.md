@@ -47,7 +47,7 @@ The goal is to understand which is the family of functions which are approximabl
 
 Coauthors: <a href="https://scholar.google.de/citations?user=fymm-XQAAAAJ&hl=en" class="links">Prof. Arnulf Jentzen</a>, <a href="https://people.math.ethz.ch/~patrickc/" class="links">Prof. Patrick Cheridito</a>, <a href="https://scholar.google.com/citations?user=Dc8yKjUAAAAJ&hl=en" class="links">Philippe von Wurstemberger</a>, Robin Graeber.
 
-<details>
+<details style = "font-size:16px;">
   <summary><a href="https://arxiv.org/abs/2012.04326" class="links">High-dimensional approximation spaces of artificial neural networks and applications to partial differential equations.</a></summary>
 
   This work has been my "semester paper" during my degree at ETH.
