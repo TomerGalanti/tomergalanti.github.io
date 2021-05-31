@@ -102,11 +102,11 @@ Coauthors: <a href="https://scholar.google.com/citations?user=vqhLsGkAAAAJ&hl=en
 
 
 
-(related:)
+Related:
 <details style = "font-size:0.7em;">
-  <summary style = "font-size:1.2em;">Organizing the conference<a href="https://inetxoecd.associazionecest.it/" class="links">Forecasting the future for sustainable development: New Approaches to Modelling and the Science of Prediction</a></summary>
+  <summary style = "font-size:1.2em;">Organizing the conference: <a href="https://inetxoecd.associazionecest.it/" class="links">Forecasting the future for sustainable development: New Approaches to Modelling and the Science of Prediction</a></summary>
 
-  >With a group of friends at <a href="https://www.associazionecest.it/en" class="links">CEST</a> 
+  With a group of friends at <a href="https://www.associazionecest.it/en" class="links">CEST</a> 
   I'm organizing a conference on "<i>Forecasting the future for sustainable development: New
   Approaches to Modelling and the Science of Prediction</i>" supported by <a href="https://ysi.ineteconomics.org/" class="links">INET</a>
   and hosted by <a href="https://www.oecd.org/" class="links">OECD</a>. 
