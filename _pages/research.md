@@ -43,6 +43,10 @@ comments: false
 
 ## Neural network approximation theory
 
+The goal is to understand which is the family of functions which are approximable without curse of dimensionality.
+
+Coauthors: <a href="https://scholar.google.de/citations?user=fymm-XQAAAAJ&hl=en" class="links">Prof. Arnulf Jentzen</a>, <a href="https://people.math.ethz.ch/~patrickc/" class="links">Prof. Patrick Cheridito</a>, <a href="https://scholar.google.com/citations?user=Dc8yKjUAAAAJ&hl=en" class="links">Philippe von Wurstemberger</a>, Robin Graeber.
+
 <details>
   <summary><a href="https://arxiv.org/abs/2012.04326" class="links">High-dimensional approximation spaces of artificial neural networks and applications to partial differential equations.</a></summary>
 
@@ -58,8 +62,6 @@ comments: false
 
   On the line of the previous work, but more general, we provide a suitable large class of functions that can be approximated by DNNs without the curse of dimensionality. The main contributions of this thesis are the following: (a) the discovery of new cost bounds in the approximation of the product of d ∈ N real numbers and of representation the maximum of d real numbers, (b) the introduction of some DNN approximation spaces of functions and the proof that they are closed for some operations, and, as a consequence, (c) the proof that DNNs overcome the curse of dimensionality in the approximation on any compact set of products, maxima or the combination of both applied to low dimensional locally Lipschitz continuous functions.
 </details>
-The goal is to understand which is the family of functions which are approximable without curse of dimensionality.
-Coauthors: <a href="https://scholar.google.de/citations?user=fymm-XQAAAAJ&hl=en" class="links">Prof. Arnulf Jentzen</a>, <a href="https://people.math.ethz.ch/~patrickc/" class="links">Prof. Patrick Cheridito</a>, <a href="https://scholar.google.com/citations?user=Dc8yKjUAAAAJ&hl=en" class="links">Philippe von Wurstemberger</a>, Robin Graeber.
 
 
 ## Responsible mathematical modeling
