@@ -62,7 +62,7 @@ Coauthors: <a href="https://scholar.google.de/citations?user=fymm-XQAAAAJ&hl=en"
   Soon on arXiv, this work has been my thesis during my degree at ETH.
 
   On the line of the previous work, but more general, we provide a suitable large class of functions that can be approximated by DNNs without the curse of dimensionality. The main contributions of this thesis are the following: (a) the discovery of new cost bounds in the approximation of the product of d ∈ N real numbers and of representation the maximum of d real numbers, (b) the introduction of some DNN approximation spaces of functions and the proof that they are closed for some operations, and, as a consequence, (c) the proof that DNNs overcome the curse of dimensionality in the approximation on any compact set of products, maxima or the combination of both applied to low dimensional locally Lipschitz continuous functions.
-  
+
 </details>
 
 
@@ -70,3 +70,22 @@ Coauthors: <a href="https://scholar.google.de/citations?user=fymm-XQAAAAJ&hl=en"
 We are writing a short comment on the on the limits of mathematical modeling, statistics, and machine learning. The focus is on the O'neil conjecture and the fact that it happens that modeler do not account for it, in a sort of <em>modeler hubris</em>.
 
 Coauthors: <a href="https://scholar.google.com/citations?user=vqhLsGkAAAAJ&hl=en" class="links">Andrea Saltelli</a>, <a href="https://scholar.google.com/citations?user=3h35F_4AAAAJ&hl=en" class="links">Tommaso Potaluri</a>, <a href="https://scholar.google.com/citations?user=lGgh0DoAAAAJ&hl=en" class="links">Arnald Puy</a>, and <a href="https://scholar.google.com/citations?user=NyVVh7kAAAAJ&hl=en" class="links">Samuele Lo Piano</a>.
+
+
+
+(related:)
+<details style = "font-size:0.7em;">
+  <summary style = "font-size:1.2em;">Organizing the conference<a href="https://inetxoecd.associazionecest.it/" class="links">Forecasting the future for sustainable development: New Approaches to Modelling and the Science of Prediction</a></summary>
+
+  >With a group of friends at <a href="https://www.associazionecest.it/en" class="links">CEST</a> 
+  I'm organizing a conference on "<i>Forecasting the future for sustainable development: New
+  Approaches to Modelling and the Science of Prediction</i>" supported by <a href="https://ysi.ineteconomics.org/" class="links">INET</a>
+  and hosted by <a href="https://www.oecd.org/" class="links">OECD</a>. 
+  Please <a href="https://inetxoecd.associazionecest.it/" class="links">check out the website</a>! 
+  <br>
+  I will be chair for the session "<i>XAI and sustainable data science</i>" and I'm glad to announce that  
+  <a href="https://scholar.google.com/citations?user=mezKJyoAAAAJ&hl=en" class="links">Prof. Cynthia Rudin</a> will give us a lecture.
+  We will have also many others amazing guests and interesting sessions, please check out!
+
+
+</details>
