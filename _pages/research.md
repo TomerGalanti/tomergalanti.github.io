@@ -48,15 +48,15 @@ The goal is to understand which is the family of functions which are approximabl
 Coauthors: <a href="https://scholar.google.de/citations?user=fymm-XQAAAAJ&hl=en" class="links">Prof. Arnulf Jentzen</a>, <a href="https://people.math.ethz.ch/~patrickc/" class="links">Prof. Patrick Cheridito</a>, <a href="https://scholar.google.com/citations?user=Dc8yKjUAAAAJ&hl=en" class="links">Philippe von Wurstemberger</a>, Robin Graeber.
 
 <details style = "font-size:0.8em;">
-  <summary><a href="https://arxiv.org/abs/2012.04326" class="links">High-dimensional approximation spaces of artificial neural networks and applications to partial differential equations.</a></summary>
+  <summary style = "font-size:0.9em;"><a href="https://arxiv.org/abs/2012.04326" class="links">High-dimensional approximation spaces of artificial neural networks and applications to partial differential equations.</a></summary>
 
   This work has been my "semester paper" during my degree at ETH.
 
   In this work we develop a new machinery to study the capacity of neural networks to approximate high-dimensional functions without suffering from the curse of dimensionality. We then use our machinery to prove that the solutions of certain easy PDEs are arbitrarily approximable without the curse of dimensionality.
 </details>
 
-<details>
-  <summary>Deep neural network approximations for high-dimensional functions. (to appear soon)</summary>
+<details style = "font-size:0.8em;">
+  <summary style = "font-size:0.9em;">Deep neural network approximations for high-dimensional functions. (to appear soon)</summary>
 
   Soon on arXiv, this work has been my thesis during my degree at ETH.
 
