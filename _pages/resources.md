@@ -24,6 +24,12 @@ Here I collect lecture notes and resources which I have found to be valuable (if
 </ul>
 </details>
 
+<details><summary>ML theory</summary><br>
+<ul>
+<il> <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf" class="links">Understanding Machine Learning by Shai Shalev-Shwartz and Shai Ben-David</a> </il>
+</ul>
+</details>
+
 <details><summary>Neural network theory</summary><br>
   
 
