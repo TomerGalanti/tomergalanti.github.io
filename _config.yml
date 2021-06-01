@@ -109,7 +109,7 @@ google_analytics: UA-164383547-1
 # Site Author
 author:
   name             : *name
-  avatar           : "images/face_016.jpg"
+  avatar           : "images/studio.jpg"
   bio              : "PhD student at Princeton University"
   location         : #"Greater New York Area"
   email            : "pierb@princeton.edu"
