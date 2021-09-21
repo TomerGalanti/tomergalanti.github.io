@@ -27,11 +27,14 @@ Here I collect lecture notes and resources which I have found to be valuable (if
 <details><summary>ML theory</summary><br>
 <ul>
 <il> <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf" class="links">Understanding Machine Learning by Shai Shalev-Shwartz and Shai Ben-David</a> </il>
+<il> <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/tengyuma/cs229m_notes/main/master.pdf" class="links">Lecture Notes on Machine Learning Theory (Stanford CS229M/STATS214) by Tengyu Ma</a> </il>
 </ul>
 </details>
 
 <details><summary>Neural network theory</summary><br>
-  
+<ul>
+<il> <a href="https://mjt.cs.illinois.edu/dlt/" class="links">Deep learning theory lecture notes by Matus Telgarsky</a> </il>
+</ul>
 
 </details>
 
