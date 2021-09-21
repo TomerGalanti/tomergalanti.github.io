@@ -21,6 +21,7 @@ Here I collect lecture notes and resources which I have found to be valuable (if
 <details><summary>Math tools for data</summary><br>
 <ul>
 <il> <a href="https://www.math.uci.edu/~rvershyn/papers/HDP-book/HDP-book.html" class="links">High dimensional probability by Roman Vershynin</a> </il>
+<il> <a href="https://web.math.princeton.edu/~rvan/APC550.pdf" class="links">Probability in High Dimension (Princeton ORF550/APC550) by Ramon van Handel</a> </il>
 </ul>
 </details>
 
