@@ -21,7 +21,11 @@ Here I collect lecture notes and resources which I have found to be valuable (if
 <details><summary>Math tools for data</summary><br>
 <ul>
 <il> <a href="https://www.math.uci.edu/~rvershyn/papers/HDP-book/HDP-book.html" class="links">High dimensional probability by Roman Vershynin</a> </il>
+</ul>
+<ul>
 <il> <a href="https://web.math.princeton.edu/~rvan/APC550.pdf" class="links">Probability in High Dimension (Princeton ORF550/APC550) by Ramon van Handel</a> </il>
+</ul>
+<ul>
 <il> <a href="
 https://www.cambridge.org/core/books/highdimensional-statistics/8A91ECEEC38F46DAB53E9FF8757C7A4E" class="links">High-Dimensional Statistics: A Non-Asymptotic Viewpoint by Martin J. Wainwright</a> </il>
 </ul>
@@ -30,6 +34,8 @@ https://www.cambridge.org/core/books/highdimensional-statistics/8A91ECEEC38F46DA
 <details><summary>ML theory</summary><br>
 <ul>
 <il> <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf" class="links">Understanding Machine Learning by Shai Shalev-Shwartz and Shai Ben-David</a> </il>
+</ul>
+<ul>
 <il> <a href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/tengyuma/cs229m_notes/main/master.pdf" class="links">Lecture Notes on Machine Learning Theory (Stanford CS229M/STATS214) by Tengyu Ma</a> </il>
 </ul>
 </details>
