@@ -14,7 +14,9 @@ comments: false
 
 <!-- # Current research  -->
 
+## SGD implicit regularization
 
+## Deep Neural Networks at Initialization
 
 
 <hr>
