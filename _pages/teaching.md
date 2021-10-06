@@ -36,6 +36,42 @@ During my studies at <a href="https://math.ethz.ch/" class="links">ETH Zurich</a
 <hr>
 
 
+# Princeton University
+<details>
+  <summary> <a href="http://vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?lerneinheitId=136107&semkez=2020S&ansicht=KATALOGDATEN&lang=en" class="links">Energy and Commodities Markets</a>, Fall 2021 </summary>
+  <ul>
+    <li> Master in Finance and BSc in Operations Research and Financial Engineering. </li>
+    <li> I taught the precepts and corrected the homeworks. </li>
+    <li> <em>Contents:</em> This course is an introduction to commodities markets (oil, gas, metals, electricity, etc.), and quantitative approaches to capturing uncertainties in their demand and supply. We start from a financial perspective, and traditional models of commodity spot prices and forward curves. Then we cover modern topics: game theoretic models of energy production (OPEC vs. fracking vs. renewables); quantifying the risk of intermittency of solar and wind output on the reliability of the electric grid (mitigating the duck curve); financialization of commodity markets; carbon emissions markets; cryptocurrencies as commodities. We also discuss economic and policy implications.</li>
+  </ul>
+</details>
+
+  
+
+
+<hr>
+
+
+<div class="col-lg-4 text-center">
+  <div class="profile">
+      <!-- <img src="./images/face_016.jpg" width="120" height="160" > -->
+      <!-- <h2>Contacts</h2> -->
+      <!-- <img height="20" width="20" src="./assets/icons/mail.svg" /> <a class="contact-link"href=""> pierb@princeton.edu</a>
+      <img height="20" width="20" src="./assets/icons/graduation.svg" /> <a class="contact-link"href="https://scholar.google.com/citations?user=spL439oAAAAJ&hl=en"> Google Scholar</a>
+      <img height="20" width="20" src="./assets/icons/user.svg" /> <a class="contact-link"href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf"> Curriculum vitae</a> -->
+      <a href="https://www.linkedin.com/in/pierbeneventano/"><span class="social-icon fa fa-linkedin"></span></a> &nbsp;  &nbsp;  
+      <a href="https://join.skype.com/invite/kobWyHxDkzse"><span  class="social-icon fa fa-skype"></span></a> &nbsp;  &nbsp; 
+      <a href="https://www.instagram.com/prbn96/?hl=en"><span  class="social-icon fa fa-instagram"></span></a> &nbsp;  &nbsp; 
+      <a href="https://github.com/PierBeneventano"><span  class="social-icon fa fa-github"></span></a> &nbsp;  &nbsp; 
+      <a href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf" class="links"> CV </a> &nbsp;  &nbsp; 
+      <a href="https://scholar.google.com/citations?user=spL439oAAAAJ&hl=en"><span class="ai ai-fw ai-google-scholar-square"></span></a> &nbsp;  &nbsp; 
+      <a href="mailto:pierb@princeton.edu"><span class="social-icon fa fa-envelope"></span></a>
+  </div>
+</div>
+
+<hr>
+
+
 # ETH Zurich 
 <details>
   <summary> <a href="http://vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?lerneinheitId=136107&semkez=2020S&ansicht=KATALOGDATEN&lang=en" class="links">Numerical Methods for Partial Differential Equations</a>, Spring 2020 </summary>
