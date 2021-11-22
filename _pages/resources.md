@@ -48,6 +48,13 @@ https://www.cambridge.org/core/books/highdimensional-statistics/8A91ECEEC38F46DA
 
 </details>
 
+<details><summary>Miscellaneous</summary><br>
+<ul>
+<il> <a href="https://terrytao.wordpress.com/advice-on-writing-papers/" class="links">Advice on writing papers, Terry Tao.</a> </il>
+</ul>
+
+</details>
+
 <hr>
 
 <div class="col-lg-4 text-center">
