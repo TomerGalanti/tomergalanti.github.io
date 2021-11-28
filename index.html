@@ -96,15 +96,16 @@
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
               <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
+                <td style="padding:20px;width:100%;vertical-align:middle"
+                  onmouseover="document.getElementById('hidden_research').style.display = 'block';"
+                  onmouseout="document.getElementById('hidden_research').style.display='none';">
                   <heading>Research</heading>
                   <p>
                     <div id="hidden_research" style="display:none">
                       TLDR: Math theorems on neural networks.
-                      <br>
+                      <br><br>
                     </div>
-                    <div onmouseover="document.getElementById('hidden_research').style.display = 'block';"
-                      onmouseout="document.getElementById('hidden_research').style.display='none';">
+                    <div>
                       I am a mathematician working on the theory of machine learning. 
                       My work is motivated by the deployment of machine learning techniques in safety critical contexts.
                       <!-- A theoretical understanding of what happens in deep learning is, in my opinion, key to assessing when the use of it is harmful and to what extent. -->
