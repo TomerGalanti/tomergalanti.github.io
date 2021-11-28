@@ -32,6 +32,22 @@
   <!-- Icon for the browser tab -->
   <link rel="icon" type="image/png" href="/images/princeton.png"/>
 
+  <!-- RANDOM IMAGE! with Java Scripts -->
+  <script type="text/javascript">
+    var imageURLs = [
+         "/image/quadro.jpg"
+       , "/image/face_016.jpg"
+       , "/image/quadro.jpg"
+    ];
+    function getImageTag() {
+      var img = '<img src=\"';
+      var randomIndex = Math.floor(Math.random() * imageURLs.length);
+      img += imageURLs[randomIndex];
+      img += '\" style="width:100%;max-width:100%" alt="profile photo"/>';
+      return img;
+    }
+  </script>
+
 </head>
 
 <body>
@@ -85,9 +101,12 @@
 
 
                 </td>
-                            <td style="padding:2.5%;width:37%;max-width:37%">
-              <a href="images/quadro.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/quadro.jpg" class="hoverZoomLink"></a>
-            </td>
+                <td style="padding:2.5%;width:37%;max-width:37%">
+                  <script type="text/javascript">
+                    document.write(getImageTag());
+                  </script>
+                  <!-- <img style="width:100%;max-width:100%" alt="profile photo" src="images/quadro.jpg" class="hoverZoomLink"> -->
+                </td>
               </tr>
             </tbody>
           </table>
