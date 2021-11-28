@@ -38,7 +38,7 @@ During my studies at <a href="https://math.ethz.ch/" class="links">ETH Zurich</a
 
 # Princeton University
 <details>
-  <summary> <a href="http://vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?lerneinheitId=136107&semkez=2020S&ansicht=KATALOGDATEN&lang=en" class="links">Energy and Commodities Markets</a>, Fall 2021 </summary>
+  <summary> <a href="https://registrar.princeton.edu/course-offerings/course-details?term=1222&courseid=012553" class="links">Energy and Commodities Markets</a>, Fall 2021 </summary>
   <ul>
     <li> Master in Finance and BSc in Operations Research and Financial Engineering. </li>
     <li> I taught the precepts and corrected the homeworks. </li>
