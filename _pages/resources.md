@@ -46,6 +46,17 @@ https://www.cambridge.org/core/books/highdimensional-statistics/8A91ECEEC38F46DA
 <il> <a href="https://mjt.cs.illinois.edu/dlt/" class="links">Deep learning theory lecture notes, by Matus Telgarsky.</a> </il>
 </ul>
 
+
+</details>
+
+<details><summary>Quantum computing</summary><br>
+<ul>
+<il> <a href="https://terrytao.wordpress.com/advice-on-writing-papers/" class="links">Advice on writing papers, Terry Tao.</a> </il>
+</ul>
+
+</details>
+
+
 </details>
 
 <details><summary>Miscellaneous</summary><br>
