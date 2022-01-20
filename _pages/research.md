@@ -1,6 +1,6 @@
 ---
 layout: single
-permalink: /research/
+permalink: https://pierbeneventano.github.io/research/
 title: "Research"
 header:
   overlay_color: "#5e616c"
@@ -29,8 +29,8 @@ comments: false
       <img height="20" width="20" src="./assets/icons/graduation.svg" /> <a class="contact-link"href="https://scholar.google.com/citations?user=spL439oAAAAJ&hl=en"> Google Scholar</a>
       <img height="20" width="20" src="./assets/icons/user.svg" /> <a class="contact-link"href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf"> Curriculum vitae</a> -->
       <a href="https://www.linkedin.com/in/pierbeneventano/"><span class="social-icon fa fa-linkedin"></span></a> &nbsp;  &nbsp;  
-      <a href="https://join.skype.com/invite/kobWyHxDkzse"><span  class="social-icon fa fa-skype"></span></a> &nbsp;  &nbsp; 
-      <a href="https://www.instagram.com/prbn96/?hl=en"><span  class="social-icon fa fa-instagram"></span></a> &nbsp;  &nbsp; 
+      <!-- <a href="https://join.skype.com/invite/kobWyHxDkzse"><span  class="social-icon fa fa-skype"></span></a> &nbsp;  &nbsp;  -->
+      <!-- <a href="https://www.instagram.com/prbn96/?hl=en"><span  class="social-icon fa fa-instagram"></span></a> &nbsp;  &nbsp;  -->
       <a href="https://github.com/PierBeneventano"><span  class="social-icon fa fa-github"></span></a> &nbsp;  &nbsp; 
       <a href="https://pierbeneventano.github.io/CV/CV_Beneventano.pdf" class="links"> CV </a> &nbsp;  &nbsp; 
       <a href="https://scholar.google.com/citations?user=spL439oAAAAJ&hl=en"><span class="ai ai-fw ai-google-scholar-square"></span></a> &nbsp;  &nbsp; 
@@ -41,7 +41,7 @@ comments: false
 <hr>
 
 
-<!-- # Past research -->
+# Past research
 
 ## Neural network approximation theory
 

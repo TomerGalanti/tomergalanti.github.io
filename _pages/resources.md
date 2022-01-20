@@ -2,8 +2,8 @@
 title: "Resources & posts"
 layout: single
 tags:
-permalink: /resources/
-modified: 2021-01-23
+permalink: https://pierbeneventano.github.io/resources/
+modified: 2022-01-20
 header:
   overlay_color: "#5e616c"
   overlay_image: Image_network.jpg
@@ -16,7 +16,7 @@ comments: true
 
 ## WORK IN PROGRESS
 
-Here I collect lecture notes and resources which I have found to be valuable (if I have studied from them) or that struck me as well written and which I plan to read at some point.
+Here I collect lecture notes and resources which I have found to be valuable (if I have studied from them) or that struck me as well written and which I plan to read at some point. Please, if you know others that are better for some reasons let me know!
 
 <details><summary>Math tools for data</summary><br>
 <ul>
