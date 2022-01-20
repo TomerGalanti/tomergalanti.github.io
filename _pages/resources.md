@@ -51,7 +51,8 @@ https://www.cambridge.org/core/books/highdimensional-statistics/8A91ECEEC38F46DA
 
 <details><summary>Quantum computing</summary><br>
 <ul>
-<il> <a href="https://terrytao.wordpress.com/advice-on-writing-papers/" class="links">Advice on writing papers, Terry Tao.</a> </il>
+<il> <a href="https://www.microsoft.com/en-us/research/video/quantum-computing-computer-scientists/" class="links">I started with a very nice introduction to QC for computer scientists, by Andrew Helwer.</a> </il>
+<il> Please suggest furthr steps.
 </ul>
 
 </details>
