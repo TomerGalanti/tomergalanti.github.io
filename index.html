@@ -149,7 +149,7 @@
                       Currently, I am working towards this goal by trying to gain a theoretical understanding of what neural networks we find by studying the optimization problem behind them. 
                       More precisely, I am investigating the implicit effect of SGD as it is a fundamental step towards understanding the generalization capabilities of neural networks.
                       <br><br>
-                      Check out my new paper:  <a href="https://arxiv.org/pdf/2312.16143.pdf" class="links">On the Trajectories of SGD Without Replacement</a>
+                      Check out my new papers:  <a href="https://arxiv.org/pdf/2312.16143.pdf" class="links">On the Trajectories of SGD Without Replacement</a> and <a href="https://arxiv.org/abs/2406.11110" class="links">How Neural Networks Learn the Support is an Implicit Regularization Effect of SGD</a>
                     </div>
                   </p>
                 </td>
@@ -167,6 +167,9 @@
                   <heading>Talks, Visits, and Random News</heading>
 
                   <p>
+                    <br>
+                    <strong> [Jun '24] </strong> &nbsp;&nbsp;
+                    I, Andrea Pinto, and Tomaso Poggio posted our new article <a href="https://arxiv.org/abs/2406.11110" class="links">How Neural Networks Learn the Support is an Implicit Regularization Effect of SGD</a>
                     <br>
                     <strong> [14 Jun '24] </strong> &nbsp;&nbsp;
                     I'm giving a talk at ETH Zurich. Thanks a lot to Niao He and Zebang Shen for inviting!
@@ -293,9 +296,9 @@
                 <td style="padding:20px;width:100%;vertical-align:middle">
                   <heading>Preprints</heading>
                   <!-- turn into "projects" and do one for saltelli, one for arnulf, etc. -->
-                  <p id="hidden_preprints" style="display:none">
+                  <!-- <p id="hidden_preprints" style="display:none">
                     +1 Soon! <i class='far fa-grin-hearts' style='font-size:24px;color:rgb(255, 166, 0)'></i>
-                  </p>
+                  </p> -->
                 </td>
               </tr>
             </tbody>
@@ -303,6 +306,35 @@
           <table
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
+              
+              <tr>
+                <!-- <tr onmouseover="document.getElementById('hidden_paper_1').style.display = 'block';"
+                onmouseout="document.getElementById('hidden_paper_1').style.display='none';"> -->
+                <td style="padding:20px;width:15%;vertical-align:middle">
+                  <img src="images/SGD.png" alt="PontTuset" style="border-style: none;width:160px; height:45px; background-position:center; padding-top:2pt;">
+                </td>
+                <td width="75%" valign="middle">
+                  <details>
+                    <summary>
+                      <a href="https://arxiv.org/abs/2406.11110" class="links">
+                        How Neural Networks Learn the Support is an Implicit Regularization Effect of SGD</a>.
+                        <br>
+                        <strong>
+                        Pierfrancesco Beneventano</strong>,  
+                        Andrea Pinto, and
+                        <a href="https://scholar.google.com/citations?user=WgAGy7wAAAAJ" class="links">Prof. Tomaso Poggio</a>, 
+                        <br>
+                    </summary>
+                  <!-- <p id="hidden_paper_1" style="display:none"> -->
+                    <br>
+                    We found out that neural networks often implicitly identify what input variables are relevant in the first layer. 
+                    We proved that this is the case when training with SGD (with higher speed for smaller batch or bigger step size), but it is not the case when training with vanilla GD.
+                  <!-- </p> -->
+                  </details>
+                </td>
+              </tr>
+
+
 
               <tr>
                 <!-- <tr onmouseover="document.getElementById('hidden_paper_1').style.display = 'block';"
