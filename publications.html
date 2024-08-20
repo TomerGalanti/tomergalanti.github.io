@@ -46,31 +46,38 @@
     }
   </script>
 
-  <style>
-    .top-buttons {
+<style>
+
+  .top-buttons {
       position: absolute;
       top: 20px;
       right: 20px;
-    }
+      display: grid;
+      grid-template-columns: repeat(1, auto);
+      gap: 10px;
+  }
 
-    .top-buttons a {
-      padding: 10px 20px;
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-      font-size: 16px;
-      font-family: Arial, sans-serif;
-      margin-left: 10px;
-    }
+  .top-buttons a {
+    width: 80px;
+    height: 30px;
+    display: inline-block;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    font-family: Arial, sans-serif;
+    line-height: 30px;
+    margin-left: 10px;
+  }
 
-    .top-buttons a:hover {
-      background-color: #0056b3;
-    }
-  </style>
+  .top-buttons a:hover {
+    background-color: #0056b3;
+  }
+</style>
 
 </head>
 
@@ -79,8 +86,10 @@
 <div class="top-buttons">
 <a href="index.html">Home</a>
 <a href="publications.html">Publications</a>
-<a href="apply.html">Apply</a>
+<a href="activities.html">Activities</a>
+<a href="teaching.html">Teaching</a>
 <a href="group.html">Group</a>
+<a href="apply.html">Apply</a>
 </div>
 
 <table
