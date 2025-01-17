@@ -78,7 +78,6 @@
     .group-section {
       margin-top: 40px;
     }
-    /* Removed h2 styling as headings are removed */
     .member-list {
       list-style: none;
       padding: 0;
@@ -99,6 +98,11 @@
       margin-bottom: 5px;
       border: 2px solid #ccc;
     }
+    .role {
+      font-style: italic;
+      color: #555;
+      font-size: 0.9em;
+    }
   </style>
 </head>
 
@@ -116,53 +120,60 @@
 
 <div class="content-wrapper">
   <div class="group-section">
-    <!-- PhD Students list without heading -->
+    <!-- PhD Students list -->
     <ul class="member-list">
-      <!-- Repeat for each PhD student -->
+      <!-- Example entry for a PhD student -->
       <li>
         <img src="/images/phd_student1.jpg" alt="PhD Student 1" class="profile-pic">
         <p><strong>PhD Student 1</strong></p>
+        <p class="role">PhD student</p>
       </li>
       <li>
         <img src="/images/phd_student2.jpg" alt="PhD Student 2" class="profile-pic">
         <p><strong>PhD Student 2</strong></p>
+        <p class="role">PhD student</p>
       </li>
-      <!-- ... -->
+      <!-- Add more PhD students as needed -->
     </ul>
 
-    <!-- Master's Students list without heading -->
+    <!-- Master's Students list -->
     <ul class="member-list">
-      <!-- Repeat for each Master's student -->
+      <!-- Example entry for an MSc student -->
       <li>
         <img src="/images/msc_student1.jpg" alt="MSc Student 1" class="profile-pic">
         <p><strong>MSc Student 1</strong></p>
+        <p class="role">MSc student</p>
       </li>
       <li>
         <img src="/images/msc_student2.jpg" alt="MSc Student 2" class="profile-pic">
         <p><strong>MSc Student 2</strong></p>
+        <p class="role">MSc student</p>
       </li>
-      <!-- ... -->
+      <!-- Add more MSc students as needed -->
     </ul>
 
-    <!-- Undergraduates list without heading -->
+    <!-- Undergraduates list -->
     <ul class="member-list">
-      <!-- Repeat for each undergraduate student -->
+      <!-- Example entry for an undergrad -->
       <li>
         <img src="/images/undergrad1.jpg" alt="Undergrad 1" class="profile-pic">
         <p><strong>Undergrad 1</strong></p>
+        <p class="role">Undergrad researcher</p>
       </li>
       <li>
         <img src="/images/undergrad2.jpg" alt="Undergrad 2" class="profile-pic">
         <p><strong>Undergrad 2</strong></p>
+        <p class="role">Undergrad researcher</p>
       </li>
-      <!-- ... -->
+      <!-- Add more undergraduates as needed -->
     </ul>
 
-    <!-- PI section without heading -->
+    <!-- PI section -->
     <ul class="member-list">
       <li>
         <img src="/images/PI_photo.jpg" alt="Tomer Galanti" class="profile-pic">
-        <p><strong>Tomer Galanti</strong><br />(Group PI)</p>
+        <p><strong>Tomer Galanti</strong></p>
+        <p class="role">Group PI</p>
       </li>
     </ul>
   </div>
