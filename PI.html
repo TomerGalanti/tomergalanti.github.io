@@ -1,92 +1,127 @@
 <!DOCTYPE HTML>
 <html lang="en">
-
- <!-- Global Site Tag (gtag.js) - Google Analytics -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164383547-1"></script>
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-W36V9ZRFP4');
-</script>
-
-<!-- google_analytics: UA-164383547-1 -->
-
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta and Title -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Tomer Galanti</title>
+    <meta name="author" content="Tomer Galanti">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Tomer Galanti</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
 
-  <meta name="author" content="Tomer Galanti">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164383547-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-W36V9ZRFP4');
+    </script>
 
-  <!-- Academicons -->
-  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"/>
+    <!-- Image Script -->
+    <script type="text/javascript">
+        var imageURLs = ["/images/Tomer Galanti 2.JPG"];
+        function getImageTag() {
+            var randomIndex = Math.floor(Math.random() * imageURLs.length);
+            return `<a href="${imageURLs[randomIndex]}"><img src="${imageURLs[randomIndex]}" alt="profile photo"></a>`;
+        }
+    </script>
 
-  <!-- TO HAVE ICONS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"> -->
-
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-
-  <!-- RANDOM IMAGE! with Java Scripts -->
-  <script type="text/javascript">
-    var imageURLs = [
-       "/images/Tomer Galanti 2.JPG"
-    ];
-    function getImageTag() {
-      var randomIndex = Math.floor(Math.random() * imageURLs.length);
-      var img = '<a href=\"'
-      img += imageURLs[randomIndex];
-      img += '\"><img src=\"';
-      img += imageURLs[randomIndex];
-      img += '\" style="width:80%;max-width:80%" alt="profile photo"></a>';
-      return img;
-    }
-  </script>
-
-<style>
-
-.top-buttons {
-position: absolute;
-top: 20px;
-right: 20px;
-display: grid;
-grid-template-columns: repeat(1, auto);
-gap: 10px;
-}
-
-.top-buttons a {
-width: 80px;
-height: 30px;
-display: inline-block;
-background-color: white;
-color: navy;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-text-align: center;
-text-decoration: none;
-font-size: 12px;
-font-family: Arial, sans-serif;
-line-height: 30px;
-margin-left: 10px;
-}
-
-/* .top-buttons a:hover {
-background-color: #0056b3;
-} */
-
-  .content-wrapper {
-      width: 50%;
-      margin: 0 auto;
-  }
-</style>
-
+    <!-- Styles -->
+    <style>
+        .content-wrapper {
+            width: 50%;
+            margin: 0 auto;
+        }
+        .top-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: grid;
+            grid-template-columns: repeat(1, auto);
+            gap: 10px;
+        }
+        .top-buttons a {
+            width: 80px;
+            height: 30px;
+            display: inline-block;
+            background-color: white;
+            color: navy;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-size: 12px;
+            font-family: Arial, sans-serif;
+            line-height: 30px;
+            margin-left: 10px;
+        }
+        .about-section {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        .text-content {
+            flex: 1;
+        }
+        .image-content {
+            margin-left: 20px;
+            margin-top: 20px; /* Adjust this value to move the image lower */
+        }
+        .image-content img {
+            max-width: 200px;
+            height: auto;
+        }
+        .contact-links {
+            margin-top: 20px;
+        }
+        .contact-links a {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 14px;
+            text-decoration: none;
+            color: navy;
+        }
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            font-size: 24px;
+            margin-top: 30px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.2;
+        }
+        ul {
+            margin-left: 0;
+            padding-left: 0;
+            list-style-position: inside; /* Ensures bullets align with text */
+        } ul 
+        li {
+            margin-bottom: 10px;
+        }
+        /* Optional: Adjust the maximum width for better responsiveness */
+        @media (max-width: 800px) {
+            .content-wrapper {
+                width: 90%;
+            }
+            .about-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .image-content {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+    </style>
 </head>
-
-
 <body>
     <!-- Navigation Buttons -->
     <div class="top-buttons">
@@ -149,5 +184,4 @@ background-color: #0056b3;
         </ul>
     </div>
 </body>
-
 </html>
