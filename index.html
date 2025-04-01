@@ -27,7 +27,7 @@
         var imageURLs = ["/images/logo.png"];
         function getImageTag() {
             var randomIndex = Math.floor(Math.random() * imageURLs.length);
-            return `<a href="${imageURLs[randomIndex]}"><img src="${imageURLs[randomIndex]}" alt="profile photo"></a>`;
+            return `<a href="${imageURLs[randomIndex]}"><img src="${imageURLs[randomIndex]}" alt="profile photo", class="rounded-image"></a>`;
         }
     </script>
 
@@ -87,6 +87,9 @@
         }
         .contact-links {
             margin-top: 20px;
+        }
+        .rounded-image {
+        border-radius: 12px;
         }
         .contact-links a {
             display: inline-block;
