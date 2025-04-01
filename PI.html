@@ -27,7 +27,7 @@
         var imageURLs = ["/images/Tomer Galanti 2.JPG"];
         function getImageTag() {
             var randomIndex = Math.floor(Math.random() * imageURLs.length);
-            return `<a href="${imageURLs[randomIndex]}"><img src="${imageURLs[randomIndex]}" alt="profile photo"></a>`;
+            return `<a href="${imageURLs[randomIndex]}"><img src="${imageURLs[randomIndex]}" alt="profile photo", class="rounded-image"></a>`;
         }
     </script>
 
@@ -47,6 +47,9 @@
             display: grid;
             grid-template-columns: repeat(1, auto);
             gap: 10px;
+        }
+        .rounded-image {
+            border-radius: 12px;
         }
         .top-buttons a {
             width: 80px;
