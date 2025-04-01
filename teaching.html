@@ -48,21 +48,17 @@
 
 <style>
 body {
-background-color: #f2e8da; /* soft light brown */
-}
-.top-buttons a {
-background-color: #6f4e37; /* deep coffee */
-color: white;
-border: none;
-border-radius: 5px;
-font-size: 12px;
-font-family: Arial, sans-serif;
-padding: 6px 12px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-line-height: 30px;
-transition: background-color 0.3s ease;
+            background-color: #f2e8da; /* soft light brown */
+        }
+.top-buttons {
+position: absolute;
+top: 20px;
+right: 20px;
+display: grid;
+grid-template-columns: repeat(1, auto);
+gap: 10px;
+background-color: #6f4e37;
+
 }
 
 .top-buttons a {
