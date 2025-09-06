@@ -72,9 +72,9 @@
     .container { width: min(1100px, 96%); margin-inline: auto; padding-inline: 1rem; }
     .prose p { margin: .5rem 0 1rem; }
     .muted { color: var(--muted); }
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
-    .btn { display:inline-flex; gap:.5rem; align-items:center; border-radius: 999px; padding:.6rem 1rem; border:1px solid var(--border); background: #fff; color:#111; font-weight:600; }
-    .btn:hover { text-decoration:none; border-color: var(--accent); box-shadow: 0 6px 16px rgba(80,0,0,.12); }
+    .card { background: transparent; border: 0; border-left: 3px solid var(--border); border-radius: 0; box-shadow: none; padding-left: 1rem; }
+    .btn { display:inline-flex; gap:.5rem; align-items:center; border-radius: 6px; padding:.5rem .9rem; border:1px solid var(--border); background: #fff; color:#111; font-weight:600; }
+    .btn:hover { text-decoration:none; border-color: var(--accent); }
     .btn.primary { background: var(--accent); color:#fff; border-color: var(--accent); }
     .btn.primary:hover { background: var(--accent-2); }
     .btn.ghost { background: transparent; color: var(--text); }
@@ -97,6 +97,9 @@
     .menu a { padding:.4rem .6rem; border-radius:8px; }
     .menu a.active { background: var(--card); border:1px solid var(--border); }
     .menu-icons { display:flex; gap:.4rem; align-items:center; }
+    .icon-btn { width:36px; height:36px; display:inline-flex; align-items:center; justify-content:center; border-radius:999px; border:1px solid var(--border); background: var(--card); color: var(--text); }
+    .icon-btn:hover { border-color: var(--accent); }
+    .icon-btn svg, .icon-btn i { width:18px; height:18px; line-height:1; font-size:18px; }
 
     /* Mobile menu */
     .hamburger { display:none; background:none; border:0; padding:.5rem; border-radius:8px; }
@@ -147,6 +150,12 @@
     /* Back-to-top */
     .to-top { position: fixed; right: 16px; bottom: 16px; display:none; }
     .to-top.show { display:inline-flex; }
+
+    /* People grid */
+    .people { list-style:none; display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; padding:0; margin:0; }
+    .people li { text-align:center; }
+    .avatar { width:120px; height:120px; border-radius:50%; object-fit:cover; border:1px solid var(--border); background: var(--card); display:block; margin: 0 auto .4rem; }
+    .name { font-weight:600; }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet" />
 
@@ -165,22 +174,31 @@
       </button>
       <nav class="menu" id="menu">
         <a href="#about">About</a>
-        <a href="#research">Research</a>
         <a href="/publications.html">Publications</a>
-        <a href="#teaching">Teaching</a>
         <a href="#group">Group</a>
         <a href="#apply">Apply</a>
         <a href="#contact">Contact</a>
+        <a href="#teaching">Teaching</a>
       </nav>
       <div class="menu-icons">
-        <button class="btn ghost" id="themeBtn" aria-label="Toggle theme">
+        <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.64 13a9 9 0 11-10.63-10.6A9 9 0 0021.64 13z"/></svg>
         </button>
-        <a class="btn ghost" href="https://scholar.google.com/" aria-label="Google Scholar"><i class="ai ai-google-scholar ai-fw" aria-hidden="true"></i></a>
-        <a class="btn ghost" href="https://github.com/DLFundamentals" aria-label="GitHub">
+        <a class="icon-btn" href="https://github.com/DLFundamentals" aria-label="GitHub">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.2-3.37-1.2-.46-1.17-1.12-1.48-1.12-1.48-.92-.63.07-.62.07-.62 1.02.07 1.55 1.05 1.55 1.05 .9 1.54 2.36 1.1 2.94.84.09-.66.35-1.1.64-1.35-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.7.12 2.5.34 1.9-1.3 2.74-1.02 2.74-1.02 .55 1.4.2 2.44.1 2.7 .64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.3.69.9.69 1.82v2.7c0 .26.18.57.69.47A10 10 0 0012 2z"/></svg>
         </a>
-        <a class="btn primary" href="/cv.pdf">CV</a>
+        <a class="icon-btn" href="https://scholar.google.com/citations?user=ut_ISVIAAAAJ" aria-label="Google Scholar">
+          <!-- Google G logo -->
+          <svg viewBox="0 0 48 48" aria-hidden="true" width="18" height="18">
+            <path fill="#EA4335" d="M24 9.5c3.15 0 5.98 1.08 8.21 2.87l6.15-6.15C34.78 3.48 29.73 1.5 24 1.5 14.64 1.5 6.56 6.98 2.9 14.67l7.34 5.7C12.08 14.54 17.56 9.5 24 9.5z"/>
+            <path fill="#4285F4" d="M46.5 24c0-1.64-.15-3.22-.44-4.75H24v9h12.7c-.55 2.98-2.2 5.51-4.7 7.21l7.2 5.59C43.71 37.28 46.5 31.12 46.5 24z"/>
+            <path fill="#FBBC05" d="M10.24 20.37l-7.34-5.7C1.65 17.56 0.75 20.68 0.75 24c0 3.27.88 6.35 2.42 9.02l7.58-5.88c-.47-1.39-.72-2.88-.72-4.47 0-1.47.25-2.88.71-4.3z"/>
+            <path fill="#34A853" d="M24 46.5c6.57 0 12.09-2.17 16.11-5.86l-7.2-5.59c-2 1.35-4.57 2.15-8.91 2.15-6.45 0-11.93-5.03-13.77-11.16l-7.58 5.88C6.41 41.02 14.51 46.5 24 46.5z"/>
+          </svg>
+        </a>
+        <a class="icon-btn" href="https://www.linkedin.com/in/tomer-galanti" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4zM8.5 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2C20.6 8 22 10.2 22 13.7V24h-4v-9c0-2.1-.75-3.5-2.62-3.5-1.43 0-2.28.96-2.66 1.88-.14.34-.18.82-.18 1.3V24h-4V8z"/></svg>
+        </a>
       </div>
     </div>
   </header>
@@ -191,102 +209,16 @@
 
     <!-- ===== About ===== -->
     <section id="about" aria-labelledby="about-title">
-      <h2 id="about-title">About</h2>
+      <h2 id="about-title">About &amp; Research</h2>
       <div class="card feature">
         <div class="prose">
-          <p>Howdy! We are the <strong>Deep Learning Fundamentals</strong> group at Texas A&amp;M, led by Prof. Tomer Galanti. We combine <em>theory</em> and <em>experiments</em> , our research develops realistic models of contemporary learning settings to guide best practices in deep learning and LLMs.</p>  
+          <p>We are the <strong>Deep Learning Fundamentals</strong> group at Texas A&amp;M, led by Prof. Tomer Galanti. We link rigorous theory with practical algorithms to understand and improve modern deep learning and large language models.</p>
+          <ul>
+            <li><strong>Theory of representation learning</strong>: We develop theory for how modern networks learn transferable representations. We establish low‑rank and architectural/optimization inductive biases [1,8] and characterize the emergence of (intermediate) neural collapse with consequences for transfer [5,6,7,9,11]. We also connect supervised and self‑supervised learning [4,10], quantify generalization under sparsity [3], and explain how features form across layers [2].</li>
+            <li><strong>LLM theory &amp; algorithms</strong>: Learning theory and algorithms for large language models.</li>
+            <li><strong>Machine learning for contract design</strong>: We develop a practical machine learning‑based framework for principal–agent contract design that goes beyond closed‑form solutions.</li>
+          </ul><p>See the full list of <a href="/publications.html">publications</a>.</p>
         </div>
-      </div>
-    </section>
-
-    <!-- ===== Research highlights ===== -->
-    <section id="research" aria-labelledby="research-title">
-      <h2 id="research-title">Research</h2>
-      <div class="grid-3">
-        <article class="card feature">
-          <h3>Representation learning</h3>
-          <p class="muted">Structure and dynamics of learned features across depth and modalities; how they drive generalization and transfer.</p>
-          <div class="tags">
-            <span class="tag">Neural collapse</span>
-            <span class="tag">Transfer learning theory</span>
-            <span class="tag">SSL clustering & alignment</span>
-          </div>
-        </article>
-        <article class="card feature">
-          <h3>LLM theory & algorithms</h3>
-          <p class="muted">Optimization, inference, and learning dynamics of large language models; with collaborators incl. Tianbao Yang, Eran Malach, and Nadav Timor.</p>
-          <div class="tags">
-            <span class="tag">Speculative inference</span>
-            <span class="tag">Structured LMs (ADT)</span>
-            <span class="tag">Fair LM paradox</span>
-          </div>
-        </article>
-        <article class="card feature">
-          <h3>AI for economics</h3>
-          <p class="muted">Bringing representation learning and LLM tools to economic modeling and analysis.</p>
-          <div class="tags">
-            <span class="tag">Working papers (soon)</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ===== Publications ===== -->
-    <section id="publications-cta" aria-label="Publications">
-      <h2>Publications</h2>
-      <div class="card feature">
-        <p>See the full list on the dedicated page.</p>
-        <p><a class="btn" href="/publications.html">Open publications page</a></p>
-      </div>
-    </section>
-
-    <!-- ===== Teaching ===== -->
-    <section id="teaching" aria-labelledby="teach-title">
-      <h2 id="teach-title">Teaching</h2>
-      <ul class="list">
-        <li>
-          <strong>CSCE 689-610: Special Topics in Deep Learning and LLMs</strong><br/>
-          <span class="muted">Graduate course. Texas A&amp;M University.</span>
-        </li>
-        <!-- TODO: Add more courses with term/links to syllabus -->
-      </ul>
-    </section>
-
-    <!-- ===== Group ===== -->
-    <section id="group" aria-labelledby="group-title">
-      <h2 id="group-title">Group</h2>
-      <div class="card feature">
-        <p class="muted">We are growing! Prospective PhD students, postdocs, and research interns with interests in theory/algorithms for deep learning and LLMs are encouraged to apply.</p>
-        <div class="grid-3" style="align-items:start;">
-          <div>
-            <h3 class="muted" style="margin:.2rem 0 .6rem;">People (sample)</h3>
-            <div style="display:flex; gap:.6rem; flex-wrap:wrap;">
-              <a href="/group.html" title="View all members"><img src="/images/people/student1.jpg" alt="Lab member portrait" width="72" height="72" style="border-radius:50%; border:1px solid var(--border);"/></a>
-              <a href="/group.html" title="View all members"><img src="/images/people/student2.jpg" alt="Lab member portrait" width="72" height="72" style="border-radius:50%; border:1px solid var(--border);"/></a>
-              <a href="/group.html" title="View all members"><img src="/images/people/student3.jpg" alt="Lab member portrait" width="72" height="72" style="border-radius:50%; border:1px solid var(--border);"/></a>
-              <a href="/group.html" title="View all members"><img src="/images/people/student4.jpg" alt="Lab member portrait" width="72" height="72" style="border-radius:50%; border:1px solid var(--border);"/></a>
-            </div>
-            <p style="margin-top:.6rem;"><a class="btn" href="/group.html">View full group →</a></p>
-          </div>
-          <div>
-            <h3 class="muted" style="margin:.2rem 0 .6rem;">Openings</h3>
-            <p>See <a href="#apply">open positions</a> for how to join us.</p>
-          </div>
-          <div>
-            <h3 class="muted" style="margin:.2rem 0 .6rem;">Where we are</h3>
-            <p>Texas A&amp;M University · Department of CSE.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Apply ===== -->
-    <section id="apply" aria-labelledby="apply-title">
-      <h2 id="apply-title">Join the Lab</h2>
-      <div class="card feature">
-        <p><strong>PhD applicants</strong>: Apply through the <a href="https://engineering.tamu.edu/cse/admissions-and-aid/graduate-admissions/index.html">TAMU CSE PhD program</a> and mention your fit with our lab in your statement.</p>
-        <p><strong>Postdocs</strong>: Email a concise CV, 1–2 representative papers, and a short research vision (1 page max).</p>
-        <p><strong>Interns/Visitors</strong>: Include your transcripts and a brief note on how your skills align with our current projects.</p>
       </div>
     </section>
 
@@ -295,21 +227,98 @@
       <h2 id="contact-title">Contact</h2>
       <div class="card feature">
         <p>
-          <strong>Email</strong>: <a href="mailto:tomer.galanti@tamu.edu">tomer.galanti@tamu.edu</a>
+          <strong>Email</strong>: <a href="mailto:galanti@tamu.edu">galanti@tamu.edu</a>
           &nbsp;·&nbsp; <strong>GitHub</strong>: <a href="https://github.com/DLFundamentals">DLFundamentals</a>
-          &nbsp;·&nbsp; <strong>Google Scholar</strong>: <a href="https://scholar.google.com/">Profile</a>
+          &nbsp;·&nbsp; <strong>Google Scholar</strong>: <a href="https://scholar.google.com/citations?user=ut_ISVIAAAAJ">Profile</a>
         </p>
         <p class="muted">Texas A&amp;M University · Department of Computer Science &amp; Engineering</p>
+      </div>
+    </section>
+
+    <!-- ===== Group ===== -->
+    <section id="group" aria-labelledby="group-title">
+      <h2 id="group-title">Group</h2>
+      <ul class="people">
+        <li>
+          <img class="avatar" src="/student_images/achleshwar.jpg" alt="Achleshwar" width="120" height="120"/>
+          <div class="name">Student 1</div>
+        </li>
+        <li>
+          <img class="avatar" src="/student_images/shivam.jpg" alt="Shivam" width="120" height="120"/>
+          <div class="name">Student 2</div>
+        </li>
+        <li>
+          <img class="avatar" src="/student_images/deepak.jpg" alt="Deepak" width="120" height="120"/>
+          <div class="name">Student 3</div>
+        </li>
+        <li>
+          <img class="avatar" src="/student_images/ajay.jpg" alt="Ajay" width="120" height="120"/>
+          <div class="name">Student 4</div>
+        </li>
+        <li>
+          <img class="avatar" src="/student_images/rahul.jpg" alt="Rahul" width="120" height="120"/>
+          <div class="name">Student 5</div>
+        </li>
+        <li>
+          <img class="avatar" src="/student_images/aarya.jpg" alt="Aarya" width="120" height="120"/>
+          <div class="name">Student 6</div>
+        </li>
+        <li>
+          <img class="avatar" src="/student_images/priya.jpg" alt="Priya" width="120" height="120"/>
+          <div class="name">Student 7</div>
+        </li>
+        <li>
+          <img class="avatar" src="/student_images/yash.jpg" alt="Yash" width="120" height="120"/>
+          <div class="name">Student 8</div>
+        </li>
+      </ul>
+      
+    </section>
+
+    <!-- ===== Apply ===== -->
+    <section id="apply" aria-labelledby="apply-title">
+      <h2 id="apply-title">Join the Lab</h2>
+      <div class="card feature">
+        <p><strong>PhD applicants</strong>: Apply through the <a href="https://engineering.tamu.edu/cse/academics/degrees/graduate/phd.html">TAMU CSE PhD program</a>. In your statement, describe your fit with our research areas and mention Prof. Galanti as a potential advisor.</p>
+        <p><strong>Master's &amp; undergraduates</strong>: We welcome motivated undergraduate and Master's students to volunteer for research. Please email a short CV, transcripts, and a paragraph about your interests and skills.</p>
+      </div>
+    </section>
+
+    <!-- ===== Contact / Links ===== -->
+    
+
+    <!-- ===== Teaching (last) ===== -->
+    <section id="teaching" aria-labelledby="teach-title">
+      <h2 id="teach-title">Teaching</h2>
+      <div class="card feature">
+        <p><strong>Special Topics in Recent Developments in Deep Learning and Large Language Models</strong><br/>
+          <span class="muted">Texas A&amp;M University, Fall 2025.</span>
+        </p>
+        <p><strong>Introduction to Machine Learning</strong><br/>
+          <span class="muted">Texas A&amp;M University, Spring 2025.</span>
+        </p>
+        <p><strong>Special Topics in Recent Developments in Deep Learning and Large Language Models</strong><br/>
+          <span class="muted">Texas A&amp;M University, Fall 2024.</span>
+        </p>
+        <p><strong><a href="https://poggio-lab.mit.edu/F23-9-520">Statistical Learning Theory and its Applications</a></strong><br/>
+          <span class="muted">Massachusetts Institute of Technology, Fall 2023.</span>
+        </p>
+        <p><strong><a href="https://poggio-lab.mit.edu/F22-9-520">Statistical Learning Theory and its Applications</a></strong><br/>
+          <span class="muted">Massachusetts Institute of Technology, Fall 2022.</span>
+        </p>
+        <p><strong>Deep Convolutional Neural Networks</strong><br/>
+          <span class="muted">Tel Aviv University, Spring 2020.</span>
+        </p>
+        <p><strong>Deep Convolutional Neural Networks</strong><br/>
+          <span class="muted">Tel Aviv University, Spring 2019.</span>
+        </p>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container">
-      <div style="display:flex; gap:.5rem; justify-content:space-between; align-items:center; flex-wrap:wrap;">
-        <div>© <span id="year"></span> Tomer Galanti. Built with vanilla HTML/CSS/JS.</div>
-        <div class="muted">Dark mode · Accessible · Fast</div>
-      </div>
+      <div>© 2025 Tomer Galanti</div>
     </div>
   </footer>
 
@@ -342,11 +351,9 @@
     });
 
     // (Publications list moved to a separate page)
-    });
-    filterPubs();
 
     // Active nav highlighting on scroll
-    const sections = ['about','research','teaching','group','apply','contact'];
+    const sections = ['about','contact','group','apply','teaching'];
     const links = Array.from(document.querySelectorAll('.menu a'));
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -361,8 +368,7 @@
     }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
     sections.forEach(id => { const el = document.getElementById(id); if (el) observer.observe(el); });
 
-    // Current year
-    document.getElementById('year').textContent = new Date().getFullYear();
+    
   </script>
 </body>
 </html>
