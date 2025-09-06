@@ -206,77 +206,71 @@
     
 
     <!-- ===== About ===== -->
-    <section id="about" aria-labelledby="about-title">
-      <h2 id="about-title">About &amp; Research</h2>
-      <div class="card feature">
-        <div class="prose">
-          <p>We are the <strong>Deep Learning Fundamentals</strong> group at Texas A&amp;M, led by Prof. Tomer Galanti. We link rigorous theory with practical algorithms to understand and improve modern deep learning and large language models.</p>
-          <ul>
-  <li><strong>Deep Representation Learning:</strong> What kinds of representations do neural networks actually learn, and why do they support strong generalization?
-    <ul>
-      <li>
-        Understanding Supervised Pre-Training
-        [<a href="https://openreview.net/pdf?id=VrK7pKwOhT_">1</a>, 
-         <a href="https://openreview.net/forum?id=SwIp410B6aQ">2</a>, 
-         <a href="https://arxiv.org/abs/2212.12532">3</a>]
-      </li>
-      <li>
-        Understanding Self-Supervised Pre-Training
-        [<a href="https://openreview.net/forum?id=NsVEjx6YPd&noteId=uxqa0UxtZk">1</a>, 
-         <a href="https://arxiv.org/abs/2506.04411">2</a>]
-      </li>
-      <li>
-        Low-rank Bias [<a href="https://openreview.net/forum?id=0LzE9AROwD#discussion">1</a>], 
-        Canonical Representation Hypothesis (CRH) [<a href="https://openreview.net/forum?id=Njx1NjHIx4&noteId=MYV5SMYpzo">2</a>]
-      </li>
-    </ul>
-  </li>
+<section id="about" aria-labelledby="about-title">
+  <h2 id="about-title">About &amp; Research</h2>
+  <div class="card feature">
+    <div class="prose">
+      <p>We are the <strong>Deep Learning Fundamentals</strong> group at Texas A&amp;M, led by Prof. Tomer Galanti. We connect rigorous theory with practical algorithms to understand and improve modern deep learning and large language models.</p>
+      
+      <ul>
+        <li>
+          <details>
+            <summary><strong>Deep Representation Learning:</strong> <em>What representations do neural networks actually learn, and which ones support strong generalization?</em></summary>
+            <ul>
+              <li>
+                Understanding supervised pre-training 
+                [<a href="https://openreview.net/pdf?id=VrK7pKwOhT_">1</a>, 
+                 <a href="https://openreview.net/forum?id=SwIp410B6aQ">2</a>, 
+                 <a href="https://arxiv.org/abs/2212.12532">3</a>]
+              </li>
+              <li>
+                Understanding self-supervised pre-training 
+                [<a href="https://openreview.net/forum?id=NsVEjx6YPd&noteId=uxqa0UxtZk">1</a>, 
+                 <a href="https://arxiv.org/abs/2506.04411">2</a>]
+              </li>
+              <li>
+                Low-rank bias and canonical representation hypotheses 
+                [<a href="https://openreview.net/forum?id=0LzE9AROwD#discussion">1</a>, 
+                 <a href="https://openreview.net/forum?id=162TqkUNPO">2</a>, 
+                 <a href="https://proceedings.mlr.press/v202/rangamani23a.html">3</a>, 
+                 <a href="https://openreview.net/forum?id=Njx1NjHIx4&noteId=MYV5SMYpzo">4</a>]
+              </li>
+            </ul>
+          </details>
+        </li>
 
-  <li><strong>Theory of LLM Reasoning:</strong> Which architectures, objectives, and training procedures reliably improve multi-step reasoning in LLMs?
-    <ul>
-      <li>
-        Architectures for Algorithmic Reasoning 
-        [<a href="https://openreview.net/forum?id=nge5deRsEH">1</a>]
-      </li>
-      <li>
-        Optimizing Reasoning Objectives 
-        [<a href="https://arxiv.org/abs/2505.12366">1</a>]
-      </li>
-      <li>
-        Rare Token Dynamics & Generalization 
-        [<a href="https://arxiv.org/abs/2410.11985">1</a>]
-      </li>
-      <li>
-        LLM-ERM: Sample-Efficient Learning for Reasoning 
-        [<a href="#">1</a>] <!-- Replace with actual link -->
-      </li>
-    </ul>
-  </li>
+        <li>
+          <details>
+            <summary><strong>Theory of LLM Reasoning:</strong> <em>Which architectures, objectives, and training procedures reliably improve multi-step reasoning in LLMs?</em></summary>
+            <ul>
+              <li>Auto-regressive decision trees [<a href="https://openreview.net/forum?id=nge5deRsEH">1</a>]</li>
+              <li>DisCO: constrained optimization for reasoning [<a href="https://arxiv.org/abs/2505.12366">1</a>]</li>
+              <li>Rare-token depreciation bias [<a href="https://arxiv.org/abs/2410.11985">1</a>]</li>
+            </ul>
+          </details>
+        </li>
 
-  <li><strong>Differentiable Contract Design:</strong> How can we leverage modern optimization methods to solve foundational problems in contract and incentive design when closed-form solutions are unavailable?
-    <ul>
-      <li>
-        Gradient-Based Bilevel Optimization for Principal–Agent Contract Design 
-        [<a href="">1</a>]
-      </li>
-      <li>
-        Sparsity and Generalization in Contracts 
-        [<a href="https://openreview.net/forum?id=COPzNA10hZ">1</a>]
-      </li>
-    </ul>
-  </li>
-</ul>
+        <li>
+          <details>
+            <summary><strong>Differentiable Contract Design:</strong> <em>How can we apply modern optimization methods to solve foundational problems in contract and incentive design when closed-form solutions are unavailable?</em></summary>
+            <ul>
+              <li>Gradient-based optimization for contract design [<a href="">1</a>]</li>
+            </ul>
+          </details>
+        </li>
+      </ul>
 
-          
-          <p>See the full list of <a href="/publications.html">publications</a>.</p>
-          <p><strong>Contact</strong>: <a href="mailto:galanti@tamu.edu">galanti@tamu.edu</a>
-            &nbsp;·&nbsp; <strong>GitHub</strong>: <a href="https://github.com/DLFundamentals">DLFundamentals</a>
-            &nbsp;·&nbsp; <strong>Google Schola:</strong> <a href="https://scholar.google.com/citations?user=ut_ISVIAAAAJ">Profile</a><br/>
-            <span class="muted">Texas A&amp;M University · Department of Computer Science &amp; Engineering</span>
-          </p>
-        </div>
-      </div>
-    </section>
+      <p>See the full list of <a href="/publications.html">publications</a>.</p>
+      <p>
+        <strong>Contact</strong>: <a href="mailto:galanti@tamu.edu">galanti@tamu.edu</a>
+        &nbsp;·&nbsp; <strong>GitHub</strong>: <a href="https://github.com/DLFundamentals">DLFundamentals</a>
+        &nbsp;·&nbsp; <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=ut_ISVIAAAAJ">Profile</a><br/>
+        <span class="muted">Texas A&amp;M University · Department of Computer Science &amp; Engineering</span>
+      </p>
+    </div>
+  </div>
+</section>
+
 
     <!-- ===== Contact / Links ===== --><!-- ===== Group ===== -->
     <section id="group" aria-labelledby="group-title">
