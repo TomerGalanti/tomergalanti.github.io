@@ -11,7 +11,7 @@
   <link rel="icon" href="/images/favicon.ico" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css" />
-
+  
   <style>
     /* ===== Design tokens (match main page) ===== */
     :root { 
@@ -63,7 +63,21 @@
       .menu.open { display:flex; flex-wrap:wrap; }
       .hamburger { display:inline-flex; }
     }
-
+    .badge {
+      display: inline-block;
+      padding: 2px 6px;
+      margin-left: 6px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    .badge-oral {
+      background-color: #d97706; /* amber */
+    }
+    .badge-spotlight {
+      background-color: #2563eb; /* blue */
+    }
     main { padding: 1.25rem 0 2rem; }
     h1 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin:.2rem 0 .6rem; font-family:'Source Serif 4', Georgia, serif; }
     section { padding: 1rem 0; }
@@ -143,7 +157,49 @@
       <input id="q" type="search" placeholder="title, author, venue…" aria-label="Search publications"/>
     </div>
 
+    <!-- === Preprints Section (comes first) === -->
+    <section aria-label="Preprints List">
+      <h2>Preprints</h2>
+      <div class="pub-list" id="preprintList">
+        <!-- 2025 -->
+        <article class="pub" data-year="2025" data-authors="Luthra Yang Galanti" data-title="Self-Supervised Learning is Approximately Supervised Learning" data-venue="arXiv 2025">
+          <h3><a href="https://arxiv.org/abs/2506.04411">Self-Supervised Learning is Approximately Supervised Learning</a></h3>
+          <div class="authors">A. Luthra, T. Yang, T. Galanti</div>
+          <div class="venue"><em>Preprint</em>, arXiv, 2025</div>
+        </article>
+        <article class="pub" data-year="2025" data-authors="Li Lin Galanti Tu Yang" data-title="DisCO: Reinforcing Large Reasoning Models with Discriminative Constrained Optimization" data-venue="arXiv 2025">
+          <h3><a href="https://arxiv.org/abs/2505.12366">DisCO: Reinforcing Large Reasoning Models with Discriminative Constrained Optimization</a></h3>
+          <div class="authors">G. Li, M. Lin, T. Galanti, Z. Tu, T. Yang</div>
+          <div class="venue"><em>Preprint</em>, arXiv, 2025</div>
+        </article>
+
+        <!-- 2024 -->
+        <article class="pub" data-year="2024" data-authors="Pinto Galanti Balestriero" data-title="The Fair Language Model Paradox" data-venue="arXiv 2024">
+          <h3><a href="https://arxiv.org/abs/2410.11985">The Fair Language Model Paradox</a></h3>
+          <div class="authors">A. Pinto, T. Galanti, R. Balestriero</div>
+          <div class="venue"><em>Preprint</em>, arXiv, 2024</div>
+        </article>
+
+        <!-- 2023 -->
+        <article class="pub" data-year="2023" data-authors="Ziyin Li Galanti Ueda" data-title="Type-II Saddles and Probabilistic Stability of Stochastic Gradient Descent" data-venue="arXiv 2023">
+          <h3><a href="https://arxiv.org/abs/2303.13093">Type-II Saddles and Probabilistic Stability of Stochastic Gradient Descent</a></h3>
+          <div class="authors">L. Ziyin, B. Li, T. Galanti, M. Ueda</div>
+          <div class="venue"><em>Preprint</em>, arXiv, 2023</div>
+        </article>
+
+        <!-- 2022 -->
+        <article class="pub" data-year="2022" data-authors="Galanti Gyorgy Hutter" data-title="Generalization Bounds for Transfer Learning with Pretrained Classifiers" data-venue="arXiv 2022">
+          <h3><a href="https://arxiv.org/abs/2212.12532">Generalization Bounds for Transfer Learning with Pretrained Classifiers</a></h3>
+          <div class="authors">T. Galanti, A. Gyorgy, M. Hutter</div>
+          <div class="venue"><em>Preprint</em>, arXiv, 2022</div>
+        </article>
+      </div>
+    </section>
+    <!-- === End Preprints Section === -->
+
+    <!-- === Peer-Reviewed Publications Section === -->
     <section aria-label="Publications List">
+      <h2>Peer-Reviewed Publications</h2>
       <div class="pub-list" id="pubList">
         <!-- 2025 -->
         <article class="pub" data-year="2025" data-authors="Galanti Poggio Siegel Gupte" data-title="SGD and Weight Decay Secretly Minimize the Rank of Your Neural Network" data-venue="CPAL 2025 M3L 2024">
@@ -265,8 +321,11 @@
         <article class="pub" data-year="2020" data-authors="Galanti Wolf" data-title="On the Modularity of Hypernetworks" data-venue="NeurIPS 2020 Oral">
           <h3><a href="https://proceedings.neurips.cc/paper/2020/hash/75c58d36157505a600e0695ed0b3a22d-Abstract.html">On the Modularity of Hypernetworks</a></h3>
           <div class="authors">T. Galanti, L. Wolf</div>
-          <div class="venue"><div><em>Neural Information Processing Systems (NeurIPS)</em>, 2020 · Oral</div></div>
+          <div class="venue"><em>Neural Information Processing Systems (NeurIPS)</em>, 2020 
+          <span class="badge badge-oral">Oral</span>
+          </div>
         </article>
+
         <article class="pub" data-year="2020" data-authors="Littwin Galanti Wolf" data-title="On Infinite-Width Hypernetworks" data-venue="NeurIPS 2020">
           <h3><a href="https://proceedings.neurips.cc/paper/2020/hash/999df4ce78b966de17aee1dc87111044-Abstract.html">On Infinite-Width Hypernetworks</a></h3>
           <div class="authors">E. Littwin*, T. Galanti*, L. Wolf</div>
@@ -345,7 +404,7 @@
       applyTheme(current === 'dark' ? 'light' : 'dark');
     });
 
-    // Year + text filter
+    // Year + text filter (works for both preprints and publications)
     const yearSel = document.getElementById('year');
     const q = document.getElementById('q');
     const pubs = Array.from(document.querySelectorAll('.pub'));
