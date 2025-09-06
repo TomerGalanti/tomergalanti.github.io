@@ -27,12 +27,12 @@
 
   <style>
     /* ===== Design tokens ===== */
-    :root {
-      --bg: #ffffff;
+    :root { 
+      --bg: #fffdf9; /* warm off-white */
       --text: #1f2937; /* slate-800 */
-      --muted: #6b7280; /* gray-500 */
-      --border: #e5e7eb; /* gray-200 */
-      --card: #f9fafb; /* gray-50 */
+      --muted: #6b5c55; /* warm gray */
+      --border: #eadfd5; /* warm light border */
+      --card: #fbf7f2; /* warm card */
       --accent: #500000; /* TAMU maroon */
       --accent-2: #7a1c1c;
       --link: var(--accent);
@@ -51,7 +51,7 @@
       }
     }
     [data-theme="light"] {
-      --bg: #ffffff; --text:#1f2937; --muted:#6b7280; --border:#e5e7eb; --card:#f9fafb; --link:var(--accent);
+      --bg: #fffdf9; --text:#1f2937; --muted:#6b5c55; --border:#eadfd5; --card:#fbf7f2; --link:var(--accent);
     }
     [data-theme="dark"] {
       --bg:#0b0f14; --text:#e5e7eb; --muted:#9ca3af; --border:#1f2937; --card:#0f141b; --link:#f2b6b6;
@@ -109,7 +109,7 @@
 
     /* ===== Hero ===== */
     .hero { display:grid; grid-template-columns: 1.2fr .8fr; gap: 2rem; align-items:center; padding: 2.25rem 0 1rem; }
-    .hero h1 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin: 0 0 .5rem; letter-spacing:.3px; }
+    .hero h1 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin: 0 0 .5rem; letter-spacing:.2px; font-family: 'Source Serif 4', Georgia, serif; font-weight:700; }
     .hero .subtitle { font-size: clamp(1rem, 2vw, 1.15rem); margin:.3rem 0 1rem; }
     .hero .cta { display:flex; gap:.6rem; flex-wrap:wrap; margin-top: 1rem; }
     .hero figure { margin:0; }
@@ -122,7 +122,7 @@
 
     /* ===== Sections ===== */
     section { scroll-margin-top: 84px; padding: 2rem 0; }
-    section h2 { font-size: clamp(1.25rem, 2.4vw, 1.6rem); margin:0 0 1rem; letter-spacing:.2px; }
+    section h2 { font-size: clamp(1.25rem, 2.4vw, 1.6rem); margin:0 0 1rem; letter-spacing:.2px; font-family:'Source Serif 4', Georgia, serif; font-weight:700; }
     .grid-3 { display:grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
     @media (max-width: 900px) { .grid-3 { grid-template-columns: 1fr; } }
     .feature { padding: 1rem; }
@@ -148,7 +148,9 @@
     .to-top { position: fixed; right: 16px; bottom: 16px; display:none; }
     .to-top.show { display:inline-flex; }
   </style>
-</head>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -164,7 +166,7 @@
       <nav class="menu" id="menu">
         <a href="#about">About</a>
         <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
+        <a href="/publications.html">Publications</a>
         <a href="#teaching">Teaching</a>
         <a href="#group">Group</a>
         <a href="#apply">Apply</a>
@@ -185,22 +187,7 @@
 
   <main id="main" class="container">
     <!-- ===== Hero ===== -->
-    <section class="hero" aria-label="Intro">
-      <div>
-        <h1>Prof. Tomer Galanti</h1>
-        <div class="subtitle muted">Assistant Professor, <a href="https://engineering.tamu.edu/cse/index.html">Computer Science & Engineering</a>, Texas A&M University</div>
-        <div class="prose">
-          <p>We study the foundations of modern deep learning and large language models—linking rigorous theory with scalable practice. Our lab builds realistic theoretical models, training algorithms, and evaluation tools to improve reliability, efficiency, and transfer.</p>
-        </div>
-        <div class="cta">
-          <a class="btn primary" href="#publications">Explore publications</a>
-          <a class="btn" href="#apply">Join the lab</a>
-        </div>
-      </div>
-      <figure>
-        <img class="portrait" src="/images/logo.png" alt="Lab emblem or portrait" loading="lazy" decoding="async" />
-      </figure>
-    </section>
+    
 
     <!-- ===== About ===== -->
     <section id="about" aria-labelledby="about-title">
@@ -215,89 +202,43 @@
 
     <!-- ===== Research highlights ===== -->
     <section id="research" aria-labelledby="research-title">
-      <h2 id="research-title">Research Areas</h2>
+      <h2 id="research-title">Research</h2>
       <div class="grid-3">
         <article class="card feature">
-          <h3>Representation structure & dynamics</h3>
-          <p class="muted">Ranks, collapse, alignment, and their links to generalization and transfer across layers and modalities.</p>
+          <h3>Representation learning</h3>
+          <p class="muted">Structure and dynamics of learned features across depth and modalities; how they drive generalization and transfer.</p>
           <div class="tags">
             <span class="tag">Neural collapse</span>
-            <span class="tag">Alignment</span>
-            <span class="tag">Theory</span>
+            <span class="tag">Transfer learning theory</span>
+            <span class="tag">SSL clustering & alignment</span>
           </div>
         </article>
         <article class="card feature">
-          <h3>Generalization, compression & adaptation</h3>
-          <p class="muted">How training hyperparameters and architectural priors (e.g., convolutional sparsity) shape compressibility and few-shot learning.</p>
+          <h3>LLM theory & algorithms</h3>
+          <p class="muted">Optimization, inference, and learning dynamics of large language models; with collaborators incl. Tianbao Yang, Eran Malach, and Nadav Timor.</p>
           <div class="tags">
-            <span class="tag">Compression</span>
-            <span class="tag">Few-shot</span>
-            <span class="tag">Transfer</span>
+            <span class="tag">Speculative inference</span>
+            <span class="tag">Structured LMs (ADT)</span>
+            <span class="tag">Fair LM paradox</span>
           </div>
         </article>
         <article class="card feature">
-          <h3>Efficient training & inference for LLMs</h3>
-          <p class="muted">Parallel speculative decoding, structured language models, and fairness/robustness trade-offs in token distributions.</p>
+          <h3>AI for economics</h3>
+          <p class="muted">Bringing representation learning and LLM tools to economic modeling and analysis.</p>
           <div class="tags">
-            <span class="tag">LLMs</span>
-            <span class="tag">Inference</span>
-            <span class="tag">Algorithms</span>
+            <span class="tag">Working papers (soon)</span>
           </div>
         </article>
       </div>
     </section>
 
     <!-- ===== Publications ===== -->
-    <section id="publications" aria-labelledby="pubs-title">
-      <h2 id="pubs-title">Selected Publications</h2>
-      <div class="pub-controls">
-        <label for="yearFilter" class="muted">Filter by year</label>
-        <select id="yearFilter" aria-label="Filter publications by year">
-          <option value="all">All</option>
-          <option>2025</option>
-          <option>2024</option>
-          <option>2023</option>
-          <option>Earlier</option>
-        </select>
-        <button class="btn ghost" id="toggleSelected">Show: Selected</button>
+    <section id="publications-cta" aria-label="Publications">
+      <h2>Publications</h2>
+      <div class="card feature">
+        <p>See the full list on the dedicated page.</p>
+        <p><a class="btn" href="/publications.html">Open publications page</a></p>
       </div>
-      <div class="pub-list" id="pubList">
-        <!-- TODO: Duplicate the template below per paper; add data-year and data-selected attributes. -->
-
-        <article class="card pub" data-year="2024" data-selected="true">
-          <h3><a href="https://arxiv.org/abs/2405.14105">Distributed Speculative Inference for LLMs</a></h3>
-          <div class="authors">T. Galanti, <span class="muted">et al.</span></div>
-          <div class="venue">arXiv, 2024</div>
-          <div class="links">
-            <a href="https://arxiv.org/abs/2405.14105">PDF</a>
-            <a href="#" aria-disabled="true" class="muted">Code (soon)</a>
-          </div>
-        </article>
-
-        <article class="card pub" data-year="2023" data-selected="true">
-          <h3><a href="https://proceedings.mlr.press/v202/rangamani23a.html">Neural collapse in intermediate layers</a></h3>
-          <div class="authors">T. Galanti, <span class="muted">et al.</span></div>
-          <div class="venue">ICML 2023</div>
-          <div class="links">
-            <a href="https://proceedings.mlr.press/v202/rangamani23a.html">PDF</a>
-          </div>
-        </article>
-
-        <article class="card pub" data-year="2022" data-selected="false">
-          <h3><a href="https://arxiv.org/abs/2301.12033">Hard-coded sparsity and generalization</a></h3>
-          <div class="authors">T. Galanti, <span class="muted">et al.</span></div>
-          <div class="venue">arXiv, 2022</div>
-          <div class="links"><a href="https://arxiv.org/abs/2301.12033">PDF</a></div>
-        </article>
-
-        <article class="card pub" data-year="Earlier" data-selected="false">
-          <h3><a href="#">Representation clustering in SSL</a></h3>
-          <div class="authors">T. Galanti, <span class="muted">et al.</span></div>
-          <div class="venue">Preprint</div>
-          <div class="links"><a href="#">PDF</a></div>
-        </article>
-      </div>
-      <p class="muted" style="margin-top:.6rem">Full list: <a href="/publications.html">publications page</a>.</p>
     </section>
 
     <!-- ===== Teaching ===== -->
@@ -317,7 +258,26 @@
       <h2 id="group-title">Group</h2>
       <div class="card feature">
         <p class="muted">We are growing! Prospective PhD students, postdocs, and research interns with interests in theory/algorithms for deep learning and LLMs are encouraged to apply.</p>
-        <p><a class="btn" href="#apply">See open positions</a></p>
+        <div class="grid-3" style="align-items:start;">
+          <div>
+            <h3 class="muted" style="margin:.2rem 0 .6rem;">People (sample)</h3>
+            <div style="display:flex; gap:.6rem; flex-wrap:wrap;">
+              <a href="/group.html" title="View all members"><img src="/images/people/student1.jpg" alt="Lab member portrait" width="72" height="72" style="border-radius:50%; border:1px solid var(--border);"/></a>
+              <a href="/group.html" title="View all members"><img src="/images/people/student2.jpg" alt="Lab member portrait" width="72" height="72" style="border-radius:50%; border:1px solid var(--border);"/></a>
+              <a href="/group.html" title="View all members"><img src="/images/people/student3.jpg" alt="Lab member portrait" width="72" height="72" style="border-radius:50%; border:1px solid var(--border);"/></a>
+              <a href="/group.html" title="View all members"><img src="/images/people/student4.jpg" alt="Lab member portrait" width="72" height="72" style="border-radius:50%; border:1px solid var(--border);"/></a>
+            </div>
+            <p style="margin-top:.6rem;"><a class="btn" href="/group.html">View full group →</a></p>
+          </div>
+          <div>
+            <h3 class="muted" style="margin:.2rem 0 .6rem;">Openings</h3>
+            <p>See <a href="#apply">open positions</a> for how to join us.</p>
+          </div>
+          <div>
+            <h3 class="muted" style="margin:.2rem 0 .6rem;">Where we are</h3>
+            <p>Texas A&amp;M University · Department of CSE.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -382,34 +342,12 @@
       if (window.scrollY > 600) toTop.classList.add('show'); else toTop.classList.remove('show');
     });
 
-    // Publications filters
-    const yearFilter = document.getElementById('yearFilter');
-    const toggleSelected = document.getElementById('toggleSelected');
-    const pubList = document.getElementById('pubList');
-    let showSelectedOnly = true;
-
-    function filterPubs() {
-      const year = yearFilter.value;
-      const pubs = pubList.querySelectorAll('.pub');
-      pubs.forEach(p => {
-        const y = p.getAttribute('data-year');
-        const sel = p.getAttribute('data-selected') === 'true';
-        const matchYear = (year === 'all' || year === y);
-        const matchSel = showSelectedOnly ? sel : true;
-        p.style.display = matchYear && matchSel ? '' : 'none';
-      });
-    }
-
-    yearFilter?.addEventListener('change', filterPubs);
-    toggleSelected?.addEventListener('click', () => {
-      showSelectedOnly = !showSelectedOnly;
-      toggleSelected.textContent = 'Show: ' + (showSelectedOnly ? 'Selected' : 'All');
-      filterPubs();
+    // (Publications list moved to a separate page)
     });
     filterPubs();
 
     // Active nav highlighting on scroll
-    const sections = ['about','research','publications','teaching','group','apply','contact'];
+    const sections = ['about','research','teaching','group','apply','contact'];
     const links = Array.from(document.querySelectorAll('.menu a'));
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
