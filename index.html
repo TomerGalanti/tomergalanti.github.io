@@ -175,10 +175,9 @@
       <nav class="menu" id="menu">
         <a href="#about">About</a>
         <a href="/publications.html">Publications</a>
+        <a href="#teaching">Teaching</a>
         <a href="#group">Group</a>
         <a href="#apply">Apply</a>
-        <a href="#contact">Contact</a>
-        <a href="#teaching">Teaching</a>
       </nav>
       <div class="menu-icons">
         <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">
@@ -218,57 +217,49 @@
             <li><strong>LLM theory &amp; algorithms</strong>: Learning theory and algorithms for large language models.</li>
             <li><strong>Machine learning for contract design</strong>: We develop a practical machine learning‑based framework for principal–agent contract design that goes beyond closed‑form solutions.</li>
           </ul><p>See the full list of <a href="/publications.html">publications</a>.</p>
+          <p><strong>Contact</strong>: <a href="mailto:galanti@tamu.edu">galanti@tamu.edu</a>
+            &nbsp;·&nbsp; <strong>GitHub</strong>: <a href="https://github.com/DLFundamentals">DLFundamentals</a>
+            &nbsp;·&nbsp; <strong>Google Scholar</strong>: <a href="https://scholar.google.com/citations?user=ut_ISVIAAAAJ">Profile</a><br/>
+            <span class="muted">Texas A&amp;M University · Department of Computer Science &amp; Engineering</span>
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- ===== Contact / Links ===== -->
-    <section id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Contact</h2>
-      <div class="card feature">
-        <p>
-          <strong>Email</strong>: <a href="mailto:galanti@tamu.edu">galanti@tamu.edu</a>
-          &nbsp;·&nbsp; <strong>GitHub</strong>: <a href="https://github.com/DLFundamentals">DLFundamentals</a>
-          &nbsp;·&nbsp; <strong>Google Scholar</strong>: <a href="https://scholar.google.com/citations?user=ut_ISVIAAAAJ">Profile</a>
-        </p>
-        <p class="muted">Texas A&amp;M University · Department of Computer Science &amp; Engineering</p>
-      </div>
-    </section>
-
-    <!-- ===== Group ===== -->
+    <!-- ===== Contact / Links ===== --><!-- ===== Group ===== -->
     <section id="group" aria-labelledby="group-title">
       <h2 id="group-title">Group</h2>
       <ul class="people">
         <li>
-          <img class="avatar" src="/student_images/achleshwar.jpg" alt="Achleshwar" width="120" height="120"/>
+          <img class="avatar" src="/images/people/student1.jpg" alt="Student 1" width="120" height="120"/>
           <div class="name">Student 1</div>
         </li>
         <li>
-          <img class="avatar" src="/student_images/shivam.jpg" alt="Shivam" width="120" height="120"/>
+          <img class="avatar" src="/images/people/student2.jpg" alt="Student 2" width="120" height="120"/>
           <div class="name">Student 2</div>
         </li>
         <li>
-          <img class="avatar" src="/student_images/deepak.jpg" alt="Deepak" width="120" height="120"/>
+          <img class="avatar" src="/images/people/student3.jpg" alt="Student 3" width="120" height="120"/>
           <div class="name">Student 3</div>
         </li>
         <li>
-          <img class="avatar" src="/student_images/ajay.jpg" alt="Ajay" width="120" height="120"/>
+          <img class="avatar" src="/images/people/student4.jpg" alt="Student 4" width="120" height="120"/>
           <div class="name">Student 4</div>
         </li>
         <li>
-          <img class="avatar" src="/student_images/rahul.jpg" alt="Rahul" width="120" height="120"/>
+          <img class="avatar" src="/images/people/student5.jpg" alt="Student 5" width="120" height="120"/>
           <div class="name">Student 5</div>
         </li>
         <li>
-          <img class="avatar" src="/student_images/aarya.jpg" alt="Aarya" width="120" height="120"/>
+          <img class="avatar" src="/images/people/student6.jpg" alt="Student 6" width="120" height="120"/>
           <div class="name">Student 6</div>
         </li>
         <li>
-          <img class="avatar" src="/student_images/priya.jpg" alt="Priya" width="120" height="120"/>
+          <img class="avatar" src="/images/people/student7.jpg" alt="Student 7" width="120" height="120"/>
           <div class="name">Student 7</div>
         </li>
         <li>
-          <img class="avatar" src="/student_images/yash.jpg" alt="Yash" width="120" height="120"/>
+          <img class="avatar" src="/images/people/student8.jpg" alt="Student 8" width="120" height="120"/>
           <div class="name">Student 8</div>
         </li>
       </ul>
@@ -353,7 +344,7 @@
     // (Publications list moved to a separate page)
 
     // Active nav highlighting on scroll
-    const sections = ['about','contact','group','apply','teaching'];
+    const sections = ['about','group','apply','teaching'];
     const links = Array.from(document.querySelectorAll('.menu a'));
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
