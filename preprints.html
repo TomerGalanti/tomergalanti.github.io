@@ -1,140 +1,223 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
-
- <!-- Global Site Tag (gtag.js) - Google Analytics -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164383547-1"></script>
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-W36V9ZRFP4');
-</script>
-
-<!-- google_analytics: UA-164383547-1 -->
-
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Preprints | Tomer Galanti</title>
+  <meta name="description" content="Preprints by Tomer Galanti and collaborators." />
+  <link rel="canonical" href="/preprints.html" />
 
-  <title>Tomer Galanti</title>
+  <!-- Icons & fonts -->
+  <link rel="icon" href="/images/favicon.ico" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet" />
 
-  <meta name="author" content="Tomer Galanti">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Academicons -->
-  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"/>
-
-  <!-- TO HAVE ICONS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"> -->
-
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-
-  <!-- RANDOM IMAGE! with Java Scripts -->
-  <script type="text/javascript">
-    var imageURLs = [
-       "/images/Tomer Galanti 2.JPG"
-    ];
-    function getImageTag() {
-      var randomIndex = Math.floor(Math.random() * imageURLs.length);
-      var img = '<a href=\"'
-      img += imageURLs[randomIndex];
-      img += '\"><img src=\"';
-      img += imageURLs[randomIndex];
-      img += '\" style="width:80%;max-width:80%" alt="profile photo"></a>';
-      return img;
+  <style>
+    /* ===== Design tokens (match Publications / main) ===== */
+    :root { 
+      --bg: #fffdf9; /* warm off-white */
+      --text: #1f2937; /* slate-800 */
+      --muted: #6b5c55; /* warm gray */
+      --border: #eadfd5; /* warm light border */
+      --card: #fbf7f2; /* warm card */
+      --accent: #500000; /* TAMU maroon */
+      --accent-2: #7a1c1c;
+      --link: var(--accent);
+      --radius: 14px;
+      --shadow: 0 10px 20px rgba(0,0,0,.06), 0 2px 6px rgba(0,0,0,.04);
     }
-  </script>
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#0b0f14; --text:#e5e7eb; --muted:#9ca3af; --border:#1f2937; --card:#0f141b; --link:#f2b6b6; --shadow:none; }
+    }
+    [data-theme="light"] { --bg:#fffdf9; --text:#1f2937; --muted:#6b5c55; --border:#eadfd5; --card:#fbf7f2; --link:var(--accent); }
+    [data-theme="dark"]  { --bg:#0b0f14; --text:#e5e7eb; --muted:#9ca3af; --border:#1f2937; --card:#0f141b; --link:#f2b6b6; }
 
-<style>
-body {
-            background-color: #f2e8da; /* soft light brown */
-        }
-.top-buttons {
-position: absolute;
-top: 20px;
-right: 20px;
-display: grid;
-grid-template-columns: repeat(1, auto);
-gap: 10px;
-}
+    /* ===== Base ===== */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial; -webkit-font-smoothing: antialiased; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { width: min(1100px, 96%); margin-inline:auto; padding-inline: 1rem; }
+    .muted { color: var(--muted); }
 
-.top-buttons a {
-width: 80px;
-height: 30px;
-display: inline-block;
-background-color: white;
-color: navy;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-text-align: center;
-text-decoration: none;
-font-size: 12px;
-font-family: Arial, sans-serif;
-line-height: 30px;
-margin-left: 10px;
-}
+    /* Buttons & cards */
+    .btn { display:inline-flex; gap:.5rem; align-items:center; border-radius: 6px; padding:.5rem .9rem; border:1px solid var(--border); background:#fff; color:#111; font-weight:600; }
+    .btn:hover { text-decoration:none; border-color: var(--accent); }
+    .card { background: transparent; border: 0; border-left: 3px solid var(--border); border-radius: 0; box-shadow: none; padding-left: 1rem; }
 
-/* .top-buttons a:hover {
-background-color: #0056b3;
-} */
+    /* ===== Header / Nav (match Publications) ===== */
+    header { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(6px); background: color-mix(in srgb, var(--bg) 80%, transparent); border-bottom:1px solid var(--border); }
+    .nav { display:flex; align-items:center; justify-content:space-between; padding:.6rem 0; }
+    .brand { display:flex; align-items:center; gap:.75rem; font-weight:800; letter-spacing:.2px; }
+    .brand .logo { width:40px; height:40px; border-radius:50%; border:1px solid var(--border); object-fit:cover; }
+    .menu { display:flex; gap:.8rem; align-items:center; }
+    .menu a { padding:.4rem .6rem; border-radius:8px; }
+    .menu a.active { background: var(--card); border:1px solid var(--border); }
+    .menu-icons { display:flex; gap:.4rem; align-items:center; }
+    .icon-btn { width:36px; height:36px; display:inline-flex; align-items:center; justify-content:center; border-radius:999px; border:1px solid var(--border); background: var(--card); color: var(--text); }
+    .icon-btn:hover { border-color: var(--accent); }
+    .icon-btn svg, .icon-btn i { width:18px; height:18px; line-height:1; font-size:18px; }
 
-  .content-wrapper {
-      width: 50%;
-      margin: 0 auto;
-  }
-</style>
+    .hamburger { display:none; background:none; border:0; padding:.5rem; border-radius:8px; }
+    @media (max-width: 900px) {
+      .menu { display:none; position:absolute; left:0; right:0; top:64px; background: var(--bg); padding:.6rem 1rem; border-bottom:1px solid var(--border); }
+      .menu.open { display:flex; flex-wrap:wrap; }
+      .hamburger { display:inline-flex; }
+    }
 
+    main { padding: 1.25rem 0 2rem; }
+    h1 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin:.2rem 0 .6rem; font-family:'Source Serif 4', Georgia, serif; }
+    section { padding: 1rem 0; }
+
+    /* ===== Preprints list ===== */
+    .pub-controls { display:flex; gap:.6rem; align-items:center; flex-wrap:wrap; margin: .5rem 0 1rem; }
+    .pub-controls select, .pub-controls input { border:1px solid var(--border); background: var(--card); color:var(--text); border-radius:8px; padding:.45rem .6rem; }
+    .pub-list { display:grid; gap:.9rem; }
+    .pub { padding:.9rem; border:1px solid var(--border); border-radius:10px; background: var(--card); }
+    .pub h3 { margin:0; font-size: 1rem; }
+    .pub .authors { margin:.25rem 0; font-size:.95rem; color: var(--muted); }
+    .pub .venue { font-size:.9rem; color: var(--muted); }
+
+    footer { border-top:1px solid var(--border); padding: 1rem 0 2rem; color: var(--muted); font-size:.95rem; }
+  </style>
 </head>
-
 <body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img class="logo" src="/images/logo.png" alt="Lab emblem" />
+        <span>Deep Learning Fundamentals Lab</span>
+      </div>
+      <button class="hamburger" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 6h16v2H4zM4 11h16v2H4zM4 16h16v2H4z"/></svg>
+      </button>
+      <nav class="menu" id="menu">
+        <a href="/index.html">About</a>
+        <a href="/publications.html">Publications</a>
+        <a href="/index.html#group">Group</a>
+        <a href="/index.html#apply">Apply</a>
+        <a href="/index.html#contact">Contact</a>
+        <a href="/index.html#teaching">Teaching</a>
+      </nav>
+      <div class="menu-icons">
+        <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.64 13a9 9 0 11-10.63-10.6A9 9 0 0021.64 13z"/></svg>
+        </button>
+        <a class="icon-btn" href="https://github.com/DLFundamentals" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.2-3.37-1.2-.46-1.17-1.12-1.48-1.12-1.48-.92-.63.07-.62.07-.62 1.02.07 1.55 1.05 1.55 1.05 .9 1.54 2.36 1.1 2.94.84.09-.66.35-1.1.64-1.35-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.7.12 2.5.34 1.9-1.3 2.74-1.02 2.74-1.02 .55 1.4.2 2.44.1 2.7 .64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.3.69.9.69 1.82v2.7c0 .26.18.57.69.47A10 10 0 0012 2z"/></svg>
+        </a>
+        <a class="icon-btn" href="https://scholar.google.com/citations?user=ut_ISVIAAAAJ" aria-label="Google Scholar">
+          <!-- Google G logo -->
+          <svg viewBox="0 0 48 48" aria-hidden="true" width="18" height="18">
+            <path fill="#EA4335" d="M24 9.5c3.15 0 5.98 1.08 8.21 2.87l6.15-6.15C34.78 3.48 29.73 1.5 24 1.5 14.64 1.5 6.56 6.98 2.9 14.67l7.34 5.7C12.08 14.54 17.56 9.5 24 9.5z"/>
+            <path fill="#4285F4" d="M46.5 24c0-1.64-.15-3.22-.44-4.75H24v9h12.7c-.55 2.98-2.2 5.51-4.7 7.21l7.2 5.59C43.71 37.28 46.5 31.12 46.5 24z"/>
+            <path fill="#FBBC05" d="M10.24 20.37l-7.34-5.7C1.65 17.56 0.75 20.68 0.75 24c0 3.27.88 6.35 2.42 9.02l7.58-5.88c-.47-1.39-.72-2.88-.72-4.47 0-1.47.25-2.88.71-4.3z"/>
+            <path fill="#34A853" d="M24 46.5c6.57 0 12.09-2.17 16.11-5.86l-7.2-5.59c-2 1.35-4.57 2.15-8.91 2.15-6.45 0-11.93-5.03-13.77-11.16l-7.58 5.88C6.41 41.02 14.51 46.5 24 46.5z"/>
+          </svg>
+        </a>
+        <a class="icon-btn" href="https://www.linkedin.com/in/tomer-galanti" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4zM8.5 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2C20.6 8 22 10.2 22 13.7V24h-4v-9c0-2.1-.75-3.5-2.62-3.5-1.43 0-2.28.96-2.66 1.88-.14.34-.18.82-.18 1.3V24h-4V8z"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
 
-<div class="top-buttons">
-  <a href="index.html">Home</a>
-  <a href="PI.html">About the PI</a>
-  <a href="publications.html">Publications</a>
-  <a href="preprints.html">Preprints</a>
-  <a href="activities.html">Activities</a>
-  <a href="teaching.html">Teaching</a>
-  <a href="group.html">Group</a>
-  <a href="apply.html">Apply</a>
-</div>
+  <main class="container">
+    <h1>Preprints</h1>
+    <div class="pub-controls">
+      <label class="muted" for="year">Year:</label>
+      <select id="year">
+        <option value="all">All</option>
+        <option>2025</option>
+        <option>2024</option>
+        <option>2023</option>
+        <option>2022</option>
+      </select>
+      <label class="muted" for="q">Search:</label>
+      <input id="q" type="search" placeholder="title, author…" aria-label="Search preprints"/>
+    </div>
 
-<div class="content-wrapper">
-<table
-style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-<tbody>
-<tr>
-<td style="padding:20px;width:100%;vertical-align:middle">
-<!-- <heading>Publications</heading> -->
-</td>
-</tr>
-<tr>
-<td style="padding:20px;width:95%;vertical-align:middle;">
-<div style="padding-left:0px;">
-  <p><a href="https://arxiv.org/abs/2506.04411"><strong>Self-Supervised Learning is Approximately Supervised Learning</strong></a><br />
-    A. Luthra, T. Yang, T. Galanti<br /> 
-    <em>Preprint,&nbsp;</em>Arxiv, 2025</p>
-  <p><a href="https://arxiv.org/abs/2505.12366"><strong>DisCO: Reinforcing Large Reasoning Models with Discriminative Constrained Optimization</strong></a><br />
-    G. Li, M. Lin, T. Galanti, Z. Tu, T. Yang<br />  
-    <em>Preprint,&nbsp;</em>Arxiv, 2025</p>
-<p><a href="https://arxiv.org/abs/2410.11985"><strong>The Fair Language Model Paradox</strong></a><br />
-A. Pinto, T. Galanti, R. Balestriero<br />
-<em>Preprint,&nbsp;</em>Arxiv, 2024</p>
-<p><a href="https://arxiv.org/abs/2303.13093"><strong>Type-II Saddles and Probabilistic Stability of Stochastic Gradient Descent</strong></a><br />
-L. Ziyin, B. Li, T. Galanti, M. Ueda<br />
-<em>Preprint,&nbsp;</em>Arxiv, 2023</p>
-<p><a href="https://arxiv.org/abs/2212.12532"><strong>Generalization Bounds for Transfer Learning with Pretrained Classifiers</strong></a><br />
-T. Galanti, A. Gyorgy, M. Hutter<br />
-<em>Preprint,&nbsp;</em>Arxiv, 2022</p>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
+    <section aria-label="Preprints List">
+      <div class="pub-list" id="pubList">
+        <!-- 2025 -->
+        <article class="pub" data-year="2025" data-authors="Luthra Yang Galanti" data-title="Self-Supervised Learning is Approximately Supervised Learning" data-venue="arXiv 2025">
+          <h3><a href="https://arxiv.org/abs/2506.04411">Self-Supervised Learning is Approximately Supervised Learning</a></h3>
+          <div class="authors">A. Luthra, T. Yang, T. Galanti</div>
+          <div class="venue"><em>Preprint</em>, arXiv, 2025</div>
+        </article>
+        <article class="pub" data-year="2025" data-authors="Li Lin Galanti Tu Yang" data-title="DisCO: Reinforcing Large Reasoning Models with Discriminative Constrained Optimization" data-venue="arXiv 2025">
+          <h3><a href="https://arxiv.org/abs/2505.12366">DisCO: Reinforcing Large Reasoning Models with Discriminative Constrained Optimization</a></h3>
+          <div class="authors">G. Li, M. Lin, T. Galanti, Z. Tu, T. Yang</div>
+          <div class="venue"><em>Preprint</em>, arXiv, 2025</div>
+        </article>
 
+        <!-- 2024 -->
+        <article class="pub" data-year="2024" data-authors="Pinto Galanti Balestriero" data-title="The Fair Language Model Paradox" data-venue="arXiv 2024">
+          <h3><a href="https://arxiv.org/abs/2410.11985">The Fair Language Model Paradox</a></h3>
+          <div class="authors">A. Pinto, T. Galanti, R. Balestriero</div>
+          <div class="venue"><em>Preprint</em>, arXiv, 2024</div>
+        </article>
+
+        <!-- 2023 -->
+        <article class="pub" data-year="2023" data-authors="Ziyin Li Galanti Ueda" data-title="Type-II Saddles and Probabilistic Stability of Stochastic Gradient Descent" data-venue="arXiv 2023">
+          <h3><a href="https://arxiv.org/abs/2303.13093">Type-II Saddles and Probabilistic Stability of Stochastic Gradient Descent</a></h3>
+          <div class="authors">L. Ziyin, B. Li, T. Galanti, M. Ueda</div>
+          <div class="venue"><em>Preprint</em>, arXiv, 2023</div>
+        </article>
+
+        <!-- 2022 -->
+        <article class="pub" data-year="2022" data-authors="Galanti Gyorgy Hutter" data-title="Generalization Bounds for Transfer Learning with Pretrained Classifiers" data-venue="arXiv 2022">
+          <h3><a href="https://arxiv.org/abs/2212.12532">Generalization Bounds for Transfer Learning with Pretrained Classifiers</a></h3>
+          <div class="authors">T. Galanti, A. Gyorgy, M. Hutter</div>
+          <div class="venue"><em>Preprint</em>, arXiv, 2022</div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2025 Tomer Galanti</div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const menu = document.getElementById('menu');
+    menuBtn?.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+    });
+
+    // Theme toggle with persistence
+    const themeBtn = document.getElementById('themeBtn');
+    function applyTheme(t) { document.documentElement.setAttribute('data-theme', t); localStorage.setItem('theme', t); }
+    const saved = localStorage.getItem('theme');
+    if (saved) applyTheme(saved);
+    themeBtn?.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // Year + text filter
+    const yearSel = document.getElementById('year');
+    const q = document.getElementById('q');
+    const pubs = Array.from(document.querySelectorAll('.pub'));
+
+    function normalize(s){ return (s||'').toLowerCase(); }
+    function filter() {
+      const y = yearSel.value;
+      const term = normalize(q.value);
+      pubs.forEach(p => {
+        const matchYear = (y === 'all') || (p.dataset.year === y);
+        const hay = normalize(p.dataset.title + ' ' + p.dataset.authors + ' ' + p.dataset.venue);
+        const matchText = !term || hay.includes(term);
+        p.style.display = (matchYear && matchText) ? '' : 'none';
+      });
+    }
+    yearSel.addEventListener('change', filter);
+    q.addEventListener('input', filter);
+  </script>
 </body>
-
 </html>
