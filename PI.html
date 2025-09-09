@@ -1,186 +1,294 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
 <head>
-    <!-- Meta and Title -->
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Tomer Galanti</title>
-    <meta name="author" content="Tomer Galanti">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+    Tomer Galanti — Academic / Lab Website (single-file section: About the PI)
+    • Uses same structure, styles, and scripts as the provided template
+    • Accessible, responsive, with dark mode + mobile nav
+  -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About the PI | Tomer Galanti</title>
+  <meta name="description" content="About Prof. Tomer Galanti. Assistant Professor at Texas A&M CSE. Research in theory & algorithms of deep learning and large language models." />
+  <link rel="canonical" href="https://example.edu/about" />
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+  <!-- Social cards -->
+  <meta property="og:title" content="About the PI | Tomer Galanti" />
+  <meta property="og:description" content="Assistant Professor at Texas A&M CSE. Research in theory & algorithms of deep learning and LLMs." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/images/social-card.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164383547-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-W36V9ZRFP4');
-    </script>
+  <!-- Icons & fonts (system fonts + Academicons for Scholar/ORCID) -->
+  <link rel="icon" href="/images/favicon.ico" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css" />
 
-    <!-- Image Script -->
-    <script type="text/javascript">
-        var imageURLs = ["/images/Tomer Galanti - talk.jpg"];
-        function getImageTag() {
-            var randomIndex = Math.floor(Math.random() * imageURLs.length);
-            return `<a href="${imageURLs[randomIndex]}"><img src="${imageURLs[randomIndex]}" alt="profile photo", class="rounded-image"></a>`;
-        }
-    </script>
+  <style>
+    /* ===== Design tokens (same as template) ===== */
+    :root { 
+      --bg: #fffdf9; /* warm off-white */
+      --text: #1f2937; /* slate-800 */
+      --muted: #6b5c55; /* warm gray */
+      --border: #eadfd5; /* warm light border */
+      --card: #fbf7f2; /* warm card */
+      --accent: #500000; /* TAMU maroon */
+      --accent-2: #7a1c1c;
+      --link: var(--accent);
+      --radius: 14px;
+      --shadow: 0 10px 20px rgba(0,0,0,.06), 0 2px 6px rgba(0,0,0,.04);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b0f14; /* near-black blue */
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --border: #1f2937;
+        --card: #0f141b;
+        --link: #f2b6b6; /* soft maroon tint */
+        --shadow: none;
+      }
+    }
+    [data-theme="light"] {
+      --bg: #fffdf9; --text:#1f2937; --muted:#6b5c55; --border:#eadfd5; --card:#fbf7f2; --link:var(--accent);
+    }
+    [data-theme="dark"] {
+      --bg:#0b0f14; --text:#e5e7eb; --muted:#9ca3af; --border:#1f2937; --card:#0f141b; --link:#f2b6b6;
+    }
 
-    <!-- Styles -->
-    <style>
-        body {
-            background-color: #f2e8da; /* soft light brown */
-        }
-        .content-wrapper {
-            width: 50%;
-            margin: 0 auto;
-        }
-        .top-buttons {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            display: grid;
-            grid-template-columns: repeat(1, auto);
-            gap: 10px;
-        }
-        .rounded-image {
-            border-radius: 12px;
-            object-fit: cover;
-            margin-bottom: 5px;
-            border: 2px solid #ccc;
-        }
-        .top-buttons a {
-            width: 80px;
-            height: 30px;
-            display: inline-block;
-            background-color: white;
-            color: navy;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-align: center;
-            text-decoration: none;
-            font-size: 12px;
-            font-family: Arial, sans-serif;
-            line-height: 30px;
-            margin-left: 10px;
-        }
-        .about-section {
-            display: flex;
-            align-items: flex-start;
-            margin-top: 20px;
-        }
-        .text-content {
-            flex: 1;
-        }
-        .image-content {
-            margin-left: 20px;
-            margin-top: 20px; /* Adjust this value to move the image lower */
-        }
-        .image-content img {
-            max-width: 200px;
-            height: auto;
-        }
-        .contact-links {
-            margin-top: 20px;
-        }
-        .contact-links a {
-            display: inline-block;
-            margin-right: 15px;
-            font-size: 14px;
-            text-decoration: none;
-            color: navy;
-        }
-        .contact-links a:hover {
-            text-decoration: underline;
-        }
-        h2 {
-            font-size: 24px;
-            margin-top: 30px;
-        }
-        p {
-            font-size: 14px;
-            line-height: 1.2;
-        }
-        ul {
-            margin-left: 0;
-            padding-left: 0;
-            list-style-position: inside; /* Ensures bullets align with text */
-        } ul 
-        li {
-            margin-bottom: 10px;
-        }
-        /* Optional: Adjust the maximum width for better responsiveness */
-        @media (max-width: 800px) {
-            .content-wrapper {
-                width: 90%;
-            }
-            .about-section {
-                flex-direction: column;
-                align-items: center;
-            }
-            .image-content {
-                margin-left: 0;
-                margin-top: 20px;
-            }
-        }
-    </style>
+    /* ===== Base (same as template) ===== */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font: 16px/1.6 ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; height: auto; border-radius: calc(var(--radius) - 4px); }
+    code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .container { width: min(1100px, 96%); margin-inline: auto; padding-inline: 1rem; }
+    .prose p { margin: .5rem 0 1rem; }
+    .muted { color: var(--muted); }
+    .card { background: transparent; border: 0; border-left: 3px solid var(--border); border-radius: 0; box-shadow: none; padding-left: 1rem; }
+    .btn { display:inline-flex; gap:.5rem; align-items:center; border-radius: 6px; padding:.5rem .9rem; border:1px solid var(--border); background: #fff; color:#111; font-weight:600; }
+    .btn:hover { text-decoration:none; border-color: var(--accent); }
+    .btn.primary { background: var(--accent); color:#fff; border-color: var(--accent); }
+    .btn.primary:hover { background: var(--accent-2); }
+    .btn.ghost { background: transparent; color: var(--text); }
+    .tag { display:inline-block; padding:.2rem .55rem; border:1px solid var(--border); border-radius:999px; font-size:.75rem; color: var(--muted); }
+
+    /* ===== Skip link ===== */
+    .skip-link { position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+    .skip-link:focus { left: 12px; top: 12px; width:auto; height:auto; padding:.5rem .75rem; z-index:9999; background:#fff; border-radius:8px; }
+
+    /* ===== Header / Nav (same as template) ===== */
+    header {
+      position: sticky; top: 0; z-index: 50; backdrop-filter: blur(6px);
+      background: color-mix(in srgb, var(--bg) 80%, transparent);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav { display:flex; align-items:center; justify-content:space-between; padding:.6rem 0; }
+    .brand { display:flex; align-items:center; gap:.75rem; font-weight:800; letter-spacing:.2px; }
+    .brand .logo { width:40px; height:40px; border-radius:50%; border:1px solid var(--border); object-fit:cover; }
+    .menu { display:flex; gap: .8rem; align-items:center; }
+    .menu a { padding:.4rem .6rem; border-radius:8px; }
+    .menu a.active { background: var(--card); border:1px solid var(--border); }
+    .menu-icons { display:flex; gap:.4rem; align-items:center; }
+    .icon-btn { width:36px; height:36px; display:inline-flex; align-items:center; justify-content:center; border-radius:999px; border:1px solid var(--border); background: var(--card); color: var(--text); }
+    .icon-btn:hover { border-color: var(--accent); }
+    .icon-btn svg, .icon-btn i { width:18px; height:18px; line-height:1; font-size:18px; }
+
+    /* Mobile menu */
+    .hamburger { display:none; background:none; border:0; padding:.5rem; border-radius:8px; }
+    .hamburger:focus { outline: 2px solid var(--accent); }
+    @media (max-width: 900px) {
+      .menu { display:none; position:absolute; left:0; right:0; top:64px; background: var(--bg); padding: .6rem 1rem; border-bottom:1px solid var(--border); }
+      .menu.open { display:flex; flex-wrap:wrap; }
+      .hamburger { display:inline-flex; }
+    }
+
+    /* ===== Hero ===== */
+    .hero { display:grid; grid-template-columns: 1.2fr .8fr; gap: 2rem; align-items:center; padding: 2.25rem 0 1rem; }
+    .hero h1 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin: 0 0 .5rem; letter-spacing:.2px; font-family: 'Source Serif 4', Georgia, serif; font-weight:700; }
+    .hero .subtitle { font-size: clamp(1rem, 2vw, 1.15rem); margin:.3rem 0 1rem; }
+    .hero .cta { display:flex; gap:.6rem; flex-wrap:wrap; margin-top: 1rem; }
+    .hero figure { margin:0; }
+    .hero .portrait { width: 220px; height: 220px; border-radius: 20px; object-fit: cover; border:1px solid var(--border); }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; text-align:center; }
+      .hero .cta { justify-content:center; }
+      .hero .portrait { width: 180px; height: 180px; margin-inline:auto; }
+    }
+
+    /* ===== Sections ===== */
+    section { scroll-margin-top: 84px; padding: 2rem 0; }
+    section h2 { font-size: clamp(1.25rem, 2.4vw, 1.6rem); margin:0 0 1rem; letter-spacing:.2px; font-family:'Source Serif 4', Georgia, serif; font-weight:700; }
+
+    /* People grid (kept for consistency if needed later) */
+    .people { list-style:none; display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; padding:0; margin:0; }
+    .people li { text-align:center; }
+    .avatar { width:120px; height:120px; border-radius:50%; object-fit:cover; border:1px solid var(--border); background: var(--card); display:block; margin: 0 auto .4rem; }
+    .name { font-weight:600; }
+
+    /* Footer */
+    footer { border-top:1px solid var(--border); padding: 1rem 0 2rem; color: var(--muted); font-size:.95rem; }
+
+    /* Back-to-top */
+    .to-top { position: fixed; right: 16px; bottom: 16px; display:none; }
+    .to-top.show { display:inline-flex; }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <!-- Navigation Buttons -->
-    <div class="top-buttons">
-        <a href="index.html">Home</a>
-        <a href="PI.html">About the PI</a>
-        <a href="publications.html">Publications</a>
-        <a href="preprints.html">Preprints</a>
-        <a href="activities.html">Activities</a>
-        <a href="teaching.html">Teaching</a>
-        <a href="group.html">Group</a>
-        <a href="apply.html">Apply</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <div class="brand">
+        <img class="logo" src="/images/logo.png" alt="Lab emblem" loading="eager" decoding="async" />
+        <span>Deep Learning Fundamentals Lab</span>
+      </div>
+
+      <button class="hamburger" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 6h16v2H4zM4 11h16v2H4zM4 16h16v2H4z"/></svg>
+      </button>
+
+      <nav class="menu" id="menu">
+        <a href="#about" class="active">About</a>
+        <a href="#group">Group</a>
+        <a href="#teaching">Teaching</a>
+        <a href="/publications.html">Publications</a>
+      </nav>
+
+      <div class="menu-icons">
+        <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.64 13a9 9 0 11-10.63-10.6A9 9 0 0021.64 13z"/></svg>
+        </button>
+        <a class="icon-btn" href="https://github.com/TomerGalanti" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.2-3.37-1.2-.46-1.17-1.12-1.48-1.12-1.48-.92-.63.07-.62.07-.62 1.02.07 1.55 1.05 1.55 1.05 .9 1.54 2.36 1.1 2.94.84.09-.66.35-1.1.64-1.35-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.7.12 2.5.34 1.9-1.3 2.74-1.02 2.74-1.02 .55 1.4.2 2.44.1 2.7 .64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.3.69.9.69 1.82v2.7c0 .26.18.57.69.47A10 10 0 0012 2z"/></svg>
+        </a>
+        <a class="icon-btn" href="https://scholar.google.com/citations?user=ut_ISVIAAAAJ" aria-label="Google Scholar">
+          <i class="ai ai-google-scholar" aria-hidden="true" style="font-size:18px;line-height:1;"></i>
+        </a>
+        <a class="icon-btn" href="https://www.linkedin.com/in/tomer-galanti-5880b1104/" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4zM8.5 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2C20.6 8 22 10.2 22 13.7V24h-4v-9c0-2.1-.75-3.5-2.62-3.5-1.43 0-2.28.96-2.66 1.88-.14.34-.18.82-.18 1.3V24h-4V8z"/></svg>
+        </a>
+        <a class="icon-btn" href="https://x.com/GalantiTomer" aria-label="X (Twitter)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2H21l-6.68 7.64L22 22h-6.59l-5.15-6.73L3.4 22H1l7.16-8.19L2 2h6.7l4.65 6.16L18.24 2zM8.1 3.67H4.33l11.46 15.33h3.77L8.1 3.67z"/></svg>
+        </a>
+      </div>
     </div>
+  </header>
 
-    <!-- Main Content Wrapper -->
-    <div class="content-wrapper">
-        <!-- Name -->
-
-        <h2>About the PI</h2>
-
-        <!-- About Section with Image -->
-        <div class="about-section">
-            <!-- Text Content -->
-            <div class="text-content">
-               
-                <p>
-                    
-                    Tomer Galanti is an Assistant Professor in the Department of Computer Science and Engineering at <a href="https://engineering.tamu.edu/cse/index.html">Texas A&M University</a>. His research focuses on the theoretical and algorithmic foundations of deep learning and large language models. Combining theory and experimentation, his work addresses core challenges in deep learning efficiency — including reducing data requirements, designing compressible networks, enabling model adaptation to new tasks, accelerating inference, and improving training stability. </b>
-
-                    Prior to joining Texas A&M, he was a postdoctoral associate at MIT’s <a href="https://cbmm.mit.edu" class="links">Center for Brains, Minds & Machines</a>, where he worked with <a href="https://scholar.google.com/citations?user=WgAGy7wAAAAJ&hl=en" class="links">Tomaso Poggio</a>. He received his Ph.D. in Computer Science from <a href="https://en-exact-sciences.tau.ac.il/computer" class="links">Tel Aviv University</a>, advised by <a href="https://scholar.google.co.il/citations?user=UbFrXTsAAAAJ&hl=en" class="links">Lior Wolf</a>. In 2021, he also interned as a Research Scientist Intern at <a href="https://www.deepmind.com/" class="links">Google DeepMind</a>, collaborating with <a href="https://scholar.google.com/citations?user=822ujacAAAAJ&hl=en" class="links">Andras Gyorgy</a> and <a href="https://scholar.google.com/citations?user=7hmCntEAAAAJ&hl=en" class="links">Marcus Hutter</a>.
-                    
-                </p>
-                <!-- Contact Links -->
-                <div class="contact-links">
-                    Email:&nbsp;&nbsp;<a href="mailto:galanti@tamu.edu">galanti at tamu dot edu</a><br>
-                    Office: 325 PETR, TAMU<br>
-                    Social media: &nbsp;&nbsp;<a href="https://scholar.google.com/citations?user=ut_ISVIAAAAJ&hl=eng"><span class="ai ai-google-scholar ai"></span></a>&nbsp;
-                    <a href="https://github.com/TomerGalanti"><span class="social-icon fa fa-github"></span></a>&nbsp;
-                    <a href="https://www.linkedin.com/in/tomer-galanti-5880b1104/"><span class="social-icon fa fa-linkedin"></span></a>&nbsp;
-                    <a href="https://x.com/GalantiTomer"><span class="social-icon fa fa-twitter"></span></a>
-                </div>
-            </div>
-
-            <!-- Image Content -->
-            <div class="image-content">
-                <script type="text/javascript">
-                    document.write(getImageTag());
-                </script>
-            </div>
+  <main id="main" class="container">
+    <!-- ===== Hero ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <h1 id="hero-title">Tomer Galanti</h1>
+        <p class="subtitle">Assistant Professor, Texas A&amp;M CSE · Deep Learning &amp; LLMs (theory &amp; algorithms)</p>
+        <div class="cta">
+          <a class="btn primary" href="mailto:galanti@tamu.edu">Email</a>
+          <a class="btn" href="https://scholar.google.com/citations?user=ut_ISVIAAAAJ">Google Scholar</a>
+          <a class="btn" href="https://github.com/TomerGalanti">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/tomer-galanti-5880b1104/">LinkedIn</a>
+          <a class="btn" href="https://x.com/GalantiTomer">X</a>
         </div>
+      </div>
+      <figure>
+        <img class="portrait" src="/images/Tomer%20Galanti%20-%20talk.jpg" alt="Tomer Galanti" loading="eager" decoding="async" />
+      </figure>
+    </section>
 
+    <!-- ===== About (PI bio) ===== -->
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About the PI</h2>
+      <div class="card feature">
+        <div class="prose">
+          <p>
+            Tomer Galanti is an Assistant Professor in the Department of Computer Science and Engineering at
+            <a href="https://engineering.tamu.edu/cse/index.html">Texas A&amp;M University</a>. His research focuses on the theoretical and algorithmic foundations of deep learning and large language models. Combining theory and experimentation, his work addresses core challenges in deep learning efficiency — including reducing data requirements, designing compressible networks, enabling model adaptation to new tasks, accelerating inference, and improving training stability.
+          </p>
+          <p>
+            Prior to joining Texas A&amp;M, he was a postdoctoral associate at MIT’s
+            <a href="https://cbmm.mit.edu">Center for Brains, Minds &amp; Machines</a>, where he worked with
+            <a href="https://scholar.google.com/citations?user=WgAGy7wAAAAJ&hl=en">Tomaso Poggio</a>. He received his Ph.D. in Computer Science from
+            <a href="https://en-exact-sciences.tau.ac.il/computer">Tel Aviv University</a>, advised by
+            <a href="https://scholar.google.co.il/citations?user=UbFrXTsAAAAJ&hl=en">Lior Wolf</a>. In 2021, he interned as a Research Scientist at
+            <a href="https://www.deepmind.com/">Google DeepMind</a>, collaborating with
+            <a href="https://scholar.google.com/citations?user=822ujacAAAAJ&hl=en">Andras Gyorgy</a> and
+            <a href="https://scholar.google.com/citations?user=7hmCntEAAAAJ&hl=en">Marcus Hutter</a>.
+          </p>
+
+          <p>
+            <strong>Contact:</strong> <a href="mailto:galanti@tamu.edu">galanti@tamu.edu</a>
+            &nbsp;·&nbsp; <strong>Office:</strong> 325 PETR, TAMU
+            <br/>
+            <span class="muted">Texas A&amp;M University · Department of Computer Science &amp; Engineering</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- (Optional) Empty placeholders to keep nav highlighting consistent with template -->
+    <section id="group" aria-labelledby="group-title" hidden>
+      <h2 id="group-title">Group</h2>
+    </section>
+
+    <section id="teaching" aria-labelledby="teach-title" hidden>
+      <h2 id="teach-title">Teaching</h2>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© 2025 Tomer Galanti</div>
     </div>
+  </footer>
+
+  <a href="#main" class="btn to-top" id="toTop" aria-label="Back to top">↑ Top</a>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const menu = document.getElementById('menu');
+    menuBtn?.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+    });
+
+    // Theme toggle with persistence
+    const themeBtn = document.getElementById('themeBtn');
+    function applyTheme(t) { document.documentElement.setAttribute('data-theme', t); localStorage.setItem('theme', t); }
+    const saved = localStorage.getItem('theme');
+    if (saved) applyTheme(saved);
+    themeBtn?.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // Back-to-top visibility
+    const toTop = document.getElementById('toTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 600) toTop.classList.add('show'); else toTop.classList.remove('show');
+    });
+
+    // Active nav highlighting on scroll (same pattern as template)
+    const sections = ['about','group','teaching'];
+    const links = Array.from(document.querySelectorAll('.menu a'));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const id = entry.target.id;
+        const link = links.find(a => a.getAttribute('href') === '#' + id);
+        if (!link) return;
+        if (entry.isIntersecting) {
+          links.forEach(a => a.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+    sections.forEach(id => { const el = document.getElementById(id); if (el) observer.observe(el); });
+  </script>
 </body>
 </html>
