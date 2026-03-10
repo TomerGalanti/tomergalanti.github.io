@@ -319,11 +319,8 @@
     font-size: .95rem;
   }
 
-  .pi-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: max-content;
-    margin-top: 1rem;
+  .pi-grid .person {
+    grid-column: 1;
   }
 
   .alumni-grid {
@@ -420,7 +417,7 @@
   <main id="main" class="container">
     <section id="pi" aria-labelledby="pi-title">
       <h2 id="pi-title">Principal investigator</h2>
-      <div class="pi-grid">
+      <div class="people-grid pi-grid">
         <article class="person">
           <img class="avatar" src="/images/Tomer Galanti cropped 2.png" alt="Tomer Galanti" width="138" height="138" loading="lazy" decoding="async" />
           <h3><a href="/PI.html">Tomer Galanti</a></h3>
