@@ -28,12 +28,12 @@
   <style>
     /* ===== Design tokens ===== */
     :root { 
-      --bg: #fffdf9; /* warm off-white */
-      --text: #1f2937; /* slate-800 */
-      --muted: #6b5c55; /* warm gray */
-      --border: #eadfd5; /* warm light border */
-      --card: #fbf7f2; /* warm card */
-      --accent: #500000; /* TAMU maroon */
+      --bg: #fffdf9;
+      --text: #1f2937;
+      --muted: #6b5c55;
+      --border: #eadfd5;
+      --card: #fbf7f2;
+      --accent: #500000;
       --accent-2: #7a1c1c;
       --link: var(--accent);
       --radius: 14px;
@@ -41,12 +41,12 @@
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #0b0f14; /* near-black blue */
+        --bg: #0b0f14;
         --text: #e5e7eb;
         --muted: #9ca3af;
         --border: #1f2937;
         --card: #0f141b;
-        --link: #f2b6b6; /* soft maroon tint */
+        --link: #f2b6b6;
         --shadow: none;
       }
     }
@@ -150,16 +150,9 @@
     /* Back-to-top */
     .to-top { position: fixed; right: 16px; bottom: 16px; display:none; }
     .to-top.show { display:inline-flex; }
-
-    /* People grid */
-    .people { list-style:none; display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; padding:0; margin:0; }
-    .people li { text-align:center; }
-    .avatar { width:120px; height:120px; border-radius:50%; object-fit:cover; border:1px solid var(--border); background: var(--card); display:block; margin: 0 auto .4rem; }
-    .name { font-weight:600; }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet" />
-
-  </head>
+</head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -170,44 +163,37 @@
       <span>Deep Learning Fundamentals Lab</span>
     </div>
 
-    <!-- Mobile menu toggle -->
     <button class="hamburger" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M4 6h16v2H4zM4 11h16v2H4zM4 16h16v2H4z"/>
       </svg>
     </button>
 
-    <!-- Navigation links -->
     <nav class="menu" id="menu">
       <a href="#about">About</a>
-      <a href="#group">Group</a>
+      <a href="/group.html">Group</a>
       <a href="#teaching">Teaching</a>
-      <a href="/publications.html" class="active">Publications</a>
-      <a href="/PI.html" class="active">About the PI</a>
+      <a href="/publications.html">Publications</a>
+      <a href="/PI.html">About the PI</a>
     </nav>
 
-    <!-- Action icons -->
     <div class="menu-icons">
-      <!-- Theme toggle -->
       <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M21.64 13a9 9 0 11-10.63-10.6A9 9 0 0021.64 13z"/>
         </svg>
       </button>
 
-      <!-- GitHub -->
       <a class="icon-btn" href="https://github.com/DLFundamentals" aria-label="GitHub">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.2-3.37-1.2-.46-1.17-1.12-1.48-1.12-1.48-.92-.63.07-.62.07-.62 1.02.07 1.55 1.05 1.55 1.05.9 1.54 2.36 1.1 2.94.84.09-.66.35-1.1.64-1.35-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.7.12 2.5.34 1.9-1.3 2.74-1.02 2.74-1.02.55 1.4.2 2.44.1 2.7.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.3.69.9.69 1.82v2.7c0 .26.18.57.69.47A10 10 0 0012 2z"/>
         </svg>
       </a>
 
-      <!-- Google Scholar -->
       <a class="icon-btn" href="https://scholar.google.com/citations?user=ut_ISVIAAAAJ" aria-label="Google Scholar">
         <img src="/images/google_scholar.png" alt="Google Scholar" width="18" height="18" loading="lazy" decoding="async" />
       </a>
 
-      <!-- LinkedIn -->
       <a class="icon-btn" href="https://www.linkedin.com/in/tomer-galanti" aria-label="LinkedIn">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4zM8.5 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2C20.6 8 22 10.2 22 13.7V24h-4v-9c0-2.1-.75-3.5-2.62-3.5-1.43 0-2.28.96-2.66 1.88-.14.34-.18.82-.18 1.3V24h-4V8z"/>
@@ -217,157 +203,67 @@
   </div>
 </header>
 
-
   <main id="main" class="container">
-    <!-- ===== Hero ===== -->
-    
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About &amp; Research</h2>
+      <div class="card feature">
+        <div class="prose">
+          <p>We are the <strong>Deep Learning Fundamentals</strong> group at Texas A&amp;M, led by Prof. Tomer Galanti. We connect rigorous theory with practical algorithms to understand and improve modern deep learning and large language models.</p>
+          
+          <details>
+            <summary><strong>Theory of LLM reasoning:</strong> <em>Which architectures, objectives, and training procedures reliably improve multi-step reasoning in LLMs?</em></summary>
+            <ul>
+              <li>LLM-PV 
+                [<a href="http://arxiv.org/abs/2510.14331">1</a>]
+              </li>
+              <li>Auto-regressive decision trees 
+                [<a href="https://openreview.net/forum?id=nge5deRsEH">1</a>]
+              </li>
+              <li>DisCO: constrained optimization for reasoning
+                [<a href="https://openreview.net/forum?id=zzUXS4f91r">1</a>]
+              </li>
+              <li>Rare-token depreciation bias 
+                [<a href="https://arxiv.org/abs/2410.11985">1</a>]
+              </li>
+            </ul>
+          </details>
 
-    <!-- ===== About ===== -->
-<section id="about" aria-labelledby="about-title">
-  <h2 id="about-title">About &amp; Research</h2>
-  <div class="card feature">
-    <div class="prose">
-      <p>We are the <strong>Deep Learning Fundamentals</strong> group at Texas A&amp;M, led by Prof. Tomer Galanti. We connect rigorous theory with practical algorithms to understand and improve modern deep learning and large language models.</p>
-      
-      <details>
-        <summary><strong>Theory of LLM reasoning:</strong> <em>Which architectures, objectives, and training procedures reliably improve multi-step reasoning in LLMs?</em></summary>
-        <ul>
-          <li>LLM-ERM 
-            [<a href="http://arxiv.org/abs/2510.14331">1</a>]
-          </li>
-          <li>Auto-regressive decision trees 
-            [<a href="https://openreview.net/forum?id=nge5deRsEH">1</a>]
-          </li>
-          <li>DisCO: constrained optimization for reasoning
-            [<a href="https://arxiv.org/abs/2505.12366">1</a>]
-          </li>
-          <li>Rare-token depreciation bias 
-            [<a href="https://arxiv.org/abs/2410.11985">1</a>]
-          </li>
-        </ul>
-      </details>
+          <details>
+            <summary><strong>Deep representation learning:</strong> <em>What representations do neural networks actually learn, and which ones support strong generalization?</em></summary>
+            <ul>
+              <li>
+                Understanding pre-training: Supervised
+                [<a href="https://openreview.net/forum?id=VrK7pKwOhT_">1</a>, 
+                 <a href="https://openreview.net/forum?id=SwIp410B6aQ">2</a>, 
+                 <a href="https://arxiv.org/abs/2212.12532">3</a>], 
+                and self-supervised 
+                [<a href="https://openreview.net/forum?id=NsVEjx6YPd">1</a>, 
+                 <a href="https://openreview.net/forum?id=mf4V1SK0np">2</a>,
+                 <a href="https://openreview.net/forum?id=JkitQScjuL">3</a>,
+                 <a href="https://arxiv.org/abs/2603.03530">4</a>]
+              </li>
+              <li>
+                Representation properties: Low-rank bias 
+                [<a href="https://openreview.net/forum?id=0LzE9AROwD">1</a>], 
+                CRH [<a href="https://openreview.net/forum?id=Njx1NjHIx4">1</a>], and 
+                intermediate neural collapse 
+                [<a href="https://openreview.net/forum?id=162TqkUNPO">1</a>, 
+                 <a href="https://proceedings.mlr.press/v202/rangamani23a.html">2</a>]
+              </li>
+            </ul>
+          </details>
 
-      <details>
-        <summary><strong>Deep representation learning:</strong> <em>What representations do neural networks actually learn, and which ones support strong generalization?</em></summary>
-        <ul>
-          <li>
-            Understanding pre-training: Supervised
-            [<a href="https://openreview.net/pdf?id=VrK7pKwOhT_">1</a>, 
-             <a href="https://openreview.net/forum?id=SwIp410B6aQ">2</a>, 
-             <a href="https://arxiv.org/abs/2212.12532">3</a>], 
-            and self-supervised 
-            [<a href="https://openreview.net/forum?id=NsVEjx6YPd&noteId=uxqa0UxtZk">1</a>, 
-             <a href="https://arxiv.org/abs/2506.04411">2</a>,
-             <a href="https://arxiv.org/abs/2510.08852">3</a>]
-             
-          </li>
-          <li>
-            Representation properties: Low-rank bias 
-            [<a href="https://openreview.net/forum?id=0LzE9AROwD#discussion">1</a>], 
-            CRH [<a href="https://openreview.net/forum?id=Njx1NjHIx4&noteId=MYV5SMYpzo">1</a>], and 
-            intermediate neural collapse 
-            [<a href="https://openreview.net/forum?id=162TqkUNPO">1</a>, 
-             <a href="https://proceedings.mlr.press/v202/rangamani23a.html">2</a>]
-          </li>
-        </ul>
-      </details>
+          <p>See the full list of <a href="/publications.html">publications</a>.</p>
+          <p>
+            <strong>Contact:</strong> <a href="mailto:galanti@tamu.edu">galanti@tamu.edu</a>
+            &nbsp;·&nbsp; <strong>GitHub:</strong> <a href="https://github.com/DLFundamentals">DLFundamentals</a>
+            &nbsp;·&nbsp; <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=ut_ISVIAAAAJ">Profile</a><br/>
+            <span class="muted">Texas A&amp;M University · Department of Computer Science &amp; Engineering</span>
+          </p>
+        </div>
+      </div>
+    </section>
 
-      <!-- <details>
-        <summary><strong>Differentiable contract design:</strong> <em>How can we apply modern optimization techniques to tackle fundamental challenges in contract and incentive design when closed-form solutions are unavailable?</em></summary>
-        <ul>
-          <li>Gradient-based optimization for contract design [<a href="">1</a>]</li>
-        </ul>
-      </details> -->
-
-      <p>See the full list of <a href="/publications.html">publications</a>.</p>
-      <p>
-        <strong>Contact:</strong> <a href="mailto:galanti@tamu.edu">galanti@tamu.edu</a>
-        &nbsp;·&nbsp; <strong>GitHub:</strong> <a href="https://github.com/DLFundamentals">DLFundamentals</a>
-        &nbsp;·&nbsp; <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=ut_ISVIAAAAJ">Profile</a><br/>
-        <span class="muted">Texas A&amp;M University · Department of Computer Science &amp; Engineering</span>
-      </p>
-    </div>
-  </div>
-</section>
-
-
-<!-- ===== Group ===== -->
-<section id="group" aria-labelledby="group-title">
-  <h2 id="group-title">Group</h2>
-<ul class="people">
-  <li>
-    <img class="avatar" src="/student_images/achleshwar.jpg" alt="Student 1" width="120" height="120"/>
-    <div class="name">
-      <a href="https://achleshwar.github.io">Achleshwar Luthra</a>
-      <div class="role">Ph.D. student</div>
-    </div>
-  </li>
-  <li>
-    <img class="avatar" src="/student_images/deepak.jpg" alt="Student 2" width="120" height="120"/>
-    <div class="name">
-      <a href="https://www.linkedin.com/in/deepaksuresh15/">Deepak Suresh</a>
-      <div class="role">Master's student</div>
-    </div>
-  </li>
-  <li>
-    <img class="avatar" src="/student_images/shivam.jpg" alt="Student 3" width="120" height="120"/>
-    <div class="name">
-      <a href="https://www.linkedin.com/in/sandsinghal/">Shivam Singhal</a>
-      <div class="role">Master's student</div>
-    </div>
-  </li>
-  <li>
-    <img class="avatar" src="/student_images/rahul.jpg" alt="Student 4" width="120" height="120"/>
-    <div class="name">
-      <a href="https://www.linkedin.com/in/rahul-pillalamarri/">Rahul Pillalamari</a>
-      <div class="role">Master's student</div>
-    </div>
-  </li>
-  <li>
-    <img class="avatar" src="/student_images/ajay.jpg" alt="Student 5" width="120" height="120"/>
-    <div class="name">
-      <a href="https://www.linkedin.com/in/ajayjagan2511/">Ajay Jagannath</a>
-      <div class="role">Master's student</div>
-    </div>
-  </li>
-  <li>
-    <img class="avatar" src="/student_images/yash.jpg" alt="Student 8" width="120" height="120"/>
-    <div class="name">
-      <a href="https://www.linkedin.com/in/yash-salunkhe-47a323226/">Yash Salunkhe</a>
-      <div class="role">Master's student</div>
-    </div>
-  </li>
-  <li>
-    <img class="avatar" src="/student_images/aarya.jpg" alt="Student 6" width="120" height="120"/>
-    <div class="name">
-      <a href="https://www.linkedin.com/in/aarya-bookseller-b6a8531b7/">Aarya Bookseller</a>
-      <div class="role">Undergraduate student</div>
-    </div>
-  </li>
-  <li>
-    <img class="avatar" src="/student_images/priya.jpg" alt="Student 7" width="120" height="120"/>
-    <div class="name">
-      <a href="https://www.linkedin.com/in/priyadarsi-mishra/">Priyadarsi Mishra</a>
-      <div class="role">Undergraduate student</div>
-    </div>
-  </li>
-</ul>
-
-
-
-  <!-- Join the Lab as subsection -->
-  <h3 id="apply-title">Join the Lab</h3>
-  <div class="card feature">
-    <p><strong>PhD applicants</strong>: Apply through the <a href="https://engineering.tamu.edu/cse/academics/degrees/graduate/phd.html">TAMU CSE PhD program</a>. In your statement, describe your fit with our research areas and mention Prof. Galanti as a potential advisor.</p>
-    <p><strong>Master's &amp; undergraduates</strong>: We welcome motivated undergraduate and Master's students to volunteer for research. Please email a short CV, transcripts, and a paragraph about your interests and skills.</p>
-  </div>
-</section>
-
-
-    <!-- ===== Contact / Links ===== -->
-    
-
-    <!-- ===== Teaching (last) ===== -->
     <section id="teaching" aria-labelledby="teach-title">
       <h2 id="teach-title">Teaching</h2>
       <div class="card feature">
@@ -405,7 +301,6 @@
   <a href="#main" class="btn to-top" id="toTop" aria-label="Back to top">↑ Top</a>
 
   <script>
-    // Mobile menu toggle
     const menuBtn = document.getElementById('menuBtn');
     const menu = document.getElementById('menu');
     menuBtn?.addEventListener('click', () => {
@@ -413,10 +308,11 @@
       menuBtn.setAttribute('aria-expanded', String(open));
     });
 
-    // Theme toggle with persistence
     const themeBtn = document.getElementById('themeBtn');
-    const root = document.documentElement;
-    function applyTheme(t) { document.documentElement.setAttribute('data-theme', t); localStorage.setItem('theme', t); }
+    function applyTheme(t) {
+      document.documentElement.setAttribute('data-theme', t);
+      localStorage.setItem('theme', t);
+    }
     const saved = localStorage.getItem('theme');
     if (saved) applyTheme(saved);
     themeBtn?.addEventListener('click', () => {
@@ -424,16 +320,13 @@
       applyTheme(current === 'dark' ? 'light' : 'dark');
     });
 
-    // Back-to-top visibility
     const toTop = document.getElementById('toTop');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 600) toTop.classList.add('show'); else toTop.classList.remove('show');
+      if (window.scrollY > 600) toTop.classList.add('show');
+      else toTop.classList.remove('show');
     });
 
-    // (Publications list moved to a separate page)
-
-    // Active nav highlighting on scroll
-    const sections = ['about','group','apply','teaching'];
+    const sections = ['about', 'teaching'];
     const links = Array.from(document.querySelectorAll('.menu a'));
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -441,14 +334,18 @@
         const link = links.find(a => a.getAttribute('href') === '#' + id);
         if (!link) return;
         if (entry.isIntersecting) {
-          links.forEach(a => a.classList.remove('active'));
+          links.forEach(a => {
+            if (a.getAttribute('href')?.startsWith('#')) a.classList.remove('active');
+          });
           link.classList.add('active');
         }
       });
     }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
-    sections.forEach(id => { const el = document.getElementById(id); if (el) observer.observe(el); });
 
-    
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
   </script>
 </body>
 </html>
