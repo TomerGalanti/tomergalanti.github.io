@@ -316,6 +316,12 @@
       max-width: 220px;
     }
 
+    .alumni-grid {
+      grid-template-columns: repeat(2, 170px);
+      justify-content: center;
+      max-width: 420px;
+    }
+
     footer {
       border-top: 1px solid var(--border);
       padding: 1rem 0 2rem;
@@ -335,6 +341,18 @@
     @media (max-width: 900px) {
       .people-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+
+      .alumni-grid {
+        grid-template-columns: repeat(2, 150px);
+        max-width: 360px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .alumni-grid {
+        grid-template-columns: 1fr;
+        max-width: 170px;
       }
     }
   </style>
@@ -402,7 +420,7 @@
 
     <section id="current-members" aria-labelledby="current-title">
       <h2 id="current-title">Current members</h2>
-      
+
       <div class="people-grid">
         <article class="person">
           <img class="avatar" src="/student_images/achleshwar.jpg" alt="Achleshwar Luthra" width="122" height="122" loading="lazy" decoding="async" />
@@ -444,8 +462,8 @@
 
     <section id="alumni" aria-labelledby="alumni-title">
       <h2 id="alumni-title">Alumni</h2>
-      
-      <div class="people-grid">
+
+      <div class="people-grid alumni-grid">
         <article class="person">
           <img class="avatar" src="/student_images/shivam.jpg" alt="Shivam Singhal" width="122" height="122" loading="lazy" decoding="async" />
           <h3><a href="https://www.linkedin.com/in/sandsinghal/">Shivam Singhal</a></h3>
