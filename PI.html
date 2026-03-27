@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About the PI | Deep Learning Fundamentals Lab</title>
+  <meta name="description" content="About Prof. Tomer Galanti. Assistant Professor at Texas A&M CSE. Research in theory & algorithms of deep learning and LLMs." />
+  <link rel="icon" href="/images/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FAFAF7; --bg-elevated: #FFFFFF; --text: #1C1917;
+      --text-secondary: #78716C; --text-tertiary: #A8A29E;
+      --border: #E7E5E4; --accent: #D85A30; --accent-hover: #C04E28;
+      --accent-subtle: rgba(216,90,48,.07); --link: #D85A30;
+      --serif: 'Newsreader', Georgia, serif;
+      --sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+      --header-h: 64px;
+    }
+    [data-theme="dark"] {
+      --bg: #0C0A09; --bg-elevated: #1C1917; --text: #E7E5E4;
+      --text-secondary: #A8A29E; --text-tertiary: #78716C;
+      --border: #292524; --accent-subtle: rgba(216,90,48,.1); --link: #E8693F;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0C0A09; --bg-elevated: #1C1917; --text: #E7E5E4;
+        --text-secondary: #A8A29E; --text-tertiary: #78716C;
+        --border: #292524; --accent-subtle: rgba(216,90,48,.1); --link: #E8693F;
+      }
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header { position: sticky; top: 0; z-index: 100; height: var(--header-h); border-bottom: 1px solid var(--border); background: var(--bg); }
+    @supports (backdrop-filter: blur(12px)) { header { background: color-mix(in srgb, var(--bg) 85%, transparent); backdrop-filter: blur(12px); } }
+    .header-inner { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 100%; }
+    .brand { display: flex; align-items: center; gap: .7rem; text-decoration: none; color: var(--text); }
+    .brand:hover { text-decoration: none; }
+    .brand-logo { width: 34px; height: 34px; flex-shrink: 0; }
+    .brand-logo .logo-light { display: block; }
+    .brand-logo .logo-dark { display: none; }
+    [data-theme="dark"] .brand-logo .logo-light { display: none; }
+    [data-theme="dark"] .brand-logo .logo-dark { display: block; }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .brand-logo .logo-light { display: none; }
+      :root:not([data-theme="light"]) .brand-logo .logo-dark { display: block; }
+    }
+    .brand-text { font-weight: 600; font-size: 14px; letter-spacing: .2px; }
+    nav { display: flex; align-items: center; gap: .15rem; }
+    nav a { padding: .35rem .6rem; border-radius: 7px; font-size: 13.5px; font-weight: 500; color: var(--text-secondary); transition: all .15s; }
+    nav a:hover { color: var(--text); background: var(--accent-subtle); text-decoration: none; }
+    nav a.active { color: var(--text); background: var(--accent-subtle); }
+    .header-right { display: flex; align-items: center; gap: .3rem; }
+    .icon-btn { width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; border: 1px solid var(--border); background: transparent; color: var(--text-secondary); cursor: pointer; transition: all .15s; text-decoration: none; }
+    .icon-btn:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+    .icon-btn svg { width: 15px; height: 15px; }
+    .hamburger { display: none; background: none; border: 0; padding: .4rem; color: var(--text); cursor: pointer; }
+    @media (max-width: 768px) {
+      nav { display: none; position: absolute; left: 0; right: 0; top: var(--header-h); background: var(--bg); border-bottom: 1px solid var(--border); padding: .5rem 1rem; flex-direction: column; align-items: stretch; }
+      nav.open { display: flex; }
+      .hamburger { display: inline-flex; }
+    }
+
+    main { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
+
+    .hero { padding: 2.5rem 0 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2.5rem; align-items: center; }
+    @media (max-width: 768px) { .hero { grid-template-columns: 1fr; text-align: center; } }
+    .hero h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.25; margin-bottom: .35rem; }
+    .hero .subtitle { font-size: .95rem; color: var(--text-secondary); margin-bottom: .3rem; }
+    .hero .contact-line { font-size: .9rem; color: var(--text-tertiary); }
+    .hero .contact-line a { color: var(--link); }
+    .portrait { width: 180px; height: 180px; border-radius: 14px; object-fit: cover; border: 1px solid var(--border); }
+    @media (max-width: 768px) { .portrait { width: 150px; height: 150px; margin: 0 auto; order: -1; } }
+
+    .content { padding-bottom: 2.5rem; }
+    .content h2 { font-family: var(--serif); font-weight: 600; font-size: 1.2rem; margin: 2rem 0 .6rem; padding-bottom: .35rem; border-bottom: 1px solid var(--border); }
+    .content p { margin: .4rem 0 .75rem; }
+    .content .muted { color: var(--text-secondary); }
+
+    .teaching-item { margin-bottom: .5rem; }
+    .teaching-item strong { font-weight: 600; }
+    .teaching-item .muted { font-size: .9rem; }
+
+    footer { border-top: 1px solid var(--border); padding: 1.25rem 1.5rem; font-size: .85rem; color: var(--text-tertiary); max-width: 860px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="/index.html" class="brand">
+        <div class="brand-logo">
+          <svg class="logo-light" viewBox="0 0 200 200" width="34" height="34" xmlns="http://www.w3.org/2000/svg"><g transform="translate(100,100)"><path d="M-42,-42 L-42,-28" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M-42,-42 L-28,-42" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,-42 L42,-28" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,-42 L28,-42" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M-42,42 L-42,28" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M-42,42 L-28,42" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,42 L42,28" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,42 L28,42" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><rect x="-20" y="-18" width="22" height="22" rx="3" fill="#1a1a1a" opacity=".18"/><circle cx="16" cy="8" r="14" fill="#D85A30"/></g></svg>
+          <svg class="logo-dark" viewBox="0 0 200 200" width="34" height="34" xmlns="http://www.w3.org/2000/svg"><g transform="translate(100,100)"><path d="M-42,-42 L-42,-28" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M-42,-42 L-28,-42" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,-42 L42,-28" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,-42 L28,-42" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M-42,42 L-42,28" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M-42,42 L-28,42" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,42 L42,28" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,42 L28,42" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><rect x="-20" y="-18" width="22" height="22" rx="3" fill="#e0e0e0" opacity=".18"/><circle cx="16" cy="8" r="14" fill="#D85A30"/></g></svg>
+        </div>
+        <span class="brand-text">Deep Learning Fundamentals</span>
+      </a>
+      <button class="hamburger" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav id="menu">
+        <a href="https://dlfundamentals.github.io/index.html">Home</a>
+        <a href="https://dlfundamentals.github.io/group.html">Group</a>
+        <a href="https://dlfundamentals.github.io/publications.html">Publications</a>
+        <a href="https://dlfundamentals.github.io/blog/">Blog</a>
+        <a href="https://dlfundamentals.github.io/PI.html" class="active">About</a>
+      </nav>
+      <div class="header-right">
+        <button class="icon-btn" id="themeBtn" aria-label="Toggle theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
+        <a class="icon-btn" href="https://github.com/TomerGalanti" aria-label="GitHub"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.2-3.37-1.2-.46-1.17-1.12-1.48-1.12-1.48-.92-.63.07-.62.07-.62 1.02.07 1.55 1.05 1.55 1.05.9 1.54 2.36 1.1 2.94.84.09-.66.35-1.1.64-1.35-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.7.12 2.5.34 1.9-1.3 2.74-1.02 2.74-1.02.55 1.4.2 2.44.1 2.7.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.3.69.9.69 1.82v2.7c0 .26.18.57.69.47A10 10 0 0012 2z"/></svg></a>
+        <a class="icon-btn" href="https://scholar.google.com/citations?user=ut_ISVIAAAAJ" aria-label="Google Scholar"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-2a5 5 0 100-10 5 5 0 000 10z"/><path d="M12 13V3L1 10l4.18 2.74"/></svg></a>
+        <a class="icon-btn" href="https://www.linkedin.com/in/tomer-galanti-5880b1104/" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div>
+        <h1>Tomer Galanti</h1>
+        <p class="subtitle">Assistant Professor, Texas A&M CSE · Deep Learning &amp; LLMs</p>
+        <p class="contact-line">
+          <a href="mailto:galanti@tamu.edu">galanti@tamu.edu</a> · Office: 325 PETR, TAMU
+        </p>
+      </div>
+      <img class="portrait" src="/images/Tomer%20Galanti%20-%20talk.jpg" alt="Tomer Galanti" loading="eager" />
+    </section>
+
+    <div class="content">
+      <h2>Short bio</h2>
+      <p>Tomer Galanti is an Assistant Professor in the Department of Computer Science and Engineering at <a href="https://engineering.tamu.edu/cse/index.html">Texas A&M University</a>. His research focuses on the theoretical and algorithmic foundations of deep learning and large language models. Combining theory and experimentation, his work addresses core challenges in deep learning efficiency — including reducing data requirements, designing compressible networks, enabling model adaptation to new tasks, accelerating inference, and improving training stability.</p>
+      <p>Prior to joining Texas A&M, he was a postdoctoral associate at MIT's <a href="https://cbmm.mit.edu">Center for Brains, Minds &amp; Machines</a>, where he worked with <a href="https://scholar.google.com/citations?user=WgAGy7wAAAAJ&hl=en">Tomaso Poggio</a>. He received his Ph.D. in Computer Science from <a href="https://en-exact-sciences.tau.ac.il/computer">Tel Aviv University</a>, advised by <a href="https://scholar.google.co.il/citations?user=UbFrXTsAAAAJ&hl=en">Lior Wolf</a>. In 2021, he interned as a Research Scientist at <a href="https://www.deepmind.com/">Google DeepMind</a>, collaborating with <a href="https://scholar.google.com/citations?user=822ujacAAAAJ&hl=en">Andras Gyorgy</a> and <a href="https://scholar.google.com/citations?user=7hmCntEAAAAJ&hl=en">Marcus Hutter</a>.</p>
+
+      <h2>Teaching</h2>
+      <div class="teaching-item"><strong>Special Topics in Recent Developments in Deep Learning and Large Language Models</strong><br><span class="muted">Texas A&M University, Fall 2025</span></div>
+      <div class="teaching-item"><strong>Introduction to Machine Learning</strong><br><span class="muted">Texas A&M University, Spring 2025</span></div>
+      <div class="teaching-item"><strong>Special Topics in Recent Developments in Deep Learning and Large Language Models</strong><br><span class="muted">Texas A&M University, Fall 2024</span></div>
+      <div class="teaching-item"><strong><a href="https://poggio-lab.mit.edu/F23-9-520">Statistical Learning Theory and its Applications</a></strong><br><span class="muted">Massachusetts Institute of Technology, Fall 2023</span></div>
+      <div class="teaching-item"><strong><a href="https://poggio-lab.mit.edu/F22-9-520">Statistical Learning Theory and its Applications</a></strong><br><span class="muted">Massachusetts Institute of Technology, Fall 2022</span></div>
+      <div class="teaching-item"><strong>Deep Convolutional Neural Networks</strong><br><span class="muted">Tel Aviv University, Spring 2020</span></div>
+      <div class="teaching-item"><strong>Deep Convolutional Neural Networks</strong><br><span class="muted">Tel Aviv University, Spring 2019</span></div>
+    </div>
+  </main>
+
+  <footer>&copy; 2025 Tomer Galanti</footer>
+
+  <script>
+    document.getElementById('menuBtn')?.addEventListener('click', () => { const m = document.getElementById('menu'), o = m.classList.toggle('open'); document.getElementById('menuBtn').setAttribute('aria-expanded', String(o)); });
+    function applyTheme(t) { document.documentElement.setAttribute('data-theme', t); localStorage.setItem('theme', t); }
+    const saved = localStorage.getItem('theme'); if (saved) applyTheme(saved);
+    document.getElementById('themeBtn')?.addEventListener('click', () => { const c = document.documentElement.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light'); applyTheme(c === 'dark' ? 'light' : 'dark'); });
+  </script>
+</body>
+</html>
