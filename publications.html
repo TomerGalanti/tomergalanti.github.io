@@ -3,198 +3,412 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Publications | Deep Learning Fundamentals Lab</title>
+  <title>Publications | Deep Learning Fundamentals Lab · Texas A&M</title>
   <meta name="description" content="Publications by Tomer Galanti and collaborators." />
-  <link rel="icon" href="/images/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #FAFAF7; --bg-elevated: #FFFFFF; --text: #1C1917;
-      --text-secondary: #78716C; --text-tertiary: #A8A29E;
-      --border: #E7E5E4; --accent: #D85A30; --accent-hover: #C04E28;
-      --accent-subtle: rgba(216,90,48,.07); --link: #D85A30;
-      --serif: 'Newsreader', Georgia, serif;
-      --sans: 'DM Sans', system-ui, -apple-system, sans-serif;
-      --header-h: 64px;
+      --bg: #F8F7F4; --bg2: #FFFFFF; --text: #17170F; --text2: #5C5B55;
+      --text3: #9E9D95; --border: #E4E3DC; --accent: #1A3A2A; --accent2: #2E6B48;
+      --accent-gold: #B8924A; --accent-gold-light: rgba(184,146,74,.10);
+      --link: #2E6B48;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Outfit', system-ui, sans-serif;
+      --hh: 68px; --max: 980px;
     }
     [data-theme="dark"] {
-      --bg: #0C0A09; --bg-elevated: #1C1917; --text: #E7E5E4;
-      --text-secondary: #A8A29E; --text-tertiary: #78716C;
-      --border: #292524; --accent-subtle: rgba(216,90,48,.1); --link: #E8693F;
+      --bg: #0E110D; --bg2: #161A14; --text: #EAE9E2; --text2: #9E9D95;
+      --text3: #5C5B55; --border: #252820; --accent: #A8C9B0; --accent2: #6DB88A;
+      --accent-gold: #D4A85C; --accent-gold-light: rgba(212,168,92,.10); --link: #6DB88A;
     }
     @media (prefers-color-scheme: dark) {
       :root:not([data-theme="light"]) {
-        --bg: #0C0A09; --bg-elevated: #1C1917; --text: #E7E5E4;
-        --text-secondary: #A8A29E; --text-tertiary: #78716C;
-        --border: #292524; --accent-subtle: rgba(216,90,48,.1); --link: #E8693F;
+        --bg: #0E110D; --bg2: #161A14; --text: #EAE9E2; --text2: #9E9D95;
+        --text3: #5C5B55; --border: #252820; --accent: #A8C9B0; --accent2: #6DB88A;
+        --accent-gold: #D4A85C; --accent-gold-light: rgba(212,168,92,.10); --link: #6DB88A;
       }
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 15px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
     a { color: var(--link); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
-    header { position: sticky; top: 0; z-index: 100; height: var(--header-h); border-bottom: 1px solid var(--border); background: var(--bg); }
-    @supports (backdrop-filter: blur(12px)) { header { background: color-mix(in srgb, var(--bg) 85%, transparent); backdrop-filter: blur(12px); } }
-    .header-inner { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 100%; }
-    .brand { display: flex; align-items: center; gap: .7rem; text-decoration: none; color: var(--text); }
+    /* ── HEADER ── */
+    header { position: sticky; top: 0; z-index: 100; height: var(--hh); border-bottom: 1px solid var(--border); background: var(--bg); }
+    @supports (backdrop-filter: blur(14px)) { header { background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(14px); } }
+    .header-inner { max-width: var(--max); margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 100%; }
+    .brand { display: flex; align-items: center; gap: .85rem; text-decoration: none; color: var(--text); }
     .brand:hover { text-decoration: none; }
-    .brand-logo { width: 34px; height: 34px; flex-shrink: 0; }
-    .brand-logo .logo-light { display: block; }
-    .brand-logo .logo-dark { display: none; }
-    [data-theme="dark"] .brand-logo .logo-light { display: none; }
-    [data-theme="dark"] .brand-logo .logo-dark { display: block; }
-    @media (prefers-color-scheme: dark) {
-      :root:not([data-theme="light"]) .brand-logo .logo-light { display: none; }
-      :root:not([data-theme="light"]) .brand-logo .logo-dark { display: block; }
-    }
-    .brand-text { font-weight: 600; font-size: 14px; letter-spacing: .2px; }
-    nav { display: flex; align-items: center; gap: .15rem; }
-    nav a { padding: .35rem .6rem; border-radius: 7px; font-size: 13.5px; font-weight: 500; color: var(--text-secondary); transition: all .15s; }
-    nav a:hover { color: var(--text); background: var(--accent-subtle); text-decoration: none; }
-    nav a.active { color: var(--text); background: var(--accent-subtle); }
-    .header-right { display: flex; align-items: center; gap: .3rem; }
-    .icon-btn { width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; border: 1px solid var(--border); background: transparent; color: var(--text-secondary); cursor: pointer; transition: all .15s; text-decoration: none; }
-    .icon-btn:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+    .brand-mark { width: 36px; height: 36px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .brand-mark svg { width: 20px; height: 20px; }
+    .brand-name { font-family: var(--serif); font-weight: 600; font-size: 17px; letter-spacing: .01em; line-height: 1.2; }
+    .brand-sub { font-size: 11px; font-weight: 400; color: var(--text3); letter-spacing: .04em; text-transform: uppercase; }
+    nav { display: flex; align-items: center; gap: .1rem; }
+    nav a { padding: .3rem .65rem; border-radius: 6px; font-size: 13.5px; font-weight: 400; color: var(--text2); transition: color .15s, background .15s; }
+    nav a:hover { color: var(--text); background: rgba(0,0,0,.05); text-decoration: none; }
+    nav a.active { color: var(--text); font-weight: 500; }
+    [data-theme="dark"] nav a:hover { background: rgba(255,255,255,.06); }
+    .header-right { display: flex; align-items: center; gap: .4rem; }
+    .icon-btn { width: 34px; height: 34px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid var(--border); background: transparent; color: var(--text2); cursor: pointer; transition: all .15s; text-decoration: none; }
+    .icon-btn:hover { border-color: var(--accent2); color: var(--accent2); text-decoration: none; }
     .icon-btn svg { width: 15px; height: 15px; }
     .hamburger { display: none; background: none; border: 0; padding: .4rem; color: var(--text); cursor: pointer; }
-    @media (max-width: 768px) {
-      nav { display: none; position: absolute; left: 0; right: 0; top: var(--header-h); background: var(--bg); border-bottom: 1px solid var(--border); padding: .5rem 1rem; flex-direction: column; align-items: stretch; }
+    @media (max-width: 720px) {
+      nav { display: none; position: absolute; left: 0; right: 0; top: var(--hh); background: var(--bg); border-bottom: 1px solid var(--border); padding: .5rem 1rem; flex-direction: column; align-items: stretch; }
       nav.open { display: flex; }
       .hamburger { display: inline-flex; }
+      .brand-sub { display: none; }
     }
 
-    main { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem 3rem; }
+    /* ── MAIN ── */
+    main { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
 
-    h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(1.4rem, 3vw, 1.8rem); margin-bottom: .75rem; }
-    h2 { font-family: var(--serif); font-weight: 600; font-size: 1.15rem; margin: 2rem 0 .6rem; padding-bottom: .3rem; border-bottom: 1px solid var(--border); }
+    /* ── PAGE HEADER ── */
+    .page-header { padding: 3.5rem 0 2.5rem; border-bottom: 1px solid var(--border); }
+    .eyebrow { font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: .6rem; }
+    .page-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 500; line-height: 1.1; margin-bottom: 1.5rem; }
 
-    .pub-controls { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.25rem; }
-    .pub-controls label { font-size: .85rem; color: var(--text-secondary); }
+    /* ── CONTROLS ── */
+    .pub-controls { display: flex; gap: .6rem; align-items: center; flex-wrap: wrap; }
+    .pub-controls label { font-size: .82rem; color: var(--text3); }
     .pub-controls select, .pub-controls input {
-      border: 1px solid var(--border); background: var(--bg-elevated); color: var(--text);
-      border-radius: 7px; padding: .4rem .6rem; font-family: var(--sans); font-size: .85rem;
+      border: 1px solid var(--border); background: var(--bg2); color: var(--text);
+      border-radius: 7px; padding: .35rem .65rem;
+      font-family: var(--sans); font-size: .82rem;
     }
-    .pub-controls select:focus, .pub-controls input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+    .pub-controls select:focus, .pub-controls input:focus { outline: 2px solid var(--accent2); outline-offset: 1px; }
 
-    .pub-list { display: grid; gap: .6rem; }
-    .pub { padding: .75rem 0; border-bottom: 1px solid var(--border); }
+    /* ── SECTIONS ── */
+    .pub-section { padding: 2.5rem 0; border-bottom: 1px solid var(--border); }
+    .pub-section:last-child { border-bottom: 0; }
+    .section-label { font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 1.25rem; }
+
+    /* ── PUB ITEMS ── */
+    .pub-list { display: flex; flex-direction: column; }
+    .pub { padding: .9rem 0; border-bottom: 1px solid var(--border); }
     .pub:last-child { border-bottom: 0; }
-    .pub h3 { font-size: .95rem; font-weight: 600; margin: 0; line-height: 1.4; }
-    .pub h3 a { color: var(--text); }
-    .pub h3 a:hover { color: var(--link); }
-    .pub .authors { margin: .15rem 0; font-size: .88rem; color: var(--text-secondary); }
-    .pub .venue { font-size: .85rem; color: var(--text-secondary); }
-    .badge { display: inline-block; padding: 1px 6px; margin-left: 4px; border-radius: 5px; font-size: .75rem; font-weight: 600; color: #fff; }
-    .badge-oral { background: #d97706; }
-    .badge-spotlight { background: #2563eb; }
+    .pub-title { font-size: .93rem; font-weight: 500; line-height: 1.45; margin-bottom: .25rem; }
+    .pub-title a { color: var(--text); }
+    .pub-title a:hover { color: var(--link); text-decoration: none; }
+    .pub-authors { font-size: .83rem; color: var(--text2); margin-bottom: .2rem; }
+    .pub-venue { font-size: .83rem; color: var(--text3); }
+    .badge { display: inline-block; padding: 1px 7px; margin-left: 5px; border-radius: 4px; font-size: .72rem; font-weight: 500; }
+    .badge-oral { background: rgba(180,90,40,.1); color: #B45A28; }
+    [data-theme="dark"] .badge-oral { background: rgba(212,140,80,.12); color: #D48C50; }
+    .badge-spotlight { background: rgba(46,107,72,.1); color: #2E6B48; }
+    [data-theme="dark"] .badge-spotlight { background: rgba(109,184,138,.1); color: #6DB88A; }
 
-    footer { border-top: 1px solid var(--border); padding: 1.25rem 1.5rem; font-size: .85rem; color: var(--text-tertiary); max-width: 860px; margin: 0 auto; }
+    /* ── FOOTER ── */
+    footer { border-top: 1px solid var(--border); padding: 1.75rem 2rem; max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; font-size: .82rem; color: var(--text3); }
+    @media (max-width: 540px) { footer { flex-direction: column; gap: .5rem; text-align: center; } }
+    .footer-links { display: flex; gap: 1rem; }
+    footer a { color: var(--text3); }
+    footer a:hover { color: var(--link); }
   </style>
 </head>
 <body>
   <header>
     <div class="header-inner">
-      <a href="/index.html" class="brand">
-        <div class="brand-logo">
-          <svg class="logo-light" viewBox="0 0 200 200" width="34" height="34" xmlns="http://www.w3.org/2000/svg"><g transform="translate(100,100)"><path d="M-42,-42 L-42,-28" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M-42,-42 L-28,-42" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,-42 L42,-28" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,-42 L28,-42" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M-42,42 L-42,28" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M-42,42 L-28,42" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,42 L42,28" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,42 L28,42" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><rect x="-20" y="-18" width="22" height="22" rx="3" fill="#1a1a1a" opacity=".18"/><circle cx="16" cy="8" r="14" fill="#D85A30"/></g></svg>
-          <svg class="logo-dark" viewBox="0 0 200 200" width="34" height="34" xmlns="http://www.w3.org/2000/svg"><g transform="translate(100,100)"><path d="M-42,-42 L-42,-28" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M-42,-42 L-28,-42" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,-42 L42,-28" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,-42 L28,-42" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M-42,42 L-42,28" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M-42,42 L-28,42" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,42 L42,28" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,42 L28,42" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><rect x="-20" y="-18" width="22" height="22" rx="3" fill="#e0e0e0" opacity=".18"/><circle cx="16" cy="8" r="14" fill="#D85A30"/></g></svg>
+      <a href="index.html" class="brand">
+        <div class="brand-mark">
+          <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="5" cy="5" r="2.5" fill="rgba(255,255,255,0.4)"/>
+            <circle cx="15" cy="5" r="2.5" fill="rgba(255,255,255,0.4)"/>
+            <circle cx="5" cy="15" r="2.5" fill="rgba(255,255,255,0.4)"/>
+            <circle cx="15" cy="15" r="3.5" fill="rgba(255,255,255,0.9)"/>
+          </svg>
         </div>
-        <span class="brand-text">Deep Learning Fundamentals</span>
+        <div>
+          <div class="brand-name">DL Fundamentals Lab</div>
+          <div class="brand-sub">Texas A&M University</div>
+        </div>
       </a>
       <button class="hamburger" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
       <nav id="menu">
-        <a href="/index.html">Home</a>
-        <a href="/group.html">Group</a>
-        <a href="/publications.html" class="active">Publications</a>
+        <a href="index.html">Home</a>
+        <a href="group.html">Group</a>
+        <a href="publications.html" class="active">Publications</a>
         <a href="https://dlfundamentals.github.io/blog/">Blog</a>
-        <a href="https://tomergalanti.github.io/index.html">About</a>
       </nav>
       <div class="header-right">
-        <button class="icon-btn" id="themeBtn" aria-label="Toggle theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
-        <a class="icon-btn" href="https://github.com/DLFundamentals" aria-label="GitHub"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.2-3.37-1.2-.46-1.17-1.12-1.48-1.12-1.48-.92-.63.07-.62.07-.62 1.02.07 1.55 1.05 1.55 1.05.9 1.54 2.36 1.1 2.94.84.09-.66.35-1.1.64-1.35-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.7.12 2.5.34 1.9-1.3 2.74-1.02 2.74-1.02.55 1.4.2 2.44.1 2.7.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.3.69.9.69 1.82v2.7c0 .26.18.57.69.47A10 10 0 0012 2z"/></svg></a>
-        <a class="icon-btn" href="https://scholar.google.com/citations?user=ut_ISVIAAAAJ" aria-label="Google Scholar"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-2a5 5 0 100-10 5 5 0 000 10z"/><path d="M12 13V3L1 10l4.18 2.74"/></svg></a>
-        <a class="icon-btn" href="https://www.linkedin.com/in/tomer-galanti-5880b1104/" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+        <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <a class="icon-btn" href="https://github.com/DLFundamentals" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.2-3.37-1.2-.46-1.17-1.12-1.48-1.12-1.48-.92-.63.07-.62.07-.62 1.02.07 1.55 1.05 1.55 1.05.9 1.54 2.36 1.1 2.94.84.09-.66.35-1.1.64-1.35-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.7.12 2.5.34 1.9-1.3 2.74-1.02 2.74-1.02.55 1.4.2 2.44.1 2.7.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.3.69.9.69 1.82v2.7c0 .26.18.57.69.47A10 10 0 0012 2z"/></svg>
+        </a>
+        <a class="icon-btn" href="https://scholar.google.com/citations?user=ut_ISVIAAAAJ" aria-label="Google Scholar">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-2a5 5 0 100-10 5 5 0 000 10z"/><path d="M12 13V3L1 10l4.18 2.74"/></svg>
+        </a>
+        <a class="icon-btn" href="https://www.linkedin.com/in/tomer-galanti-5880b1104/" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
       </div>
     </div>
   </header>
 
   <main>
-    <h1>Publications</h1>
-    <div class="pub-controls">
-      <label for="year">Year:</label>
-      <select id="year"><option value="all">All</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option><option>2022</option><option>2021</option><option>2020</option><option>2019</option><option>2018</option><option>2016</option></select>
-      <label for="q">Search:</label>
-      <input id="q" type="search" placeholder="title, author, venue…" />
+    <div class="page-header">
+      <div class="eyebrow">Deep Learning Fundamentals Lab</div>
+      <h1>Publications</h1>
+      <div class="pub-controls">
+        <label for="year">Year</label>
+        <select id="year"><option value="all">All</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option><option>2022</option><option>2021</option><option>2020</option><option>2019</option><option>2018</option><option>2016</option></select>
+        <label for="q">Search</label>
+        <input id="q" type="search" placeholder="title, author, venue…" style="width: 220px;" />
+      </div>
     </div>
 
-    <h2>Preprints</h2>
-    <div class="pub-list" id="preprintList">
-      <article class="pub" data-year="2026" data-authors="Achleshwar Luthra Yash Salunkhe Tomer Galanti" data-title="Directional Neural Collapse Explains Few-Shot Transfer in Self-Supervised Learning" data-venue="arXiv 2026"><h3><a href="https://arxiv.org/abs/2603.03530">Directional Neural Collapse Explains Few-Shot Transfer in Self-Supervised Learning</a></h3><div class="authors">A. Luthra*, Y. Salunkhe*, T. Galanti*</div><div class="venue"><em>Preprint</em>, arXiv, 2026</div></article>
-      <article class="pub" data-year="2026" data-authors="David Koplow Tomer Galanti Tomaso Poggio" data-title="Tool Building as a Path to Superintelligence" data-venue="arXiv 2026"><h3><a href="https://arxiv.org/abs/2602.21061">Tool Building as a Path to "Superintelligence"</a></h3><div class="authors">D. Koplow, T. Galanti, T. Poggio</div><div class="venue"><em>Preprint</em>, arXiv, 2026</div></article>
-      <article class="pub" data-year="2025" data-authors="Galanti Bookseller Ray" data-title="Scalable Principal-Agent Contract Design via Gradient-Based Optimization" data-venue="arXiv 2025"><h3><a href="https://arxiv.org/abs/2510.21177">Scalable Principal–Agent Contract Design via Gradient-Based Optimization</a></h3><div class="authors">T. Galanti, A. Bookseller, K. Ray</div><div class="venue"><em>Preprint</em>, arXiv, 2025</div></article>
-      <article class="pub" data-year="2025" data-authors="Singhal Priyadarsi Malach Galanti" data-title="LLM Priors for ERM over Programs" data-venue="arXiv 2025"><h3><a href="http://arxiv.org/abs/2510.14331">LLM Priors for ERM over Programs</a></h3><div class="authors">S. Singhal, P. Mishra, E. Malach, T. Galanti</div><div class="venue"><em>Preprint</em>, arXiv, 2025</div></article>
-      <article class="pub" data-year="2024" data-authors="Pinto Galanti Balestriero" data-title="The Fair Language Model Paradox" data-venue="arXiv 2024"><h3><a href="https://arxiv.org/abs/2410.11985">The Fair Language Model Paradox</a></h3><div class="authors">A. Pinto, T. Galanti, R. Balestriero</div><div class="venue"><em>Preprint</em>, arXiv, 2024</div></article>
-      <article class="pub" data-year="2023" data-authors="Ziyin Li Galanti Ueda" data-title="Type-II Saddles and Probabilistic Stability of Stochastic Gradient Descent" data-venue="arXiv 2023"><h3><a href="https://arxiv.org/abs/2303.13093">Type-II Saddles and Probabilistic Stability of Stochastic Gradient Descent</a></h3><div class="authors">L. Ziyin, B. Li, T. Galanti, M. Ueda</div><div class="venue"><em>Preprint</em>, arXiv, 2023</div></article>
-      <article class="pub" data-year="2022" data-authors="Galanti Gyorgy Hutter" data-title="Generalization Bounds for Transfer Learning with Pretrained Classifiers" data-venue="arXiv 2022"><h3><a href="https://arxiv.org/abs/2212.12532">Generalization Bounds for Transfer Learning with Pretrained Classifiers</a></h3><div class="authors">T. Galanti, A. Gyorgy, M. Hutter</div><div class="venue"><em>Preprint</em>, arXiv, 2022</div></article>
+    <div class="pub-section">
+      <div class="section-label">Preprints</div>
+      <div class="pub-list" id="preprintList">
+        <article class="pub" data-year="2026" data-authors="Achleshwar Luthra Yash Salunkhe Tomer Galanti" data-title="Directional Neural Collapse Explains Few-Shot Transfer in Self-Supervised Learning" data-venue="arXiv 2026">
+          <div class="pub-title"><a href="https://arxiv.org/abs/2603.03530">Directional Neural Collapse Explains Few-Shot Transfer in Self-Supervised Learning</a></div>
+          <div class="pub-authors">A. Luthra*, Y. Salunkhe*, T. Galanti*</div>
+          <div class="pub-venue"><em>Preprint</em>, arXiv, 2026</div>
+        </article>
+        <article class="pub" data-year="2026" data-authors="David Koplow Tomer Galanti Tomaso Poggio" data-title="Tool Building as a Path to Superintelligence" data-venue="arXiv 2026">
+          <div class="pub-title"><a href="https://arxiv.org/abs/2602.21061">Tool Building as a Path to "Superintelligence"</a></div>
+          <div class="pub-authors">D. Koplow, T. Galanti, T. Poggio</div>
+          <div class="pub-venue"><em>Preprint</em>, arXiv, 2026</div>
+        </article>
+        <article class="pub" data-year="2025" data-authors="Galanti Bookseller Ray" data-title="Scalable Principal-Agent Contract Design via Gradient-Based Optimization" data-venue="arXiv 2025">
+          <div class="pub-title"><a href="https://arxiv.org/abs/2510.21177">Scalable Principal–Agent Contract Design via Gradient-Based Optimization</a></div>
+          <div class="pub-authors">T. Galanti, A. Bookseller, K. Ray</div>
+          <div class="pub-venue"><em>Preprint</em>, arXiv, 2025</div>
+        </article>
+        <article class="pub" data-year="2025" data-authors="Singhal Priyadarsi Malach Galanti" data-title="LLM Priors for ERM over Programs" data-venue="arXiv 2025">
+          <div class="pub-title"><a href="http://arxiv.org/abs/2510.14331">LLM Priors for ERM over Programs</a></div>
+          <div class="pub-authors">S. Singhal, P. Mishra, E. Malach, T. Galanti</div>
+          <div class="pub-venue"><em>Preprint</em>, arXiv, 2025</div>
+        </article>
+        <article class="pub" data-year="2024" data-authors="Pinto Galanti Balestriero" data-title="The Fair Language Model Paradox" data-venue="arXiv 2024">
+          <div class="pub-title"><a href="https://arxiv.org/abs/2410.11985">The Fair Language Model Paradox</a></div>
+          <div class="pub-authors">A. Pinto, T. Galanti, R. Balestriero</div>
+          <div class="pub-venue"><em>Preprint</em>, arXiv, 2024</div>
+        </article>
+        <article class="pub" data-year="2023" data-authors="Ziyin Li Galanti Ueda" data-title="Type-II Saddles and Probabilistic Stability of Stochastic Gradient Descent" data-venue="arXiv 2023">
+          <div class="pub-title"><a href="https://arxiv.org/abs/2303.13093">Type-II Saddles and Probabilistic Stability of Stochastic Gradient Descent</a></div>
+          <div class="pub-authors">L. Ziyin, B. Li, T. Galanti, M. Ueda</div>
+          <div class="pub-venue"><em>Preprint</em>, arXiv, 2023</div>
+        </article>
+        <article class="pub" data-year="2022" data-authors="Galanti Gyorgy Hutter" data-title="Generalization Bounds for Transfer Learning with Pretrained Classifiers" data-venue="arXiv 2022">
+          <div class="pub-title"><a href="https://arxiv.org/abs/2212.12532">Generalization Bounds for Transfer Learning with Pretrained Classifiers</a></div>
+          <div class="pub-authors">T. Galanti, A. Gyorgy, M. Hutter</div>
+          <div class="pub-venue"><em>Preprint</em>, arXiv, 2022</div>
+        </article>
+      </div>
     </div>
 
-    <h2>Publications at top-tier venues</h2>
-    <div class="pub-list" id="pubList">
-      <article class="pub" data-year="2026" data-authors="Luthra Mishra Galanti" data-title="On the Alignment Between Supervised and Self-Supervised Contrastive Learning" data-venue="ICLR 2026"><h3><a href="https://arxiv.org/abs/2510.08852">On the Alignment Between Supervised and Self-Supervised Contrastive Learning</a></h3><div class="authors">A. Luthra, P. Mishra, T. Galanti</div><div class="venue"><em>ICLR</em>, 2026</div></article>
-      <article class="pub" data-year="2025" data-authors="Luthra Yang Galanti" data-title="Self-Supervised Contrastive Learning is Approximately Supervised Contrastive Learning" data-venue="NeurIPS 2025"><h3><a href="https://arxiv.org/abs/2506.04411">Self-Supervised Contrastive Learning is Approximately Supervised Contrastive Learning</a></h3><div class="authors">A. Luthra, T. Yang, T. Galanti</div><div class="venue"><em>NeurIPS</em>, 2025</div></article>
-      <article class="pub" data-year="2025" data-authors="Li Lin Galanti Tu Yang" data-title="DisCO: Reinforcing Large Reasoning Models with Discriminative Constrained Optimization" data-venue="NeurIPS 2025"><h3><a href="https://arxiv.org/abs/2505.12366">DisCO: Reinforcing Large Reasoning Models with Discriminative Constrained Optimization</a></h3><div class="authors">G. Li, M. Lin, T. Galanti, Z. Tu, T. Yang</div><div class="venue"><em>NeurIPS</em>, 2025</div></article>
-      <article class="pub" data-year="2025" data-authors="Ziyin Chuang Galanti Poggio" data-title="Formation of Representations in Neural Networks" data-venue="ICLR 2025"><h3><a href="https://openreview.net/forum?id=Njx1NjHIx4&noteId=MYV5SMYpzo">Formation of Representations in Neural Networks</a></h3><div class="authors">L. Ziyin, I. L. Chuang, T. Galanti, T. Poggio</div><div class="venue"><em>ICLR</em>, 2025 <span class="badge badge-spotlight">Spotlight</span></div></article>
-      <article class="pub" data-year="2025" data-authors="Timor Mamou Korat Berchansky Pereg Wasserblat Galanti Gordon Harel" data-title="Distributed Speculative Inference" data-venue="ICLR 2025"><h3><a href="https://openreview.net/forum?id=cJd1BgZ9CS">Distributed Speculative Inference (DSI)</a></h3><div class="authors">N. Timor, J. Mamou, D. Korat, M. Berchansky, O. Pereg, M. Wasserblat, T. Galanti, M. Gordon, D. Harel</div><div class="venue"><em>ICLR</em>, 2025</div></article>
-      <article class="pub" data-year="2025" data-authors="Galanti Poggio Siegel Gupte" data-title="SGD and Weight Decay Secretly Minimize the Rank of Your Neural Network" data-venue="CPAL 2025"><h3><a href="https://openreview.net/forum?id=0LzE9AROwD#discussion">SGD and Weight Decay Secretly Minimize the Rank of Your Neural Network</a></h3><div class="authors">T. Galanti, Z. Siegel, A. Gupte, T. Poggio</div><div class="venue"><em>CPAL</em>, 2025 · <em>NeurIPS M3L Workshop</em>, 2024</div></article>
-      <article class="pub" data-year="2024" data-authors="Gan Galanti Poggio Malach" data-title="On the Power of Decision Trees in Auto-Regressive Language Modeling" data-venue="NeurIPS 2024"><h3><a href="https://openreview.net/forum?id=nge5deRsEH">On the Power of Decision Trees in Auto-Regressive Language Modeling</a></h3><div class="authors">Y. Gan, T. Galanti, T. Poggio, E. Malach</div><div class="venue"><em>NeurIPS</em>, 2024</div></article>
-      <article class="pub" data-year="2023" data-authors="Galanti Xu Galanti Poggio" data-title="Norm-Based Generalization Bounds for Sparse Neural Networks" data-venue="NeurIPS 2023"><h3><a href="https://openreview.net/forum?id=COPzNA10hZ">Norm-Based Generalization Bounds for Sparse Neural Networks</a></h3><div class="authors">T. Galanti, M. Xu, L. Galanti, T. Poggio</div><div class="venue"><em>NeurIPS</em>, 2023</div></article>
-      <article class="pub" data-year="2023" data-authors="Ben-Shaul Shwartz-Ziv Galanti Dekel LeCun" data-title="Reverse Engineering Self-Supervised Learning" data-venue="NeurIPS 2023"><h3><a href="https://openreview.net/forum?id=NsVEjx6YPd&noteId=uxqa0UxtZk">Reverse Engineering Self-Supervised Learning</a></h3><div class="authors">I. Ben-Shaul, R. Shwartz-Ziv*, T. Galanti*, S. Dekel, Y. LeCun</div><div class="venue"><em>NeurIPS</em>, 2023</div></article>
-      <article class="pub" data-year="2023" data-authors="Galanti Galanti Ben-Shaul" data-title="Comparative Generalization Bounds for Deep Neural Networks" data-venue="TMLR 2023"><h3><a href="https://openreview.net/forum?id=162TqkUNPO">Comparative Generalization Bounds for Deep Neural Networks</a></h3><div class="authors">T. Galanti, L. Galanti, I. Ben-Shaul</div><div class="venue"><em>TMLR</em>, 2023</div></article>
-      <article class="pub" data-year="2023" data-authors="Rangamani Lindegaard Galanti Poggio" data-title="Feature Learning in Deep Classifiers Through Intermediate Neural Collapse" data-venue="ICML 2023"><h3><a href="https://proceedings.mlr.press/v202/rangamani23a.html">Feature Learning in Deep Classifiers Through Intermediate Neural Collapse</a></h3><div class="authors">A. Rangamani, M. Lindegaard, T. Galanti, T. Poggio</div><div class="venue"><em>ICML</em>, 2023</div></article>
-      <article class="pub" data-year="2023" data-authors="Ben-Shaul Galanti Dekel" data-title="Exploring the Approximation Capabilities of Multiplicative Neural Networks" data-venue="TMLR 2023"><h3><a href="https://openreview.net/forum?id=sWQJfb2GSk">Exploring the Approximation Capabilities of Multiplicative Neural Networks for Smooth Functions</a></h3><div class="authors">I. Ben-Shaul, T. Galanti, S. Dekel</div><div class="venue"><em>TMLR</em>, 2023</div></article>
-      <article class="pub" data-year="2022" data-authors="Xu Galanti Yang Wu Yue Zhai Zhan Vajda Keutzer Tomizuka" data-title="Image2Point" data-venue="ECCV 2022"><h3><a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136970625.pdf">Image2Point: 3D Point-Cloud Understanding with 2D Image Pretrained Models</a></h3><div class="authors">C. Xu, S. Yang, T. Galanti, B. Wu, X. Yue, B. Zhai, W. Zhan, P. Vajda, K. Keutzer, M. Tomizuka</div><div class="venue"><em>ECCV</em>, 2022</div></article>
-      <article class="pub" data-year="2022" data-authors="Galanti Gyorgy Hutter" data-title="On the Role of Neural Collapse in Transfer Learning" data-venue="ICLR 2022"><h3><a href="https://openreview.net/forum?id=SwIp410B6aQ">On the Role of Neural Collapse in Transfer Learning</a></h3><div class="authors">T. Galanti, A. Gyorgy, M. Hutter</div><div class="venue"><em>ICLR</em>, 2022</div></article>
-      <article class="pub" data-year="2021" data-authors="Ben Sadoun Gur Galanti Wolf" data-title="Meta Internal Learning" data-venue="NeurIPS 2021"><h3><a href="https://openreview.net/forum?id=xfskdMFkuTS">Meta Internal Learning</a></h3><div class="authors">R. Ben Sadoun, S. Gur, T. Galanti, L. Wolf</div><div class="venue"><em>NeurIPS</em>, 2021</div></article>
-      <article class="pub" data-year="2021" data-authors="Littwin Galanti Wolf" data-title="On Random Kernels of Residual Architectures" data-venue="UAI 2021"><h3><a href="https://proceedings.mlr.press/v161/littwin21a.html">On Random Kernels of Residual Architectures</a></h3><div class="authors">E. Littwin*, T. Galanti*, L. Wolf</div><div class="venue"><em>UAI</em>, 2021</div></article>
-      <article class="pub" data-year="2021" data-authors="Galanti Benaim Wolf" data-title="Risk Bounds for Unsupervised Cross-Domain Mapping with IPMs" data-venue="JMLR 2021"><h3><a href="https://jmlr.org/papers/v22/18-489.html">Risk Bounds for Unsupervised Cross-Domain Mapping with IPMs</a></h3><div class="authors">T. Galanti, S. Benaim, L. Wolf</div><div class="venue"><em>JMLR</em>, 2021</div></article>
-      <article class="pub" data-year="2021" data-authors="Benny Galanti Benaim Wolf" data-title="Evaluation Metrics for Conditional Image Generation" data-venue="IJCV 2021"><h3><a href="https://link.springer.com/article/10.1007/s11263-020-01424-w">Evaluation Metrics for Conditional Image Generation</a></h3><div class="authors">Y. Benny, T. Galanti, S. Benaim, L. Wolf</div><div class="venue"><em>IJCV</em>, 2021</div></article>
-      <article class="pub" data-year="2020" data-authors="Galanti Wolf" data-title="On the Modularity of Hypernetworks" data-venue="NeurIPS 2020"><h3><a href="https://proceedings.neurips.cc/paper/2020/hash/75c58d36157505a600e0695ed0b3a22d-Abstract.html">On the Modularity of Hypernetworks</a></h3><div class="authors">T. Galanti, L. Wolf</div><div class="venue"><em>NeurIPS</em>, 2020 <span class="badge badge-oral">Oral</span></div></article>
-      <article class="pub" data-year="2020" data-authors="Littwin Galanti Wolf" data-title="On Infinite-Width Hypernetworks" data-venue="NeurIPS 2020"><h3><a href="https://proceedings.neurips.cc/paper/2020/hash/999df4ce78b966de17aee1dc87111044-Abstract.html">On Infinite-Width Hypernetworks</a></h3><div class="authors">E. Littwin*, T. Galanti*, L. Wolf</div><div class="venue"><em>NeurIPS</em>, 2020</div></article>
-      <article class="pub" data-year="2019" data-authors="Benaim Khaitov Galanti Wolf" data-title="Domain Intersection and Domain Difference" data-venue="ICCV 2019"><h3><a href="https://openaccess.thecvf.com/content_ICCV_2019/html/Benaim_Domain_Intersection_and_Domain_Difference_ICCV_2019_paper.html">Domain Intersection and Domain Difference</a></h3><div class="authors">S. Benaim, M. Khaitov, T. Galanti, L. Wolf</div><div class="venue"><em>ICCV</em>, 2019</div></article>
-      <article class="pub" data-year="2019" data-authors="Wolf Benaim Galanti" data-title="Unsupervised Learning of the Set of Local Maxima" data-venue="ICLR 2019"><h3><a href="https://openreview.net/forum?id=H1lqZhRcFm">Unsupervised Learning of the Set of Local Maxima</a></h3><div class="authors">L. Wolf, S. Benaim, T. Galanti</div><div class="venue"><em>ICLR</em>, 2019</div></article>
-      <article class="pub" data-year="2019" data-authors="Press Galanti Benaim Wolf" data-title="Emerging Disentanglement in Auto-Encoder Based Unsupervised Image Content Transfer" data-venue="ICLR 2019"><h3><a href="https://openreview.net/forum?id=BylE1205Fm">Emerging Disentanglement in Auto-Encoder Based Unsupervised Image Content Transfer</a></h3><div class="authors">O. Press, T. Galanti, S. Benaim, L. Wolf</div><div class="venue"><em>ICLR</em>, 2019</div></article>
-      <article class="pub" data-year="2018" data-authors="Benaim Galanti Wolf" data-title="Estimating the Success of Unsupervised Image to Image Translation" data-venue="ECCV 2018"><h3><a href="https://openaccess.thecvf.com/content_ECCV_2018/html/Lior_Wolf_Estimating_the_Success_ECCV_2018_paper.html">Estimating the Success of Unsupervised Image to Image Translation</a></h3><div class="authors">S. Benaim*, T. Galanti*, L. Wolf</div><div class="venue"><em>ECCV</em>, 2018</div></article>
-      <article class="pub" data-year="2018" data-authors="Galanti Wolf Benaim" data-title="The Role of Minimal Complexity in Unsupervised Learning of Semantic Mappings" data-venue="ICLR 2018"><h3><a href="https://openreview.net/forum?id=H1VjBebR-">The Role of Minimal Complexity in Unsupervised Learning of Semantic Mappings</a></h3><div class="authors">T. Galanti, L. Wolf, S. Benaim</div><div class="venue"><em>ICLR</em>, 2018</div></article>
+    <div class="pub-section">
+      <div class="section-label">Publications at Top-Tier Venues</div>
+      <div class="pub-list" id="pubList">
+        <article class="pub" data-year="2026" data-authors="Luthra Mishra Galanti" data-title="On the Alignment Between Supervised and Self-Supervised Contrastive Learning" data-venue="ICLR 2026">
+          <div class="pub-title"><a href="https://arxiv.org/abs/2510.08852">On the Alignment Between Supervised and Self-Supervised Contrastive Learning</a></div>
+          <div class="pub-authors">A. Luthra, P. Mishra, T. Galanti</div>
+          <div class="pub-venue"><em>ICLR</em>, 2026</div>
+        </article>
+        <article class="pub" data-year="2025" data-authors="Luthra Yang Galanti" data-title="Self-Supervised Contrastive Learning is Approximately Supervised Contrastive Learning" data-venue="NeurIPS 2025">
+          <div class="pub-title"><a href="https://arxiv.org/abs/2506.04411">Self-Supervised Contrastive Learning is Approximately Supervised Contrastive Learning</a></div>
+          <div class="pub-authors">A. Luthra, T. Yang, T. Galanti</div>
+          <div class="pub-venue"><em>NeurIPS</em>, 2025</div>
+        </article>
+        <article class="pub" data-year="2025" data-authors="Li Lin Galanti Tu Yang" data-title="DisCO: Reinforcing Large Reasoning Models with Discriminative Constrained Optimization" data-venue="NeurIPS 2025">
+          <div class="pub-title"><a href="https://arxiv.org/abs/2505.12366">DisCO: Reinforcing Large Reasoning Models with Discriminative Constrained Optimization</a></div>
+          <div class="pub-authors">G. Li, M. Lin, T. Galanti, Z. Tu, T. Yang</div>
+          <div class="pub-venue"><em>NeurIPS</em>, 2025</div>
+        </article>
+        <article class="pub" data-year="2025" data-authors="Ziyin Chuang Galanti Poggio" data-title="Formation of Representations in Neural Networks" data-venue="ICLR 2025">
+          <div class="pub-title"><a href="https://openreview.net/forum?id=Njx1NjHIx4&noteId=MYV5SMYpzo">Formation of Representations in Neural Networks</a></div>
+          <div class="pub-authors">L. Ziyin, I. L. Chuang, T. Galanti, T. Poggio</div>
+          <div class="pub-venue"><em>ICLR</em>, 2025 <span class="badge badge-spotlight">Spotlight</span></div>
+        </article>
+        <article class="pub" data-year="2025" data-authors="Timor Mamou Korat Berchansky Pereg Wasserblat Galanti Gordon Harel" data-title="Distributed Speculative Inference" data-venue="ICLR 2025">
+          <div class="pub-title"><a href="https://openreview.net/forum?id=cJd1BgZ9CS">Distributed Speculative Inference (DSI)</a></div>
+          <div class="pub-authors">N. Timor, J. Mamou, D. Korat, M. Berchansky, O. Pereg, M. Wasserblat, T. Galanti, M. Gordon, D. Harel</div>
+          <div class="pub-venue"><em>ICLR</em>, 2025</div>
+        </article>
+        <article class="pub" data-year="2025" data-authors="Galanti Poggio Siegel Gupte" data-title="SGD and Weight Decay Secretly Minimize the Rank of Your Neural Network" data-venue="CPAL 2025">
+          <div class="pub-title"><a href="https://openreview.net/forum?id=0LzE9AROwD#discussion">SGD and Weight Decay Secretly Minimize the Rank of Your Neural Network</a></div>
+          <div class="pub-authors">T. Galanti, Z. Siegel, A. Gupte, T. Poggio</div>
+          <div class="pub-venue"><em>CPAL</em>, 2025 · <em>NeurIPS M3L Workshop</em>, 2024</div>
+        </article>
+        <article class="pub" data-year="2024" data-authors="Gan Galanti Poggio Malach" data-title="On the Power of Decision Trees in Auto-Regressive Language Modeling" data-venue="NeurIPS 2024">
+          <div class="pub-title"><a href="https://openreview.net/forum?id=nge5deRsEH">On the Power of Decision Trees in Auto-Regressive Language Modeling</a></div>
+          <div class="pub-authors">Y. Gan, T. Galanti, T. Poggio, E. Malach</div>
+          <div class="pub-venue"><em>NeurIPS</em>, 2024</div>
+        </article>
+        <article class="pub" data-year="2023" data-authors="Galanti Xu Galanti Poggio" data-title="Norm-Based Generalization Bounds for Sparse Neural Networks" data-venue="NeurIPS 2023">
+          <div class="pub-title"><a href="https://openreview.net/forum?id=COPzNA10hZ">Norm-Based Generalization Bounds for Sparse Neural Networks</a></div>
+          <div class="pub-authors">T. Galanti, M. Xu, L. Galanti, T. Poggio</div>
+          <div class="pub-venue"><em>NeurIPS</em>, 2023</div>
+        </article>
+        <article class="pub" data-year="2023" data-authors="Ben-Shaul Shwartz-Ziv Galanti Dekel LeCun" data-title="Reverse Engineering Self-Supervised Learning" data-venue="NeurIPS 2023">
+          <div class="pub-title"><a href="https://openreview.net/forum?id=NsVEjx6YPd&noteId=uxqa0UxtZk">Reverse Engineering Self-Supervised Learning</a></div>
+          <div class="pub-authors">I. Ben-Shaul, R. Shwartz-Ziv*, T. Galanti*, S. Dekel, Y. LeCun</div>
+          <div class="pub-venue"><em>NeurIPS</em>, 2023</div>
+        </article>
+        <article class="pub" data-year="2023" data-authors="Galanti Galanti Ben-Shaul" data-title="Comparative Generalization Bounds for Deep Neural Networks" data-venue="TMLR 2023">
+          <div class="pub-title"><a href="https://openreview.net/forum?id=162TqkUNPO">Comparative Generalization Bounds for Deep Neural Networks</a></div>
+          <div class="pub-authors">T. Galanti, L. Galanti, I. Ben-Shaul</div>
+          <div class="pub-venue"><em>TMLR</em>, 2023</div>
+        </article>
+        <article class="pub" data-year="2023" data-authors="Rangamani Lindegaard Galanti Poggio" data-title="Feature Learning in Deep Classifiers Through Intermediate Neural Collapse" data-venue="ICML 2023">
+          <div class="pub-title"><a href="https://proceedings.mlr.press/v202/rangamani23a.html">Feature Learning in Deep Classifiers Through Intermediate Neural Collapse</a></div>
+          <div class="pub-authors">A. Rangamani, M. Lindegaard, T. Galanti, T. Poggio</div>
+          <div class="pub-venue"><em>ICML</em>, 2023</div>
+        </article>
+        <article class="pub" data-year="2023" data-authors="Ben-Shaul Galanti Dekel" data-title="Exploring the Approximation Capabilities of Multiplicative Neural Networks" data-venue="TMLR 2023">
+          <div class="pub-title"><a href="https://openreview.net/forum?id=sWQJfb2GSk">Exploring the Approximation Capabilities of Multiplicative Neural Networks for Smooth Functions</a></div>
+          <div class="pub-authors">I. Ben-Shaul, T. Galanti, S. Dekel</div>
+          <div class="pub-venue"><em>TMLR</em>, 2023</div>
+        </article>
+        <article class="pub" data-year="2022" data-authors="Xu Galanti Yang Wu Yue Zhai Zhan Vajda Keutzer Tomizuka" data-title="Image2Point" data-venue="ECCV 2022">
+          <div class="pub-title"><a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136970625.pdf">Image2Point: 3D Point-Cloud Understanding with 2D Image Pretrained Models</a></div>
+          <div class="pub-authors">C. Xu, S. Yang, T. Galanti, B. Wu, X. Yue, B. Zhai, W. Zhan, P. Vajda, K. Keutzer, M. Tomizuka</div>
+          <div class="pub-venue"><em>ECCV</em>, 2022</div>
+        </article>
+        <article class="pub" data-year="2022" data-authors="Galanti Gyorgy Hutter" data-title="On the Role of Neural Collapse in Transfer Learning" data-venue="ICLR 2022">
+          <div class="pub-title"><a href="https://openreview.net/forum?id=SwIp410B6aQ">On the Role of Neural Collapse in Transfer Learning</a></div>
+          <div class="pub-authors">T. Galanti, A. Gyorgy, M. Hutter</div>
+          <div class="pub-venue"><em>ICLR</em>, 2022</div>
+        </article>
+        <article class="pub" data-year="2021" data-authors="Ben Sadoun Gur Galanti Wolf" data-title="Meta Internal Learning" data-venue="NeurIPS 2021">
+          <div class="pub-title"><a href="https://openreview.net/forum?id=xfskdMFkuTS">Meta Internal Learning</a></div>
+          <div class="pub-authors">R. Ben Sadoun, S. Gur, T. Galanti, L. Wolf</div>
+          <div class="pub-venue"><em>NeurIPS</em>, 2021</div>
+        </article>
+        <article class="pub" data-year="2021" data-authors="Littwin Galanti Wolf" data-title="On Random Kernels of Residual Architectures" data-venue="UAI 2021">
+          <div class="pub-title"><a href="https://proceedings.mlr.press/v161/littwin21a.html">On Random Kernels of Residual Architectures</a></div>
+          <div class="pub-authors">E. Littwin*, T. Galanti*, L. Wolf</div>
+          <div class="pub-venue"><em>UAI</em>, 2021</div>
+        </article>
+        <article class="pub" data-year="2021" data-authors="Galanti Benaim Wolf" data-title="Risk Bounds for Unsupervised Cross-Domain Mapping with IPMs" data-venue="JMLR 2021">
+          <div class="pub-title"><a href="https://jmlr.org/papers/v22/18-489.html">Risk Bounds for Unsupervised Cross-Domain Mapping with IPMs</a></div>
+          <div class="pub-authors">T. Galanti, S. Benaim, L. Wolf</div>
+          <div class="pub-venue"><em>JMLR</em>, 2021</div>
+        </article>
+        <article class="pub" data-year="2021" data-authors="Benny Galanti Benaim Wolf" data-title="Evaluation Metrics for Conditional Image Generation" data-venue="IJCV 2021">
+          <div class="pub-title"><a href="https://link.springer.com/article/10.1007/s11263-020-01424-w">Evaluation Metrics for Conditional Image Generation</a></div>
+          <div class="pub-authors">Y. Benny, T. Galanti, S. Benaim, L. Wolf</div>
+          <div class="pub-venue"><em>IJCV</em>, 2021</div>
+        </article>
+        <article class="pub" data-year="2020" data-authors="Galanti Wolf" data-title="On the Modularity of Hypernetworks" data-venue="NeurIPS 2020">
+          <div class="pub-title"><a href="https://proceedings.neurips.cc/paper/2020/hash/75c58d36157505a600e0695ed0b3a22d-Abstract.html">On the Modularity of Hypernetworks</a></div>
+          <div class="pub-authors">T. Galanti, L. Wolf</div>
+          <div class="pub-venue"><em>NeurIPS</em>, 2020 <span class="badge badge-oral">Oral</span></div>
+        </article>
+        <article class="pub" data-year="2020" data-authors="Littwin Galanti Wolf" data-title="On Infinite-Width Hypernetworks" data-venue="NeurIPS 2020">
+          <div class="pub-title"><a href="https://proceedings.neurips.cc/paper/2020/hash/999df4ce78b966de17aee1dc87111044-Abstract.html">On Infinite-Width Hypernetworks</a></div>
+          <div class="pub-authors">E. Littwin*, T. Galanti*, L. Wolf</div>
+          <div class="pub-venue"><em>NeurIPS</em>, 2020</div>
+        </article>
+        <article class="pub" data-year="2019" data-authors="Benaim Khaitov Galanti Wolf" data-title="Domain Intersection and Domain Difference" data-venue="ICCV 2019">
+          <div class="pub-title"><a href="https://openaccess.thecvf.com/content_ICCV_2019/html/Benaim_Domain_Intersection_and_Domain_Difference_ICCV_2019_paper.html">Domain Intersection and Domain Difference</a></div>
+          <div class="pub-authors">S. Benaim, M. Khaitov, T. Galanti, L. Wolf</div>
+          <div class="pub-venue"><em>ICCV</em>, 2019</div>
+        </article>
+        <article class="pub" data-year="2019" data-authors="Wolf Benaim Galanti" data-title="Unsupervised Learning of the Set of Local Maxima" data-venue="ICLR 2019">
+          <div class="pub-title"><a href="https://openreview.net/forum?id=H1lqZhRcFm">Unsupervised Learning of the Set of Local Maxima</a></div>
+          <div class="pub-authors">L. Wolf, S. Benaim, T. Galanti</div>
+          <div class="pub-venue"><em>ICLR</em>, 2019</div>
+        </article>
+        <article class="pub" data-year="2019" data-authors="Press Galanti Benaim Wolf" data-title="Emerging Disentanglement in Auto-Encoder Based Unsupervised Image Content Transfer" data-venue="ICLR 2019">
+          <div class="pub-title"><a href="https://openreview.net/forum?id=BylE1205Fm">Emerging Disentanglement in Auto-Encoder Based Unsupervised Image Content Transfer</a></div>
+          <div class="pub-authors">O. Press, T. Galanti, S. Benaim, L. Wolf</div>
+          <div class="pub-venue"><em>ICLR</em>, 2019</div>
+        </article>
+        <article class="pub" data-year="2018" data-authors="Benaim Galanti Wolf" data-title="Estimating the Success of Unsupervised Image to Image Translation" data-venue="ECCV 2018">
+          <div class="pub-title"><a href="https://openaccess.thecvf.com/content_ECCV_2018/html/Lior_Wolf_Estimating_the_Success_ECCV_2018_paper.html">Estimating the Success of Unsupervised Image to Image Translation</a></div>
+          <div class="pub-authors">S. Benaim*, T. Galanti*, L. Wolf</div>
+          <div class="pub-venue"><em>ECCV</em>, 2018</div>
+        </article>
+        <article class="pub" data-year="2018" data-authors="Galanti Wolf Benaim" data-title="The Role of Minimal Complexity in Unsupervised Learning of Semantic Mappings" data-venue="ICLR 2018">
+          <div class="pub-title"><a href="https://openreview.net/forum?id=H1VjBebR-">The Role of Minimal Complexity in Unsupervised Learning of Semantic Mappings</a></div>
+          <div class="pub-authors">T. Galanti, L. Wolf, S. Benaim</div>
+          <div class="pub-venue"><em>ICLR</em>, 2018</div>
+        </article>
+      </div>
     </div>
 
-    <h2>Other peer-reviewed publications</h2>
-    <div class="pub-list" id="pubListOther">
-      <article class="pub" data-year="2025" data-authors="Bookseller Ray Galanti" data-title="Gradient-Based Bilevel Optimization for Principal-Agent Contract Design" data-venue="NeurIPS WS 2025"><h3><a href="">Gradient-Based Bilevel Optimization for Principal–Agent Contract Design</a></h3><div class="authors">A. Bookseller, K. Ray, T. Galanti</div><div class="venue"><em>NeurIPS Workshop: Generative AI in Finance</em>, 2025</div></article>
-      <article class="pub" data-year="2024" data-authors="Timor Mamou Korat Berchansky Pereg Wasserblat Galanti Gordon Harel" data-title="Distributed Speculative Inference of Large Language Models is Provably Faster" data-venue="ENLSP 2024"><h3><a href="https://arxiv.org/abs/2405.14105">Distributed Speculative Inference of Large Language Models is Provably Faster</a></h3><div class="authors">N. Timor, J. Mamou, D. Korat, M. Berchansky, O. Pereg, M. Wasserblat, T. Galanti, M. Gordon, D. Harel</div><div class="venue"><em>NeurIPS ENLSP Workshop</em>, 2024 (PMLR)</div></article>
-      <article class="pub" data-year="2023" data-authors="Xu Rangamani Liao Galanti Poggio" data-title="Dynamics of Deep Classifiers Trained with the Square Loss" data-venue="Research 2023"><h3><a href="https://spj.science.org/doi/10.34133/research.0024">Dynamics of Deep Classifiers Trained with the Square Loss</a></h3><div class="authors">M. Xu, A. Rangamani, Q. Liao, T. Galanti, T. Poggio</div><div class="venue"><em>Research (A Science Partner Journal)</em>, 2023</div></article>
-      <article class="pub" data-year="2022" data-authors="Galanti Gyorgy Hutter" data-title="Improved Generalization Bounds for Transfer Learning via Neural Collapse" data-venue="ICML WS 2022"><h3><a href="https://openreview.net/pdf?id=VrK7pKwOhT_">Improved Generalization Bounds for Transfer Learning via Neural Collapse</a></h3><div class="authors">T. Galanti, A. Gyorgy, M. Hutter</div><div class="venue"><em>ICML Workshop on Pretraining</em>, 2022</div></article>
-      <article class="pub" data-year="2022" data-authors="Galanti Galanti Ben-Shaul" data-title="On the Implicit Bias Towards Depth Minimization in Deep Neural Networks" data-venue="DEEPMATH 2022"><h3><a href="https://arxiv.org/abs/2202.09028">On the Implicit Bias Towards Depth Minimization in Deep Neural Networks</a></h3><div class="authors">T. Galanti, L. Galanti, I. Ben-Shaul</div><div class="venue"><em>DEEPMATH</em>, 2022 · <em>TOPML</em>, 2022</div></article>
-      <article class="pub" data-year="2022" data-authors="Ali Galanti Zheltonozhskii Baskin Wolf" data-title="Weakly Supervised Discovery of Semantic Attributes" data-venue="CLeaR 2022"><h3><a href="https://proceedings.mlr.press/v177/ali22a.html">Weakly Supervised Discovery of Semantic Attributes</a></h3><div class="authors">A. A. Ali, T. Galanti, E. Zheltonozhskii, C. Baskin, L. Wolf</div><div class="venue"><em>CLeaR</em>, 2022</div></article>
-      <article class="pub" data-year="2019" data-authors="Wolf Galanti Hazan" data-title="A Formal Approach to Explainability" data-venue="AIES 2019"><h3><a href="https://dl.acm.org/doi/abs/10.1145/3306618.3314260">A Formal Approach to Explainability</a></h3><div class="authors">L. Wolf, T. Galanti, T. Hazan</div><div class="venue"><em>AIES</em>, 2019</div></article>
-      <article class="pub" data-year="2018" data-authors="Galanti Benaim Wolf" data-title="Generalization Bounds for Cross-Domain Mapping with WGANs" data-venue="NeurIPS WS 2018"><h3><a href="http://nips2018dltheory.rice.edu/">Generalization Bounds for Cross-Domain Mapping with WGANs</a></h3><div class="authors">T. Galanti, S. Benaim, L. Wolf</div><div class="venue"><em>NeurIPS Workshop on Integration of Deep Learning Theories</em>, 2018</div></article>
-      <article class="pub" data-year="2016" data-authors="Galanti Hazan Wolf" data-title="A Theoretical Framework for Deep Transfer Learning" data-venue="IMAIAI 2016"><h3><a href="https://academic.oup.com/imaiai/article-abstract/5/2/159/2363463">A Theoretical Framework for Deep Transfer Learning</a></h3><div class="authors">T. Galanti, T. Hazan, L. Wolf</div><div class="venue"><em>Information and Inference: A Journal of the IMA</em>, 2016</div></article>
+    <div class="pub-section">
+      <div class="section-label">Other Peer-Reviewed Publications</div>
+      <div class="pub-list" id="pubListOther">
+        <article class="pub" data-year="2025" data-authors="Bookseller Ray Galanti" data-title="Gradient-Based Bilevel Optimization for Principal-Agent Contract Design" data-venue="NeurIPS WS 2025">
+          <div class="pub-title"><a href="">Gradient-Based Bilevel Optimization for Principal–Agent Contract Design</a></div>
+          <div class="pub-authors">A. Bookseller, K. Ray, T. Galanti</div>
+          <div class="pub-venue"><em>NeurIPS Workshop: Generative AI in Finance</em>, 2025</div>
+        </article>
+        <article class="pub" data-year="2024" data-authors="Timor Mamou Korat Berchansky Pereg Wasserblat Galanti Gordon Harel" data-title="Distributed Speculative Inference of Large Language Models is Provably Faster" data-venue="ENLSP 2024">
+          <div class="pub-title"><a href="https://arxiv.org/abs/2405.14105">Distributed Speculative Inference of Large Language Models is Provably Faster</a></div>
+          <div class="pub-authors">N. Timor, J. Mamou, D. Korat, M. Berchansky, O. Pereg, M. Wasserblat, T. Galanti, M. Gordon, D. Harel</div>
+          <div class="pub-venue"><em>NeurIPS ENLSP Workshop</em>, 2024 (PMLR)</div>
+        </article>
+        <article class="pub" data-year="2023" data-authors="Xu Rangamani Liao Galanti Poggio" data-title="Dynamics of Deep Classifiers Trained with the Square Loss" data-venue="Research 2023">
+          <div class="pub-title"><a href="https://spj.science.org/doi/10.34133/research.0024">Dynamics of Deep Classifiers Trained with the Square Loss</a></div>
+          <div class="pub-authors">M. Xu, A. Rangamani, Q. Liao, T. Galanti, T. Poggio</div>
+          <div class="pub-venue"><em>Research (A Science Partner Journal)</em>, 2023</div>
+        </article>
+        <article class="pub" data-year="2022" data-authors="Galanti Gyorgy Hutter" data-title="Improved Generalization Bounds for Transfer Learning via Neural Collapse" data-venue="ICML WS 2022">
+          <div class="pub-title"><a href="https://openreview.net/pdf?id=VrK7pKwOhT_">Improved Generalization Bounds for Transfer Learning via Neural Collapse</a></div>
+          <div class="pub-authors">T. Galanti, A. Gyorgy, M. Hutter</div>
+          <div class="pub-venue"><em>ICML Workshop on Pretraining</em>, 2022</div>
+        </article>
+        <article class="pub" data-year="2022" data-authors="Galanti Galanti Ben-Shaul" data-title="On the Implicit Bias Towards Depth Minimization in Deep Neural Networks" data-venue="DEEPMATH 2022">
+          <div class="pub-title"><a href="https://arxiv.org/abs/2202.09028">On the Implicit Bias Towards Depth Minimization in Deep Neural Networks</a></div>
+          <div class="pub-authors">T. Galanti, L. Galanti, I. Ben-Shaul</div>
+          <div class="pub-venue"><em>DEEPMATH</em>, 2022 · <em>TOPML</em>, 2022</div>
+        </article>
+        <article class="pub" data-year="2022" data-authors="Ali Galanti Zheltonozhskii Baskin Wolf" data-title="Weakly Supervised Discovery of Semantic Attributes" data-venue="CLeaR 2022">
+          <div class="pub-title"><a href="https://proceedings.mlr.press/v177/ali22a.html">Weakly Supervised Discovery of Semantic Attributes</a></div>
+          <div class="pub-authors">A. A. Ali, T. Galanti, E. Zheltonozhskii, C. Baskin, L. Wolf</div>
+          <div class="pub-venue"><em>CLeaR</em>, 2022</div>
+        </article>
+        <article class="pub" data-year="2019" data-authors="Wolf Galanti Hazan" data-title="A Formal Approach to Explainability" data-venue="AIES 2019">
+          <div class="pub-title"><a href="https://dl.acm.org/doi/abs/10.1145/3306618.3314260">A Formal Approach to Explainability</a></div>
+          <div class="pub-authors">L. Wolf, T. Galanti, T. Hazan</div>
+          <div class="pub-venue"><em>AIES</em>, 2019</div>
+        </article>
+        <article class="pub" data-year="2018" data-authors="Galanti Benaim Wolf" data-title="Generalization Bounds for Cross-Domain Mapping with WGANs" data-venue="NeurIPS WS 2018">
+          <div class="pub-title"><a href="http://nips2018dltheory.rice.edu/">Generalization Bounds for Cross-Domain Mapping with WGANs</a></div>
+          <div class="pub-authors">T. Galanti, S. Benaim, L. Wolf</div>
+          <div class="pub-venue"><em>NeurIPS Workshop on Integration of Deep Learning Theories</em>, 2018</div>
+        </article>
+        <article class="pub" data-year="2016" data-authors="Galanti Hazan Wolf" data-title="A Theoretical Framework for Deep Transfer Learning" data-venue="IMAIAI 2016">
+          <div class="pub-title"><a href="https://academic.oup.com/imaiai/article-abstract/5/2/159/2363463">A Theoretical Framework for Deep Transfer Learning</a></div>
+          <div class="pub-authors">T. Galanti, T. Hazan, L. Wolf</div>
+          <div class="pub-venue"><em>Information and Inference: A Journal of the IMA</em>, 2016</div>
+        </article>
+      </div>
     </div>
   </main>
 
-  <footer>&copy; 2025 Tomer Galanti</footer>
+  <footer>
+    <span>&copy; 2025 Deep Learning Fundamentals Lab · Texas A&M University</span>
+    <div class="footer-links">
+      <a href="mailto:galanti@tamu.edu">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="group.html">Group</a>
+    </div>
+  </footer>
 
   <script>
-    document.getElementById('menuBtn')?.addEventListener('click', () => { const m = document.getElementById('menu'), o = m.classList.toggle('open'); document.getElementById('menuBtn').setAttribute('aria-expanded', String(o)); });
+    document.getElementById('menuBtn')?.addEventListener('click', () => {
+      const m = document.getElementById('menu');
+      const o = m.classList.toggle('open');
+      document.getElementById('menuBtn').setAttribute('aria-expanded', String(o));
+    });
     function applyTheme(t) { document.documentElement.setAttribute('data-theme', t); localStorage.setItem('theme', t); }
     const saved = localStorage.getItem('theme'); if (saved) applyTheme(saved);
-    document.getElementById('themeBtn')?.addEventListener('click', () => { const c = document.documentElement.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light'); applyTheme(c === 'dark' ? 'light' : 'dark'); });
-
+    document.getElementById('themeBtn')?.addEventListener('click', () => {
+      const c = document.documentElement.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
+      applyTheme(c === 'dark' ? 'light' : 'dark');
+    });
     const yearSel = document.getElementById('year'), q = document.getElementById('q');
     const pubs = Array.from(document.querySelectorAll('.pub'));
     function norm(s) { return (s||'').toLowerCase(); }

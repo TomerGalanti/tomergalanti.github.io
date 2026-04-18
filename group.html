@@ -3,168 +3,269 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Group | Deep Learning Fundamentals Lab</title>
+  <title>Group | Deep Learning Fundamentals Lab · Texas A&M</title>
   <meta name="description" content="People of the Deep Learning Fundamentals Lab at Texas A&M University." />
-  <link rel="icon" href="/images/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #FAFAF7; --bg-elevated: #FFFFFF; --text: #1C1917;
-      --text-secondary: #78716C; --text-tertiary: #A8A29E;
-      --border: #E7E5E4; --accent: #D85A30; --accent-hover: #C04E28;
-      --accent-subtle: rgba(216,90,48,.07); --link: #D85A30;
-      --serif: 'Newsreader', Georgia, serif;
-      --sans: 'DM Sans', system-ui, -apple-system, sans-serif;
-      --header-h: 64px;
+      --bg: #F8F7F4; --bg2: #FFFFFF; --text: #17170F; --text2: #5C5B55;
+      --text3: #9E9D95; --border: #E4E3DC; --accent: #1A3A2A; --accent2: #2E6B48;
+      --accent-gold: #B8924A; --accent-gold-light: rgba(184,146,74,.10);
+      --link: #2E6B48;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Outfit', system-ui, sans-serif;
+      --hh: 68px; --max: 980px;
     }
     [data-theme="dark"] {
-      --bg: #0C0A09; --bg-elevated: #1C1917; --text: #E7E5E4;
-      --text-secondary: #A8A29E; --text-tertiary: #78716C;
-      --border: #292524; --accent-subtle: rgba(216,90,48,.1); --link: #E8693F;
+      --bg: #0E110D; --bg2: #161A14; --text: #EAE9E2; --text2: #9E9D95;
+      --text3: #5C5B55; --border: #252820; --accent: #A8C9B0; --accent2: #6DB88A;
+      --accent-gold: #D4A85C; --accent-gold-light: rgba(212,168,92,.10); --link: #6DB88A;
     }
     @media (prefers-color-scheme: dark) {
       :root:not([data-theme="light"]) {
-        --bg: #0C0A09; --bg-elevated: #1C1917; --text: #E7E5E4;
-        --text-secondary: #A8A29E; --text-tertiary: #78716C;
-        --border: #292524; --accent-subtle: rgba(216,90,48,.1); --link: #E8693F;
+        --bg: #0E110D; --bg2: #161A14; --text: #EAE9E2; --text2: #9E9D95;
+        --text3: #5C5B55; --border: #252820; --accent: #A8C9B0; --accent2: #6DB88A;
+        --accent-gold: #D4A85C; --accent-gold-light: rgba(212,168,92,.10); --link: #6DB88A;
       }
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 15px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
     a { color: var(--link); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    img { max-width: 100%; height: auto; }
+    a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
-    header { position: sticky; top: 0; z-index: 100; height: var(--header-h); border-bottom: 1px solid var(--border); background: var(--bg); }
-    @supports (backdrop-filter: blur(12px)) { header { background: color-mix(in srgb, var(--bg) 85%, transparent); backdrop-filter: blur(12px); } }
-    .header-inner { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 100%; }
-    .brand { display: flex; align-items: center; gap: .7rem; text-decoration: none; color: var(--text); }
+    /* ── HEADER ── */
+    header { position: sticky; top: 0; z-index: 100; height: var(--hh); border-bottom: 1px solid var(--border); background: var(--bg); }
+    @supports (backdrop-filter: blur(14px)) { header { background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(14px); } }
+    .header-inner { max-width: var(--max); margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 100%; }
+    .brand { display: flex; align-items: center; gap: .85rem; text-decoration: none; color: var(--text); }
     .brand:hover { text-decoration: none; }
-    .brand-logo { width: 34px; height: 34px; flex-shrink: 0; }
-    .brand-logo .logo-light { display: block; }
-    .brand-logo .logo-dark { display: none; }
-    [data-theme="dark"] .brand-logo .logo-light { display: none; }
-    [data-theme="dark"] .brand-logo .logo-dark { display: block; }
-    @media (prefers-color-scheme: dark) {
-      :root:not([data-theme="light"]) .brand-logo .logo-light { display: none; }
-      :root:not([data-theme="light"]) .brand-logo .logo-dark { display: block; }
-    }
-    .brand-text { font-weight: 600; font-size: 14px; letter-spacing: .2px; }
-    nav { display: flex; align-items: center; gap: .15rem; }
-    nav a { padding: .35rem .6rem; border-radius: 7px; font-size: 13.5px; font-weight: 500; color: var(--text-secondary); transition: all .15s; }
-    nav a:hover { color: var(--text); background: var(--accent-subtle); text-decoration: none; }
-    nav a.active { color: var(--text); background: var(--accent-subtle); }
-    .header-right { display: flex; align-items: center; gap: .3rem; }
-    .icon-btn { width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; border: 1px solid var(--border); background: transparent; color: var(--text-secondary); cursor: pointer; transition: all .15s; text-decoration: none; }
-    .icon-btn:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+    .brand-mark { width: 36px; height: 36px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .brand-mark svg { width: 20px; height: 20px; }
+    .brand-name { font-family: var(--serif); font-weight: 600; font-size: 17px; letter-spacing: .01em; line-height: 1.2; }
+    .brand-sub { font-size: 11px; font-weight: 400; color: var(--text3); letter-spacing: .04em; text-transform: uppercase; }
+    nav { display: flex; align-items: center; gap: .1rem; }
+    nav a { padding: .3rem .65rem; border-radius: 6px; font-size: 13.5px; font-weight: 400; color: var(--text2); transition: color .15s, background .15s; }
+    nav a:hover { color: var(--text); background: rgba(0,0,0,.05); text-decoration: none; }
+    nav a.active { color: var(--text); font-weight: 500; }
+    [data-theme="dark"] nav a:hover { background: rgba(255,255,255,.06); }
+    .header-right { display: flex; align-items: center; gap: .4rem; }
+    .icon-btn { width: 34px; height: 34px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid var(--border); background: transparent; color: var(--text2); cursor: pointer; transition: all .15s; text-decoration: none; }
+    .icon-btn:hover { border-color: var(--accent2); color: var(--accent2); text-decoration: none; }
     .icon-btn svg { width: 15px; height: 15px; }
     .hamburger { display: none; background: none; border: 0; padding: .4rem; color: var(--text); cursor: pointer; }
-    @media (max-width: 768px) {
-      nav { display: none; position: absolute; left: 0; right: 0; top: var(--header-h); background: var(--bg); border-bottom: 1px solid var(--border); padding: .5rem 1rem; flex-direction: column; align-items: stretch; }
+    @media (max-width: 720px) {
+      nav { display: none; position: absolute; left: 0; right: 0; top: var(--hh); background: var(--bg); border-bottom: 1px solid var(--border); padding: .5rem 1rem; flex-direction: column; align-items: stretch; }
       nav.open { display: flex; }
       .hamburger { display: inline-flex; }
+      .brand-sub { display: none; }
     }
 
-    main { max-width: 860px; margin: 0 auto; padding: 2.5rem 1.5rem 3rem; }
+    /* ── MAIN ── */
+    main { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
 
-    h2 { font-family: var(--serif); font-weight: 600; font-size: 1.2rem; margin: 2rem 0 .6rem; padding-bottom: .35rem; border-bottom: 1px solid var(--border); }
-    h2:first-child { margin-top: 0; }
+    /* ── PAGE HEADER ── */
+    .page-header { padding: 3.5rem 0 2.5rem; border-bottom: 1px solid var(--border); }
+    .eyebrow { font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: .6rem; }
+    .page-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 500; line-height: 1.1; }
 
-    .people-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem 1.25rem; margin-top: .75rem; }
-    @media (max-width: 768px) { .people-grid { grid-template-columns: repeat(3, 1fr); } }
-    @media (max-width: 520px) { .people-grid { grid-template-columns: repeat(2, 1fr); } }
+    /* ── SECTIONS ── */
+    .two-col { display: grid; grid-template-columns: 220px 1fr; gap: 4rem; padding: 3rem 0; border-bottom: 1px solid var(--border); }
+    @media (max-width: 720px) { .two-col { grid-template-columns: 1fr; gap: 1.5rem; } }
+    .col-label { font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-gold); padding-top: .25rem; }
 
-    .person { text-align: center; transition: transform .2s; }
-    .person:hover { transform: translateY(-3px); }
-    .avatar { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border); display: block; margin: 0 auto .6rem; transition: border-color .2s; }
-    .person:hover .avatar { border-color: var(--accent); }
-    .person h3 { font-size: .9rem; font-weight: 600; margin: 0; }
-    .person h3 a { color: var(--text); }
-    .person h3 a:hover { color: var(--link); text-decoration: none; }
-    .role { color: var(--text-secondary); font-size: .85rem; margin-top: .1rem; }
+    /* ── PEOPLE GRID ── */
+    .people-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem 1.5rem; }
+    @media (max-width: 720px) { .people-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 480px) { .people-grid { grid-template-columns: repeat(2, 1fr); } }
 
-    .join { margin-top: .5rem; }
-    .join p { margin: .4rem 0 .75rem; color: var(--text-secondary); }
-    .join a { color: var(--link); }
+    .person { text-align: center; }
+    .avatar-wrap { position: relative; width: 100px; height: 100px; margin: 0 auto .75rem; }
+    .avatar { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border); display: block; transition: border-color .2s; }
+    .person:hover .avatar { border-color: var(--accent2); }
+    .person-name { font-size: .88rem; font-weight: 500; margin-bottom: .15rem; }
+    .person-name a { color: var(--text); }
+    .person-name a:hover { color: var(--link); text-decoration: none; }
+    .person-role { font-size: .78rem; color: var(--text3); }
 
-    footer { border-top: 1px solid var(--border); padding: 1.25rem 1.5rem; font-size: .85rem; color: var(--text-tertiary); max-width: 860px; margin: 0 auto; }
+    /* PI card — slightly larger */
+    .pi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem 1.5rem; }
+    .pi-grid .avatar-wrap { width: 120px; height: 120px; }
+    .pi-grid .avatar { width: 120px; height: 120px; }
+    .pi-grid .person-name { font-size: .95rem; }
+
+    /* ── JOIN ── */
+    .join-content { display: flex; flex-direction: column; gap: 1rem; }
+    .join-content p { color: var(--text2); font-size: .93rem; }
+    .join-content strong { color: var(--text); font-weight: 500; }
+    .join-content a { color: var(--link); }
+
+    /* ── FOOTER ── */
+    footer { border-top: 1px solid var(--border); padding: 1.75rem 2rem; max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; font-size: .82rem; color: var(--text3); }
+    @media (max-width: 540px) { footer { flex-direction: column; gap: .5rem; text-align: center; } }
+    .footer-links { display: flex; gap: 1rem; }
+    footer a { color: var(--text3); }
+    footer a:hover { color: var(--link); }
   </style>
 </head>
 <body>
   <header>
     <div class="header-inner">
-      <a href="/index.html" class="brand">
-        <div class="brand-logo">
-          <svg class="logo-light" viewBox="0 0 200 200" width="34" height="34" xmlns="http://www.w3.org/2000/svg"><g transform="translate(100,100)"><path d="M-42,-42 L-42,-28" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M-42,-42 L-28,-42" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,-42 L42,-28" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,-42 L28,-42" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M-42,42 L-42,28" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M-42,42 L-28,42" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,42 L42,28" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,42 L28,42" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round" opacity=".28"/><rect x="-20" y="-18" width="22" height="22" rx="3" fill="#1a1a1a" opacity=".18"/><circle cx="16" cy="8" r="14" fill="#D85A30"/></g></svg>
-          <svg class="logo-dark" viewBox="0 0 200 200" width="34" height="34" xmlns="http://www.w3.org/2000/svg"><g transform="translate(100,100)"><path d="M-42,-42 L-42,-28" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M-42,-42 L-28,-42" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,-42 L42,-28" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,-42 L28,-42" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M-42,42 L-42,28" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M-42,42 L-28,42" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,42 L42,28" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><path d="M42,42 L28,42" fill="none" stroke="#e0e0e0" stroke-width="4" stroke-linecap="round" opacity=".28"/><rect x="-20" y="-18" width="22" height="22" rx="3" fill="#e0e0e0" opacity=".18"/><circle cx="16" cy="8" r="14" fill="#D85A30"/></g></svg>
+      <a href="index.html" class="brand">
+        <div class="brand-mark">
+          <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="5" cy="5" r="2.5" fill="rgba(255,255,255,0.4)"/>
+            <circle cx="15" cy="5" r="2.5" fill="rgba(255,255,255,0.4)"/>
+            <circle cx="5" cy="15" r="2.5" fill="rgba(255,255,255,0.4)"/>
+            <circle cx="15" cy="15" r="3.5" fill="rgba(255,255,255,0.9)"/>
+          </svg>
         </div>
-        <span class="brand-text">Deep Learning Fundamentals</span>
+        <div>
+          <div class="brand-name">DL Fundamentals Lab</div>
+          <div class="brand-sub">Texas A&M University</div>
+        </div>
       </a>
       <button class="hamburger" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
       <nav id="menu">
-        <a href="/index.html">Home</a>
-        <a href="/group.html" class="active">Group</a>
-        <a href="/publications.html">Publications</a>
+        <a href="index.html">Home</a>
+        <a href="group.html" class="active">Group</a>
+        <a href="publications.html">Publications</a>
         <a href="https://dlfundamentals.github.io/blog/">Blog</a>
-        <a href="https://tomergalanti.github.io/index.html">About</a>
+        <a href="PI.html">About PI</a>
       </nav>
       <div class="header-right">
-        <button class="icon-btn" id="themeBtn" aria-label="Toggle theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
-        <a class="icon-btn" href="https://github.com/DLFundamentals" aria-label="GitHub"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.2-3.37-1.2-.46-1.17-1.12-1.48-1.12-1.48-.92-.63.07-.62.07-.62 1.02.07 1.55 1.05 1.55 1.05.9 1.54 2.36 1.1 2.94.84.09-.66.35-1.1.64-1.35-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.7.12 2.5.34 1.9-1.3 2.74-1.02 2.74-1.02.55 1.4.2 2.44.1 2.7.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.3.69.9.69 1.82v2.7c0 .26.18.57.69.47A10 10 0 0012 2z"/></svg></a>
-        <a class="icon-btn" href="https://scholar.google.com/citations?user=ut_ISVIAAAAJ" aria-label="Google Scholar"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-2a5 5 0 100-10 5 5 0 000 10z"/><path d="M12 13V3L1 10l4.18 2.74"/></svg></a>
-        <a class="icon-btn" href="https://www.linkedin.com/in/tomer-galanti" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+        <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <a class="icon-btn" href="https://github.com/DLFundamentals" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.2-3.37-1.2-.46-1.17-1.12-1.48-1.12-1.48-.92-.63.07-.62.07-.62 1.02.07 1.55 1.05 1.55 1.05.9 1.54 2.36 1.1 2.94.84.09-.66.35-1.1.64-1.35-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.7.12 2.5.34 1.9-1.3 2.74-1.02 2.74-1.02.55 1.4.2 2.44.1 2.7.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.3.69.9.69 1.82v2.7c0 .26.18.57.69.47A10 10 0 0012 2z"/></svg>
+        </a>
+        <a class="icon-btn" href="https://scholar.google.com/citations?user=ut_ISVIAAAAJ" aria-label="Google Scholar">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-2a5 5 0 100-10 5 5 0 000 10z"/><path d="M12 13V3L1 10l4.18 2.74"/></svg>
+        </a>
+        <a class="icon-btn" href="https://www.linkedin.com/in/tomer-galanti" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
       </div>
     </div>
   </header>
 
-  <main id="main">
-    <h2>Principal investigator</h2>
-    <div class="people-grid">
-      <article class="person">
-        <img class="avatar" src="/images/Tomer Galanti cropped 2.png" alt="Tomer Galanti" width="110" height="110" loading="lazy" />
-        <h3><a href="https://tomergalanti.github.io/index.html">Tomer Galanti</a></h3>
-        <div class="role">Group PI</div>
-      </article>
+  <main>
+    <div class="page-header">
+      <div class="eyebrow">Deep Learning Fundamentals Lab</div>
+      <h1>Our Group</h1>
     </div>
 
-    <h2>Current members</h2>
-    <div class="people-grid">
-      <article class="person"><img class="avatar" src="/student_images/achleshwar.jpg" alt="Achleshwar Luthra" loading="lazy" /><h3><a href="https://achleshwar.github.io">Achleshwar Luthra</a></h3><div class="role">PhD student</div></article>
-      <article class="person"><img class="avatar" src="/student_images/deepak.jpg" alt="Deepak Suresh" loading="lazy" /><h3><a href="https://www.linkedin.com/in/deepaksuresh15/">Deepak Suresh</a></h3><div class="role">Master's student</div></article>
-      <article class="person"><img class="avatar" src="/student_images/rahul.jpg" alt="Rahul Pillalamarri" loading="lazy" /><h3><a href="https://www.linkedin.com/in/rahul-pillalamarri/">Rahul Pillalamarri</a></h3><div class="role">Master's student</div></article>
-      <article class="person"><img class="avatar" src="/student_images/yash.jpg" alt="Yash Salunkhe" loading="lazy" /><h3><a href="https://www.linkedin.com/in/yash-salunkhe-47a323226/">Yash Salunkhe</a></h3><div class="role">Master's student</div></article>
-      <article class="person"><img class="avatar" src="/student_images/saharsh.jpeg" alt="Saharsh Koganti" loading="lazy" /><h3><a href="https://www.linkedin.com/in/saharsh-koganti-5a9a84229/">Saharsh Koganti</a></h3><div class="role">Master's student</div></article>
-      <article class="person"><img class="avatar" src="/student_images/aarya.jpg" alt="Aarya Bookseller" loading="lazy" /><h3><a href="https://www.linkedin.com/in/aarya-bookseller-b6a8531b7/">Aarya Bookseller</a></h3><div class="role">Undergraduate</div></article>
-      <article class="person"><img class="avatar" src="/student_images/priya.jpg" alt="Priyadarsi Mishra" loading="lazy" /><h3><a href="https://www.linkedin.com/in/priyadarsi-mishra/">Priyadarsi Mishra</a></h3><div class="role">Undergraduate</div></article>
-      <article class="person"><img class="avatar" src="/student_images/nishit.jpeg" alt="Nishit Aggarwal" loading="lazy" /><h3><a href="https://www.linkedin.com/in/nishit-a-7b62352a6/">Nishit Aggarwal</a></h3><div class="role">Undergraduate</div></article>
-    </div>
+    <section class="two-col">
+      <div class="col-label">Principal Investigator</div>
+      <div class="pi-grid">
+        <article class="person">
+          <div class="avatar-wrap">
+            <img class="avatar" src="images/Tomer Galanti cropped 2.png" alt="Tomer Galanti" loading="eager" />
+          </div>
+          <div class="person-name"><a href="PI.html">Tomer Galanti</a></div>
+          <div class="person-role">Assistant Professor</div>
+        </article>
+      </div>
+    </section>
 
-    <h2>Alumni</h2>
-    <div class="people-grid">
-      <article class="person"><img class="avatar" src="/student_images/shivam.jpg" alt="Shivam Singhal" loading="lazy" /><h3><a href="https://www.linkedin.com/in/sandsinghal/">Shivam Singhal</a></h3><div class="role">Alumnus</div></article>
-      <article class="person"><img class="avatar" src="/student_images/ajay.jpg" alt="Ajay Jagannath" loading="lazy" /><h3><a href="https://www.linkedin.com/in/ajayjagan2511/">Ajay Jagannath</a></h3><div class="role">Alumnus</div></article>
-    </div>
+    <section class="two-col">
+      <div class="col-label">Current Members</div>
+      <div class="people-grid">
+        <article class="person">
+          <div class="avatar-wrap"><img class="avatar" src="student_images/achleshwar.jpg" alt="Achleshwar Luthra" loading="lazy" /></div>
+          <div class="person-name"><a href="https://achleshwar.github.io">Achleshwar Luthra</a></div>
+          <div class="person-role">PhD student</div>
+        </article>
+        <article class="person">
+          <div class="avatar-wrap"><img class="avatar" src="student_images/deepak.jpg" alt="Deepak Suresh" loading="lazy" /></div>
+          <div class="person-name"><a href="https://www.linkedin.com/in/deepaksuresh15/">Deepak Suresh</a></div>
+          <div class="person-role">Master's student</div>
+        </article>
+        <article class="person">
+          <div class="avatar-wrap"><img class="avatar" src="student_images/rahul.jpg" alt="Rahul Pillalamarri" loading="lazy" /></div>
+          <div class="person-name"><a href="https://www.linkedin.com/in/rahul-pillalamarri/">Rahul Pillalamarri</a></div>
+          <div class="person-role">Master's student</div>
+        </article>
+        <article class="person">
+          <div class="avatar-wrap"><img class="avatar" src="student_images/yash.jpg" alt="Yash Salunkhe" loading="lazy" /></div>
+          <div class="person-name"><a href="https://www.linkedin.com/in/yash-salunkhe-47a323226/">Yash Salunkhe</a></div>
+          <div class="person-role">Master's student</div>
+        </article>
+        <article class="person">
+          <div class="avatar-wrap"><img class="avatar" src="student_images/saharsh.jpeg" alt="Saharsh Koganti" loading="lazy" /></div>
+          <div class="person-name"><a href="https://www.linkedin.com/in/saharsh-koganti-5a9a84229/">Saharsh Koganti</a></div>
+          <div class="person-role">Master's student</div>
+        </article>
+        <article class="person">
+          <div class="avatar-wrap"><img class="avatar" src="student_images/aarya.jpg" alt="Aarya Bookseller" loading="lazy" /></div>
+          <div class="person-name"><a href="https://www.linkedin.com/in/aarya-bookseller-b6a8531b7/">Aarya Bookseller</a></div>
+          <div class="person-role">Undergraduate</div>
+        </article>
+        <article class="person">
+          <div class="avatar-wrap"><img class="avatar" src="student_images/priya.jpg" alt="Priyadarsi Mishra" loading="lazy" /></div>
+          <div class="person-name"><a href="https://www.linkedin.com/in/priyadarsi-mishra/">Priyadarsi Mishra</a></div>
+          <div class="person-role">Undergraduate</div>
+        </article>
+        <article class="person">
+          <div class="avatar-wrap"><img class="avatar" src="student_images/nishit.jpeg" alt="Nishit Aggarwal" loading="lazy" /></div>
+          <div class="person-name"><a href="https://www.linkedin.com/in/nishit-a-7b62352a6/">Nishit Aggarwal</a></div>
+          <div class="person-role">Undergraduate</div>
+        </article>
+      </div>
+    </section>
 
-    <h2>Join the lab</h2>
-    <div class="join">
-      <p><strong>PhD applicants:</strong> Apply through the <a href="https://engineering.tamu.edu/cse/academics/degrees/graduate/phd.html">TAMU CSE PhD program</a>. In your statement, describe your fit with the lab's research areas and mention Prof. Galanti as a potential advisor.</p>
-      <p><strong>Master's &amp; undergraduates:</strong> We welcome motivated students to get involved in research. Please email a short CV, transcripts, and a brief note about your interests and relevant skills.</p>
-      <p><a href="mailto:galanti@tamu.edu">galanti@tamu.edu</a></p>
-    </div>
+    <section class="two-col">
+      <div class="col-label">Alumni</div>
+      <div class="people-grid">
+        <article class="person">
+          <div class="avatar-wrap"><img class="avatar" src="student_images/shivam.jpg" alt="Shivam Singhal" loading="lazy" /></div>
+          <div class="person-name"><a href="https://www.linkedin.com/in/sandsinghal/">Shivam Singhal</a></div>
+          <div class="person-role">Alumnus</div>
+        </article>
+        <article class="person">
+          <div class="avatar-wrap"><img class="avatar" src="student_images/ajay.jpg" alt="Ajay Jagannath" loading="lazy" /></div>
+          <div class="person-name"><a href="https://www.linkedin.com/in/ajayjagan2511/">Ajay Jagannath</a></div>
+          <div class="person-role">Alumnus</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="two-col" style="border-bottom: 0;">
+      <div class="col-label">Join the Lab</div>
+      <div class="join-content">
+        <p><strong>PhD applicants</strong> — Apply through the <a href="https://engineering.tamu.edu/cse/academics/degrees/graduate/phd.html">TAMU CSE PhD program</a>. In your statement, describe your fit with the lab's research areas and mention Prof. Galanti as a potential advisor.</p>
+        <p><strong>Master's &amp; undergraduates</strong> — We welcome motivated students to get involved in research. Please email a short CV, transcripts, and a brief note about your interests and relevant skills.</p>
+        <p><a href="mailto:galanti@tamu.edu">galanti@tamu.edu</a></p>
+      </div>
+    </section>
   </main>
 
-  <footer>&copy; 2025 Tomer Galanti</footer>
+  <footer>
+    <span>&copy; 2025 Deep Learning Fundamentals Lab · Texas A&M University</span>
+    <div class="footer-links">
+      <a href="mailto:galanti@tamu.edu">Contact</a>
+      <a href="publications.html">Publications</a>
+      <a href="index.html">Home</a>
+    </div>
+  </footer>
 
   <script>
-    document.getElementById('menuBtn')?.addEventListener('click', () => { const m = document.getElementById('menu'), o = m.classList.toggle('open'); document.getElementById('menuBtn').setAttribute('aria-expanded', String(o)); });
+    document.getElementById('menuBtn')?.addEventListener('click', () => {
+      const m = document.getElementById('menu');
+      const o = m.classList.toggle('open');
+      document.getElementById('menuBtn').setAttribute('aria-expanded', String(o));
+    });
     function applyTheme(t) { document.documentElement.setAttribute('data-theme', t); localStorage.setItem('theme', t); }
     const saved = localStorage.getItem('theme'); if (saved) applyTheme(saved);
-    document.getElementById('themeBtn')?.addEventListener('click', () => { const c = document.documentElement.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light'); applyTheme(c === 'dark' ? 'light' : 'dark'); });
+    document.getElementById('themeBtn')?.addEventListener('click', () => {
+      const c = document.documentElement.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
+      applyTheme(c === 'dark' ? 'light' : 'dark');
+    });
   </script>
 </body>
 </html>
