@@ -178,15 +178,7 @@
       object-fit: cover;
       border: 1px solid var(--border);
     }
-    .portrait-accent {
-      position: absolute;
-      bottom: -10px; right: -10px;
-      width: 60px; height: 60px;
-      border-radius: 10px;
-      background: var(--accent-gold-light);
-      border: 1px solid var(--accent-gold);
-      z-index: -1;
-    }
+
 
     /* ── SECTION LAYOUT ── */
     .two-col {
@@ -274,9 +266,10 @@
     [data-theme="dark"] .tag-spotlight { background: rgba(109,184,138,.1); color: #6DB88A; }
 
     /* ── TEACHING ── */
-    .teaching-list { display: flex; flex-direction: column; gap: .6rem; }
-    .teaching-item { padding: .85rem 1.1rem; border-radius: 10px; border: 1px solid var(--border); background: var(--bg2); }
-    .teaching-item strong { font-weight: 500; font-size: .92rem; display: block; margin-bottom: .15rem; }
+    .teaching-list { display: flex; flex-direction: column; gap: 0; }
+    .teaching-item { padding: .65rem 0; border-bottom: 1px solid var(--border); }
+    .teaching-item:last-child { border-bottom: 0; }
+    .teaching-item strong { font-weight: 500; font-size: .92rem; display: block; margin-bottom: .1rem; }
     .teaching-item span { font-size: .83rem; color: var(--text3); }
 
     /* ── FOOTER ── */
@@ -368,7 +361,6 @@
       </div>
       <div class="portrait-wrap">
         <img class="portrait" src="images/Tomer Galanti - talk.jpg" alt="Pier Beneventano" loading="eager" />
-        <div class="portrait-accent"></div>
       </div>
     </section>
 
@@ -376,8 +368,9 @@
     <section class="two-col">
       <div class="col-label">Research Focus</div>
       <div class="col-content">
-        <h2>Making deep learning theoretically understood — and practically powerful.</h2>
-        <p>Tomer Galanti is an Assistant Professor in the Department of Computer Science and Engineering at <a href="https://engineering.tamu.edu/cse/index.html">Texas A&M University</a>. His research focuses on the theoretical and algorithmic foundations of deep learning and large language models. Combining theory and experimentation, his work addresses core challenges in deep learning efficiency — including reducing data requirements, designing compressible networks, enabling model adaptation to new tasks, accelerating inference, and improving training stability.</p>
+        <h2>Understanding why pre-training works, and building reliable systems from imperfect models.</h2>
+        <p>Tomer Galanti is an Assistant Professor in the Department of Computer Science and Engineering at <a href="https://engineering.tamu.edu/cse/index.html">Texas A&M University</a>. His research has two directions: understanding the theoretical foundations of pre-training — why supervised and self-supervised representations generalize and transfer — and building provably reliable systems from imperfect LLM agents.</p>
+        <p>Prior to joining Texas A&M, he was a postdoctoral associate at MIT's <a href="https://cbmm.mit.edu">Center for Brains, Minds &amp; Machines</a>, working with <a href="https://scholar.google.com/citations?user=WgAGy7wAAAAJ&hl=en">Tomaso Poggio</a>. He received his Ph.D. from <a href="https://en-exact-sciences.tau.ac.il/computer">Tel Aviv University</a>, advised by <a href="https://scholar.google.co.il/citations?user=UbFrXTsAAAAJ&hl=en">Lior Wolf</a>, and interned as a Research Scientist at <a href="https://www.deepmind.com/">Google DeepMind</a> in 2021.</p>
         <p>Prior to joining Texas A&M, he was a postdoctoral associate at MIT's <a href="https://cbmm.mit.edu">Center for Brains, Minds &amp; Machines</a>, working with <a href="https://scholar.google.com/citations?user=WgAGy7wAAAAJ&hl=en">Tomaso Poggio</a>. He received his Ph.D. from <a href="https://en-exact-sciences.tau.ac.il/computer">Tel Aviv University</a>, advised by <a href="https://scholar.google.co.il/citations?user=UbFrXTsAAAAJ&hl=en">Lior Wolf</a>, and interned as a Research Scientist at <a href="https://www.deepmind.com/">Google DeepMind</a> in 2021.</p>
       </div>
     </section>
