@@ -383,20 +383,22 @@
         </div>
         <div class="contributions">
 
-          <div class="contrib-item">
-          <div class="contrib-num">01</div>
-          <div class="contrib-body">
-            <div class="contrib-title">A Theory of Directional Neural Collapse in Self-Supervised Learning</div>
-            <div class="contrib-desc">Frozen self-supervised representations often transfer with surprisingly few labels, not because they collapse everywhere, but because they collapse in the directions that matter. These two papers show that SSL learns an anisotropic geometry in which within-class variation shrinks sharply along class-separating directions while remaining large in irrelevant subspaces. <a href="https://arxiv.org/abs/2506.04411">[1]</a> identifies this mechanism through directional CDNV, showing that contrastive learning implicitly moves toward a supervised clustering geometry and that few-shot error is governed primarily by decision-axis variability rather than total within-class spread. <a href="https://arxiv.org/abs/2603.03530">[2]</a> develops this into a full theory of directional neural collapse: once decision-axis variance becomes small, few-shot transfer becomes predictable, and independent downstream tasks are pushed onto nearly orthogonal decision axes, allowing a single pretrained representation to support many tasks with minimal interference. Together, the papers give a geometric explanation for two central facts about SSL: why frozen features work so well in the low-label regime, and why they remain broadly reusable across diverse tasks.</div>
-            <div class="contrib-meta">
-              <span class="tag tag-venue">NeurIPS 2025</span>
-              <span class="tag tag-venue">Preprint 2026</span>
-              <span class="tag">Self-Supervised Learning</span>
-              <span class="tag">Neural Collapse</span>
-              <span class="tag">Few-Shot Transfer</span>
-            </div>
-          </div>
-        </div>
+<div class="contrib-item">
+  <div class="contrib-num">09</div>
+  <div class="contrib-body">
+    <div class="contrib-title">Directional Neural Collapse in Self-Supervised Learning</div>
+    <div class="contrib-desc">
+      Self-supervised learning works in the few-shot regime not because features collapse everywhere, but because they collapse where decisions are made. In <a href="https://arxiv.org/abs/2506.04411">[1]</a> and <a href="https://arxiv.org/abs/2603.03530">[2]</a>, we show that the key quantity is <i>directional CDNV</i>: variability along class-separating directions. This yields a geometric explanation for two defining strengths of SSL at once, strong few-shot transfer and <i>task orthogonalization</i>, where independent tasks occupy nearly orthogonal decision axes and therefore interfere little with one another. Together, these works identify <i>directional neural collapse</i> as a central principle behind why frozen SSL features are both label-efficient and broadly reusable.
+    </div>
+    <div class="contrib-meta">
+      <span class="tag tag-venue">NeurIPS 2025</span>
+      <span class="tag tag-venue">Preprint 2026</span>
+      <span class="tag">Self-Supervised Learning</span>
+      <span class="tag">Neural Collapse</span>
+      <span class="tag">Transfer Learning</span>
+    </div>
+  </div>
+</div>
 
           <a class="contrib-item" href="https://openreview.net/forum?id=Njx1NjHIx4">
             <div class="contrib-num">02</div>
