@@ -424,20 +424,20 @@
             </div>
           </a>
 
-        <div class="contrib-item">
-          <div class="contrib-num">02</div>
-          <div class="contrib-body">
-            <div class="contrib-title">Neural Collapse and Transfer Learning</div>
-            <div class="contrib-desc">Why do supervised pre-trained models transfer so well to new tasks and classes, even with very few examples? These papers establish the first theoretical account of this phenomenon through the lens of neural collapse — the geometric clustering of last-layer features that emerges at the end of training. We build a new theoretical framework showing that neural collapse generalizes from source classes to unseen target classes, and introduce the Class-Distance Normalized Variance (CDNV) — the key quantity governing few-shot transfer error — with progressively tighter and more realistic bounds across <a href="https://openreview.net/forum?id=SwIp410B6aQ">[1]</a>, <a href="https://arxiv.org/abs/2212.12532">[2]</a>, and <a href="https://openreview.net/pdf?id=VrK7pKwOhT_">[3]</a>. The CDNV has since been widely adopted in the neural collapse literature, and the framework has provided practical guidance for improving transfer in both supervised and self-supervised pre-training.</div>
-            <div class="contrib-meta">
-              <span class="tag tag-venue">ICLR 2022</span>
-              <span class="tag tag-venue">ICML WS 2022</span>
-              <span class="tag">Neural Collapse</span>
-              <span class="tag">Transfer Learning</span>
-              <span class="tag">Few-Shot Learning</span>
-            </div>
-          </div>
-        </div>
+<div class="contrib-item">
+<div class="contrib-num">02</div>
+<div class="contrib-body">
+<div class="contrib-title">Neural Collapse and Transfer Learning</div>
+<div class="contrib-desc">Why do supervised pre-trained models transfer so well to new tasks and classes, even with very few examples? These papers establish the first theoretical account of this phenomenon through the lens of neural collapse — the geometric clustering of last-layer features that emerges at the end of training. We build a new theoretical framework showing that neural collapse generalizes from source classes to unseen target classes, and introduce the Class-Distance Normalized Variance (CDNV) — the key quantity governing few-shot transfer error — with progressively tighter and more realistic bounds across <a href="https://openreview.net/forum?id=SwIp410B6aQ">[1]</a>, <a href="https://arxiv.org/abs/2212.12532">[2]</a>, and <a href="https://openreview.net/pdf?id=VrK7pKwOhT_">[3]</a>. The CDNV has since been widely adopted in the neural collapse literature, and the framework has provided practical guidance for improving transfer in both supervised and self-supervised pre-training.</div>
+<div class="contrib-meta">
+<span class="tag tag-venue">ICLR 2022</span>
+<span class="tag tag-venue">ICML WS 2022</span>
+<span class="tag">Neural Collapse</span>
+<span class="tag">Transfer Learning</span>
+<span class="tag">Few-Shot Learning</span>
+</div>
+</div>
+</div>
 
 <div class="contrib-item">
   <div class="contrib-num">01</div>
@@ -460,7 +460,7 @@
   <div class="contrib-body">
     <div class="contrib-title">SGD and Weight Decay Secretly Minimize Rank</div>
     <div class="contrib-desc">
-      It is widely observed that neural networks trained with SGD tend to develop surprisingly low-rank weight matrices, but until <a href="https://openreview.net/forum?id=0LzE9AROwD">[3]</a>, this phenomenon had no general theoretical explanation. This paper shows that mini-batch SGD together with weight decay provably induces a bias toward low-rank solutions across a broad class of modern architectures, without relying on restrictive assumptions about the data, convergence, global optimality, width, or depth. The theory also identifies how this effect strengthens with smaller batch sizes, larger learning rates, and stronger weight decay, revealing rank minimization as an implicit force built into the training dynamics themselves. The broader implication is that compressibility is not merely an after-the-fact property of trained networks: it is already being shaped during optimization. This helps explain why modern deep networks often learn low-dimensional internal structure and why weight decay does more than regularize, it steers what kinds of representations are learned in the first place.
+      We provide the first general explanation for why neural networks trained with mini-batch SGD often develop low-rank weight matrices. In <a href="https://openreview.net/forum?id=0LzE9AROwD">[3]</a>, we show that SGD together with weight decay provably induces an implicit bias toward low-rank solutions across a broad class of modern architectures. In contrast to prior work, our result does not rely on restrictive assumptions about the data, convergence, global optimality, width, or depth. The theory further reveals that this bias becomes stronger with smaller batch sizes, larger learning rates, and stronger weight decay. More broadly, the result suggests that compressibility is not merely an after-effect of training, but a structural property already being shaped by the optimization dynamics themselves.
     </div>
     <div class="contrib-meta">
       <span class="tag tag-venue">CPAL 2025</span>
