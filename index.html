@@ -382,13 +382,13 @@
       <div class="contrib-item">
         <div class="contrib-num">01</div>
         <div class="contrib-body">
-          <div class="contrib-title">Neural Collapse and Transfer Learning</div>
+          <div class="contrib-title">Neural Collapse Explains Why Transfer Works</div>
           <div class="contrib-desc">
-            Why do pre-trained models transfer so well, even with only a handful of examples? In
+            Why do pre-trained models often transfer so well from only a few examples? In
             <a href="https://arxiv.org/abs/2209.05487">this work</a>,
             <a href="https://arxiv.org/abs/2305.16279">this follow-up</a>,
             and <a href="https://arxiv.org/abs/2506.04411">later extensions</a>,
-            we give the first theoretical answer through the lens of neural collapse. We show that the geometric structure learned during pretraining is not confined to the source classes, but can extend to unseen target classes in a way that directly enables few-shot generalization. Central to this theory is the <i>Class-Distance Normalized Variance (CDNV)</i>, which we introduce as a key predictor of transfer error and which has since become a standard tool in neural collapse research. Together, these works turn neural collapse from an in-distribution training phenomenon into a broader theory of representation transfer, with influence on both the supervised and self-supervised literature.
+            we show that the geometry learned during pretraining can extend beyond the source classes and directly support few-shot generalization on new ones. A central quantity in this theory is <i>Class-Distance Normalized Variance (CDNV)</i>, which we introduce as a predictor of transfer error and use to connect neural collapse to a broader theory of representation transfer.
           </div>
           <div class="contrib-meta">
             <span class="tag tag-venue">ICLR 2022</span>
@@ -403,11 +403,11 @@
       <div class="contrib-item">
         <div class="contrib-num">02</div>
         <div class="contrib-body">
-          <div class="contrib-title">The Relationship Between Self-Supervised and Supervised Contrastive Learning</div>
+          <div class="contrib-title">Self-Supervised Contrastive Learning Is Closer to Supervised Learning Than It Seems</div>
           <div class="contrib-desc">
             In <a href="https://openreview.net/forum?id=mf4V1SK0np">this paper</a> and
             <a href="https://openreview.net/forum?id=JkitQScjuL">this follow-up</a>,
-            we show that self-supervised contrastive learning is much closer to supervised learning than previously understood. The first paper proves that the standard contrastive objective closely approximates a supervised surrogate we call negatives-only supervised contrastive learning (NSCL), with a label-agnostic, architecture-independent gap that vanishes as the number of classes grows. The second paper shows that this connection survives far beyond the loss itself: throughout training, CL and NSCL remain strongly aligned in representation space, with provable guarantees for similarity matrices and downstream alignment metrics such as CKA and RSA. Together, these works provide a principled explanation for why contrastive pretraining recovers semantic structure so effectively without labels.
+            we show that standard contrastive learning closely tracks a supervised surrogate, both at the level of the loss and throughout training in representation space. This provides a principled explanation for why contrastive pretraining can recover semantic structure so effectively without labels, and helps narrow the conceptual gap between self-supervised and supervised learning.
           </div>
           <div class="contrib-meta">
             <span class="tag tag-venue">NeurIPS 2025</span>
@@ -423,10 +423,10 @@
         <div class="contrib-body">
           <div class="contrib-title">Directional Neural Collapse in Self-Supervised Learning</div>
           <div class="contrib-desc">
-            Self-supervised learning works in the few-shot regime not because features collapse everywhere, but because they collapse where decisions are made. In
+            Self-supervised learning succeeds in the few-shot regime not because features collapse everywhere, but because they collapse in the directions that matter for decision-making. In
             <a href="https://arxiv.org/abs/2506.04411">this paper</a> and
             <a href="https://arxiv.org/abs/2603.03530">this follow-up</a>,
-            we show that the key quantity is <i>directional CDNV</i>: variability along class-separating directions. This yields a geometric explanation for two defining strengths of SSL at once, strong few-shot transfer and <i>task orthogonalization</i>, where independent tasks occupy nearly orthogonal decision axes and therefore interfere little with one another. Together, these works identify <i>directional neural collapse</i> as a central principle behind why frozen SSL features are both label-efficient and broadly reusable.
+            we identify <i>directional CDNV</i>, the variability along class-separating directions, as the key quantity behind strong transfer. The same view also explains <i>task orthogonalization</i>, where distinct tasks occupy nearly orthogonal decision axes and therefore interfere little with one another.
           </div>
           <div class="contrib-meta">
             <span class="tag tag-venue">NeurIPS 2025</span>
@@ -441,11 +441,10 @@
       <div class="contrib-item">
         <div class="contrib-num">04</div>
         <div class="contrib-body">
-          <div class="contrib-title">SGD and Weight Decay Secretly Minimize Rank</div>
+          <div class="contrib-title">SGD and Weight Decay Implicitly Minimize Rank</div>
           <div class="contrib-desc">
-            We provide the first general explanation for why neural networks trained with mini-batch SGD often develop low-rank weight matrices. In
-            <a href="https://openreview.net/forum?id=0LzE9AROwD">this paper</a>,
-            we show that SGD together with weight decay provably induces an implicit bias toward low-rank solutions across a broad class of modern architectures. In contrast to prior work, our result does not rely on restrictive assumptions about the data, convergence, global optimality, width, or depth. The theory further reveals that this bias becomes stronger with smaller batch sizes, larger learning rates, and stronger weight decay. More broadly, the result suggests that compressibility is not merely an after-effect of training, but a structural property already being shaped by the optimization dynamics themselves.
+            In <a href="https://openreview.net/forum?id=0LzE9AROwD">this paper</a>,
+            we show that mini-batch SGD together with weight decay induces an implicit bias toward low-rank weight matrices across a broad class of modern architectures. The theory reveals how this effect strengthens with smaller batch sizes, larger learning rates, and stronger weight decay, suggesting that compressibility is not merely a byproduct of training but something optimization is actively shaping.
           </div>
           <div class="contrib-meta">
             <span class="tag tag-venue">CPAL 2025</span>
@@ -458,11 +457,11 @@
       <div class="contrib-item">
         <div class="contrib-num">05</div>
         <div class="contrib-body">
-          <div class="contrib-title">Modularity of Hypernetworks</div>
+          <div class="contrib-title">Hypernetworks Are Fundamentally More Modular</div>
           <div class="contrib-desc">
-            Hypernetworks offer a radically different way to condition a model: instead of feeding context into a fixed predictor, they generate the predictor’s weights themselves. In
+            Hypernetworks condition a model by generating its weights rather than merely feeding context into a fixed predictor. In
             <a href="https://arxiv.org/abs/2002.10006">this paper</a>,
-            we gave one of the first rigorous explanations for why this can be fundamentally more powerful. The paper formalizes <i>modularity</i> as the ability to efficiently realize a different function for each conditioning input, and proves that hypernetworks can achieve this with orders-of-magnitude smaller primary networks than standard embedding-based conditioning methods. Under structured assumptions, the result is even stronger: the total number of trainable parameters needed by a hypernetwork can be orders of magnitude smaller than that of both standard networks and embedding-based alternatives.
+            we give a theoretical explanation for why this can be fundamentally more powerful, formalizing <i>modularity</i> as the ability to efficiently realize a different function for each conditioning input. Under structured assumptions, we show that hypernetworks can achieve this with dramatically fewer parameters than standard and embedding-based alternatives.
           </div>
           <div class="contrib-meta">
             <span class="tag tag-venue">NeurIPS 2020</span>
@@ -476,9 +475,10 @@
       <div class="contrib-item">
         <div class="contrib-num">06</div>
         <div class="contrib-body">
-          <div class="contrib-title">Bridging Statistical and Computational Efficiency in Program Learning with LLM Agents</div>
+          <div class="contrib-title">LLMs Make Program Learning Computationally Feasible</div>
           <div class="contrib-desc">
-            In <a href="https://arxiv.org/abs/2510.14331">this paper</a>, we show that pretrained LLMs can make <i>ERM over programs</i> computationally feasible. The paper introduces a propose-and-verify framework in which a reasoning-augmented LLM proposes candidate programs, each program is executed and checked on data, and the best verified rule is selected, with no gradients, no adaptivity, and no feedback loop. This closes a central gap in program learning: classical ERM is statistically efficient but computationally intractable, while gradient-based training is computationally convenient but can fail to recover simple underlying rules. Across tasks such as parity, pattern matching, and primality, the method often recovers the exact rule from small labeled sets and generalizes far beyond the training regime.
+            In <a href="https://arxiv.org/abs/2510.14331">this paper</a>,
+            we show that pretrained LLMs can make <i>ERM over programs</i> practical through a simple propose-and-verify pipeline: candidate programs are proposed, executed, and selected by verification on data. This bridges a central gap in program learning, where classical ERM is statistically attractive but computationally intractable, while gradient-based methods are computationally convenient but may miss simple underlying rules. Across tasks such as parity, pattern matching, and primality, the method often recovers the exact rule from small labeled sets and generalizes far beyond the training regime.
           </div>
           <div class="contrib-meta">
             <span class="tag tag-venue">Preprint</span>
