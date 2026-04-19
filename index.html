@@ -448,43 +448,32 @@
             </div>
           </a>
 
-          <a class="contrib-item" href="https://openreview.net/forum?id=nge5deRsEH">
-            <div class="contrib-num">06</div>
-            <div class="contrib-body">
-              <div class="contrib-title">On the Power of Decision Trees in Auto-Regressive Language Modeling</div>
-              <div class="contrib-desc">Proves that decision tree ensembles are expressive enough to implement next-token prediction, providing a new theoretical lens on the computational substrate of LLMs.</div>
-              <div class="contrib-meta">
-                <span class="tag tag-venue">NeurIPS 2024</span>
-                <span class="tag">LLM Theory</span>
-                <span class="tag">Expressivity</span>
-              </div>
+        <div class="contrib-item">
+          <div class="contrib-num">01</div>
+          <div class="contrib-body">
+            <div class="contrib-title">The Relationship Between Self-Supervised and Supervised Contrastive Learning</div>
+            <div class="contrib-desc">These two papers identify and formalize the bridge between self-supervised and supervised contrastive learning. The key insight is that the standard contrastive loss (CL) is closely related to a supervised variant — the negatives-only supervised contrastive loss (NSCL) — which excludes same-class pairs from the denominator. <a href="https://arxiv.org/abs/2506.04411">The first paper</a> proves this connection at the loss level: the gap between CL and NSCL vanishes as the number of classes grows, under a bound that is label-agnostic and architecture-independent. <a href="https://arxiv.org/abs/2510.08852">The second</a> shows the alignment extends to the representation level throughout training — quantifying how closely the learned representations track each other as a function of learning rate, batch size, number of classes, and temperature. Empirically, models trained with CL and NSCL achieve CKA and RSA scores of ~0.9, a remarkably high representational similarity.</div>
+            <div class="contrib-meta">
+              <span class="tag tag-venue">NeurIPS 2025</span>
+              <span class="tag tag-venue">ICLR 2026</span>
+              <span class="tag">Self-Supervised Learning</span>
+              <span class="tag">Representation Theory</span>
             </div>
-          </a>
+          </div>
+        </div>
 
-          <a class="contrib-item" href="https://openreview.net/forum?id=NsVEjx6YPd">
-            <div class="contrib-num">07</div>
-            <div class="contrib-body">
-              <div class="contrib-title">Reverse Engineering Self-Supervised Learning</div>
-              <div class="contrib-desc">Decomposes SSL objectives to reveal the implicit supervision signal, bridging the gap between contrastive learning and classical supervised approaches. Co-authored with Yann LeCun.</div>
-              <div class="contrib-meta">
-                <span class="tag tag-venue">NeurIPS 2023</span>
-                <span class="tag">Self-Supervised Learning</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="contrib-item" href="https://openreview.net/forum?id=0LzE9AROwD">
+          <div class="contrib-item">
             <div class="contrib-num">08</div>
             <div class="contrib-body">
               <div class="contrib-title">SGD and Weight Decay Secretly Minimize Rank</div>
-              <div class="contrib-desc">Proves that standard training with SGD and weight decay implicitly drives neural network weight matrices toward low rank — explaining compressibility and generalization from first principles.</div>
+              <div class="contrib-desc">It has long been observed empirically that neural networks trained with SGD learn surprisingly low-rank weight matrices. <a href="https://openreview.net/forum?id=0LzE9AROwD">This paper</a> provides the first proof that this is not a coincidence — mini-batch SGD and weight decay provably induce a bias toward rank minimization, for any modern architecture (e.g., Transformers), any width or depth, without assumptions about convergence or data. Prior work had only established this under heavily restricted settings such as linear networks or gradient flow at a global minimum. The result explains why modern networks are so compressible, and why weight decay is not merely a regularizer but a structural force shaping the geometry of what gets learned.</div>
               <div class="contrib-meta">
                 <span class="tag tag-venue">CPAL 2025</span>
                 <span class="tag">Implicit Regularization</span>
                 <span class="tag">Generalization</span>
               </div>
             </div>
-          </a>
+          </div>
 
         </div>
       </div>
