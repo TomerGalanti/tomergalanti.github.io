@@ -383,6 +383,21 @@
         </div>
         <div class="contributions">
 
+          <div class="contrib-item">
+          <div class="contrib-num">01</div>
+          <div class="contrib-body">
+            <div class="contrib-title">A Theory of Directional Neural Collapse in Self-Supervised Learning</div>
+            <div class="contrib-desc">Frozen self-supervised representations often transfer with surprisingly few labels, not because they collapse everywhere, but because they collapse in the directions that matter. These two papers show that SSL learns an anisotropic geometry in which within-class variation shrinks sharply along class-separating directions while remaining large in irrelevant subspaces. <a href="https://arxiv.org/abs/2506.04411">[1]</a> identifies this mechanism through directional CDNV, showing that contrastive learning implicitly moves toward a supervised clustering geometry and that few-shot error is governed primarily by decision-axis variability rather than total within-class spread. <a href="https://arxiv.org/abs/2603.03530">[2]</a> develops this into a full theory of directional neural collapse: once decision-axis variance becomes small, few-shot transfer becomes predictable, and independent downstream tasks are pushed onto nearly orthogonal decision axes, allowing a single pretrained representation to support many tasks with minimal interference. Together, the papers give a geometric explanation for two central facts about SSL: why frozen features work so well in the low-label regime, and why they remain broadly reusable across diverse tasks.</div>
+            <div class="contrib-meta">
+              <span class="tag tag-venue">NeurIPS 2025</span>
+              <span class="tag tag-venue">Preprint 2026</span>
+              <span class="tag">Self-Supervised Learning</span>
+              <span class="tag">Neural Collapse</span>
+              <span class="tag">Few-Shot Transfer</span>
+            </div>
+          </div>
+        </div>
+
           <a class="contrib-item" href="https://openreview.net/forum?id=Njx1NjHIx4">
             <div class="contrib-num">02</div>
             <div class="contrib-body">
@@ -410,7 +425,7 @@
           </a>
 
         <div class="contrib-item">
-          <div class="contrib-num">04</div>
+          <div class="contrib-num">02</div>
           <div class="contrib-body">
             <div class="contrib-title">Neural Collapse and Transfer Learning</div>
             <div class="contrib-desc">Why do supervised pre-trained models transfer so well to new tasks and classes, even with very few examples? These papers establish the first theoretical account of this phenomenon through the lens of neural collapse — the geometric clustering of last-layer features that emerges at the end of training. We build a new theoretical framework showing that neural collapse generalizes from source classes to unseen target classes, and introduce the Class-Distance Normalized Variance (CDNV) — the key quantity governing few-shot transfer error — with progressively tighter and more realistic bounds across <a href="https://openreview.net/forum?id=SwIp410B6aQ">[1]</a>, <a href="https://arxiv.org/abs/2212.12532">[2]</a>, and <a href="https://openreview.net/pdf?id=VrK7pKwOhT_">[3]</a>. The CDNV has since been widely adopted in the neural collapse literature, and the framework has provided practical guidance for improving transfer in both supervised and self-supervised pre-training.</div>
@@ -424,46 +439,52 @@
           </div>
         </div>
 
-        <div class="contrib-item">
-          <div class="contrib-num">01</div>
-          <div class="contrib-body">
-            <div class="contrib-title">The Relationship Between Self-Supervised and Supervised Contrastive Learning</div>
-            <div class="contrib-desc">In [<a href="https://arxiv.org/abs/2506.04411">1</a>,<a href="https://arxiv.org/abs/2510.08852">2</a>] we identify and formalize the bridge between self-supervised and supervised contrastive learning. The key insight is that the standard contrastive loss (CL) is closely related to a supervised variant — the negatives-only supervised contrastive loss (NSCL) — which excludes same-class pairs from the denominator. We prove this connection at the loss level: the gap between CL and NSCL vanishes as the number of classes grows, under a bound that is label-agnostic and architecture-independent. The second shows the alignment extends to the representation level throughout training — quantifying how closely the learned representations track each other as a function of learning rate, batch size, number of classes, and temperature. Empirically, models trained with CL and NSCL achieve CKA and RSA scores of ~0.9, a remarkably high representational similarity.</div>
-            <div class="contrib-meta">
-              <span class="tag tag-venue">NeurIPS 2025</span>
-              <span class="tag tag-venue">ICLR 2026</span>
-              <span class="tag">Self-Supervised Learning</span>
-              <span class="tag">Representation Theory</span>
-            </div>
-          </div>
-        </div>
+<div class="contrib-item">
+  <div class="contrib-num">01</div>
+  <div class="contrib-body">
+    <div class="contrib-title">The Relationship Between Self-Supervised and Supervised Contrastive Learning</div>
+    <div class="contrib-desc">
+      In <a href="https://openreview.net/forum?id=mf4V1SK0np">[1]</a> and <a href="https://openreview.net/forum?id=JkitQScjuL">[2]</a>, we show that self-supervised contrastive learning is much closer to supervised learning than previously understood. The first paper proves that the standard contrastive objective closely approximates a supervised surrogate we call negatives-only supervised contrastive learning (NSCL), with a label-agnostic, architecture-independent gap that vanishes as the number of classes grows. The second paper shows that this connection survives far beyond the loss itself: throughout training, CL and NSCL remain strongly aligned in representation space, with provable guarantees for similarity matrices and downstream alignment metrics such as CKA and RSA. Together, these works provide a principled explanation for why contrastive pretraining recovers semantic structure so effectively without labels: it is not merely learning invariances, but implicitly tracking a supervised geometry all along.
+    </div>
+    <div class="contrib-meta">
+      <span class="tag tag-venue">NeurIPS 2025</span>
+      <span class="tag tag-venue">ICLR 2026</span>
+      <span class="tag">Self-Supervised Learning</span>
+      <span class="tag">Representation Theory</span>
+    </div>
+  </div>
+</div>
 
-          <div class="contrib-item">
-            <div class="contrib-num">08</div>
-            <div class="contrib-body">
-              <div class="contrib-title">SGD and Weight Decay Secretly Minimize Rank</div>
-              <div class="contrib-desc">It has long been observed empirically that neural networks trained with SGD learn surprisingly low-rank weight matrices. <a href="https://openreview.net/forum?id=0LzE9AROwD">This paper</a> provides the first proof that this is not a coincidence — mini-batch SGD and weight decay provably induce a bias toward rank minimization, for any modern architecture (e.g., Transformers), any width or depth, without assumptions about convergence or data. Prior work had only established this under heavily restricted settings such as linear networks or gradient flow at a global minimum. The result explains why modern networks are so compressible, and why weight decay is not merely a regularizer but a structural force shaping the geometry of what gets learned.</div>
-              <div class="contrib-meta">
-                <span class="tag tag-venue">CPAL 2025</span>
-                <span class="tag">Implicit Regularization</span>
-                <span class="tag">Generalization</span>
-              </div>
-            </div>
-          </div>
+<div class="contrib-item">
+  <div class="contrib-num">08</div>
+  <div class="contrib-body">
+    <div class="contrib-title">SGD and Weight Decay Secretly Minimize Rank</div>
+    <div class="contrib-desc">
+      It is widely observed that neural networks trained with SGD tend to develop surprisingly low-rank weight matrices, but until <a href="https://openreview.net/forum?id=0LzE9AROwD">[3]</a>, this phenomenon had no general theoretical explanation. This paper shows that mini-batch SGD together with weight decay provably induces a bias toward low-rank solutions across a broad class of modern architectures, without relying on restrictive assumptions about the data, convergence, global optimality, width, or depth. The theory also identifies how this effect strengthens with smaller batch sizes, larger learning rates, and stronger weight decay, revealing rank minimization as an implicit force built into the training dynamics themselves. The broader implication is that compressibility is not merely an after-the-fact property of trained networks: it is already being shaped during optimization. This helps explain why modern deep networks often learn low-dimensional internal structure and why weight decay does more than regularize, it steers what kinds of representations are learned in the first place.
+    </div>
+    <div class="contrib-meta">
+      <span class="tag tag-venue">CPAL 2025</span>
+      <span class="tag">Implicit Regularization</span>
+      <span class="tag">Generalization</span>
+    </div>
+  </div>
+</div>
 
-          <div class="contrib-item">
-            <div class="contrib-num">05</div>
-            <div class="contrib-body">
-              <div class="contrib-title">Modularity of Hypernetworks</div>
-              <div class="contrib-desc">Hypernetworks — networks that generate the weights of another network — are a fundamental architectural primitive underlying attention, LoRA, and modern parameter-efficient methods. Yet before this work, their theoretical advantage over standard conditioning had no rigorous foundation. <a href="https://proceedings.neurips.cc/paper/2020/hash/75c58d36157505a600e0695ed0b3a22d-Abstract.html">This paper</a> establishes a mathematical bridge between hypernetworks and continuous selectors from classical approximation theory, and uses it to formally define and analyze modularity — the ability to efficiently learn a different function for each input instance. The central result is a complexity separation: hypernetworks can be smaller than embedding-based methods by orders of magnitude, and under structured meta-learning assumptions, smaller than standard networks by orders of magnitude as well. This gives the first rigorous justification for why generating weights is fundamentally more expressive than conditioning on them.</div>
-              <div class="contrib-meta">
-                <span class="tag tag-venue">NeurIPS 2020</span>
-                <span class="tag tag-oral">Oral</span>
-                <span class="tag">Hypernetworks</span>
-                <span class="tag">Expressivity</span>
-              </div>
-            </div>
-          </div>
+<div class="contrib-item">
+  <div class="contrib-num">05</div>
+  <div class="contrib-body">
+    <div class="contrib-title">Modularity of Hypernetworks</div>
+    <div class="contrib-desc">
+      Hypernetworks offer a radically different way to condition a model: instead of feeding context into a fixed predictor, they generate the predictor’s weights themselves. In <a href="https://arxiv.org/abs/2002.10006">[4]</a>, we gave one of the first rigorous explanations for why this can be fundamentally more powerful. The paper formalizes <i>modularity</i> as the ability to efficiently realize a different function for each conditioning input, and proves that hypernetworks can achieve this with orders-of-magnitude smaller primary networks than standard embedding-based conditioning methods. Under structured assumptions, the result is even stronger: the total number of trainable parameters needed by a hypernetwork can be orders of magnitude smaller than that of both standard networks and embedding-based alternatives. Conceptually, this provides a mathematical foundation for a central idea behind modern adaptive models: generating weights is not just another implementation trick, but a fundamentally more expressive way to allocate computation across tasks, contexts, and instances.
+    </div>
+    <div class="contrib-meta">
+      <span class="tag tag-venue">NeurIPS 2020</span>
+      <span class="tag tag-oral">Oral</span>
+      <span class="tag">Hypernetworks</span>
+      <span class="tag">Expressivity</span>
+    </div>
+  </div>
+</div>
 
         </div>
       </div>
