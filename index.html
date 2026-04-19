@@ -383,19 +383,6 @@
         </div>
         <div class="contributions">
 
-          <a class="contrib-item" href="https://openreview.net/forum?id=cJd1BgZ9CS">
-            <div class="contrib-num">01</div>
-            <div class="contrib-body">
-              <div class="contrib-title">Distributed Speculative Inference (DSI)</div>
-              <div class="contrib-desc">A framework that parallelizes speculative decoding across multiple devices, making LLM inference provably and empirically faster — without sacrificing output quality.</div>
-              <div class="contrib-meta">
-                <span class="tag tag-venue">ICLR 2025</span>
-                <span class="tag">LLM Inference</span>
-                <span class="tag">Efficiency</span>
-              </div>
-            </div>
-          </a>
-
           <a class="contrib-item" href="https://openreview.net/forum?id=Njx1NjHIx4">
             <div class="contrib-num">02</div>
             <div class="contrib-body">
@@ -422,31 +409,20 @@
             </div>
           </a>
 
-          <a class="contrib-item" href="https://openreview.net/forum?id=SwIp410B6aQ">
-            <div class="contrib-num">04</div>
-            <div class="contrib-body">
-              <div class="contrib-title">On the Role of Neural Collapse in Transfer Learning</div>
-              <div class="contrib-desc">Shows that neural collapse — the geometric alignment of final-layer features to class means — is the key mechanism behind the success of pretrained representations for transfer.</div>
-              <div class="contrib-meta">
-                <span class="tag tag-venue">ICLR 2022</span>
-                <span class="tag">Neural Collapse</span>
-                <span class="tag">Transfer Learning</span>
-              </div>
+          <div class="contrib-item">
+          <div class="contrib-num">04</div>
+          <div class="contrib-body">
+            <div class="contrib-title">Neural Collapse and Transfer Learning</div>
+            <div class="contrib-desc">Why do supervised pre-trained models transfer so well to new tasks and classes, even with very few examples? These papers establish the first theoretical account of this phenomenon through the lens of neural collapse — the geometric clustering of last-layer features that emerges at the end of training. <a href="https://openreview.net/forum?id=SwIp410B6aQ">[1]</a> builds a new theoretical framework showing that neural collapse generalizes from source classes to unseen target classes, and introduces the Class-Distance Normalized Variance (CDNV) metric as the key quantity governing few-shot transfer error — the smaller the CDNV, the better the transfer. <a href="https://arxiv.org/abs/2212.12532">[2]</a> and <a href="https://openreview.net/pdf?id=VrK7pKwOhT_">[3]</a> significantly strengthen these results with tighter, more realistic bounds. The CDNV metric introduced here has since been widely adopted in the neural collapse literature, and the framework has provided practical guidance for how to design pre-training — supervised and self-supervised alike — to improve transferability.</div>
+            <div class="contrib-meta">
+              <span class="tag tag-venue">ICLR 2022</span>
+              <span class="tag tag-venue">ICML WS 2022</span>
+              <span class="tag">Neural Collapse</span>
+              <span class="tag">Transfer Learning</span>
+              <span class="tag">Few-Shot Learning</span>
             </div>
-          </a>
-
-          <a class="contrib-item" href="https://proceedings.neurips.cc/paper/2020/hash/75c58d36157505a600e0695ed0b3a22d-Abstract.html">
-            <div class="contrib-num">05</div>
-            <div class="contrib-body">
-              <div class="contrib-title">On the Modularity of Hypernetworks</div>
-              <div class="contrib-desc">A rigorous theoretical analysis of hypernetworks, establishing when and why parameter-generating networks induce modular structure — with implications for continual learning and multi-task settings.</div>
-              <div class="contrib-meta">
-                <span class="tag tag-venue">NeurIPS 2020</span>
-                <span class="tag tag-oral">Oral</span>
-                <span class="tag">Hypernetworks</span>
-              </div>
-            </div>
-          </a>
+          </div>
+        </div>
 
         <div class="contrib-item">
           <div class="contrib-num">01</div>
@@ -471,6 +447,20 @@
                 <span class="tag tag-venue">CPAL 2025</span>
                 <span class="tag">Implicit Regularization</span>
                 <span class="tag">Generalization</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contrib-item">
+            <div class="contrib-num">05</div>
+            <div class="contrib-body">
+              <div class="contrib-title">Modularity of Hypernetworks</div>
+              <div class="contrib-desc">Hypernetworks — networks that generate the weights of another network — are a fundamental architectural primitive underlying attention, LoRA, and modern parameter-efficient methods. Yet before this work, their theoretical advantage over standard conditioning had no rigorous foundation. <a href="https://proceedings.neurips.cc/paper/2020/hash/75c58d36157505a600e0695ed0b3a22d-Abstract.html">This paper</a> establishes a mathematical bridge between hypernetworks and continuous selectors from classical approximation theory, and uses it to formally define and analyze modularity — the ability to efficiently learn a different function for each input instance. The central result is a complexity separation: hypernetworks can be smaller than embedding-based methods by orders of magnitude, and under structured meta-learning assumptions, smaller than standard networks by orders of magnitude as well. This gives the first rigorous justification for why generating weights is fundamentally more expressive than conditioning on them.</div>
+              <div class="contrib-meta">
+                <span class="tag tag-venue">NeurIPS 2020</span>
+                <span class="tag tag-oral">Oral</span>
+                <span class="tag">Hypernetworks</span>
+                <span class="tag">Expressivity</span>
               </div>
             </div>
           </div>
