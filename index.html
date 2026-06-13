@@ -369,139 +369,140 @@
 </div>
 </section>
 
-    <!-- SELECTED RESEARCH CONTRIBUTIONS -->
+<!-- SELECTED RESEARCH CONTRIBUTIONS -->
+
 <section style="padding: 3rem 0 0;">
   <div style="padding-bottom: 3.5rem; border-bottom: 1px solid var(--border);">
     <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1.5rem;">
       <div style="font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-gold);">Selected Research Contributions</div>
       <a href="https://dlfundamentals.github.io/publications.html" style="font-size:.83rem;color:var(--text3);">All publications →</a>
     </div>
+<div class="contributions">
 
-    <div class="contributions">
-
-      <div class="contrib-item">
-        <div class="contrib-num">01</div>
-        <div class="contrib-body">
-          <div class="contrib-title">LLM-PV<span style="font-weight:400;color:var(--text2);"> · propose-and-verify program learning</span></div>
-          <div class="contrib-desc">
-            Short programs are learnable from tiny datasets in theory, but searching program space is exponential — so it was never practical. <i>LLM-PV</i> closes that gap: a pretrained LLM proposes candidate programs, executes them, and keeps the one that verifies on held-out data — no gradients, no enumeration
-            (<a href="https://arxiv.org/abs/2510.14331">preprint</a>). From roughly 200 examples it recovers the exact rule on parity, palindromes, Dyck-2, and primality, and generalizes far past the training lengths — while SGD-trained transformers fit the data but collapse to chance even with 100k examples.
-          </div>
-          <div class="contrib-meta">
-            <span class="tag tag-venue">Preprint</span>
-            <span class="tag">LLMs</span>
-            <span class="tag">Program Learning</span>
-            <span class="tag">Reasoning</span>
-          </div>
-        </div>
+  <div class="contrib-item">
+    <div class="contrib-num">01</div>
+    <div class="contrib-body">
+      <div class="contrib-title">LLM-PV<span style="font-weight:400;color:var(--text2);"> · propose-and-verify program learning</span></div>
+      <div class="contrib-desc">
+        Tiny datasets can identify simple programs statistically, but brute-force search makes this computationally hopeless. <i>LLM-PV</i> uses an LLM as a program prior and verification as the final judge — no gradients, no exhaustive enumeration
+        (<a href="https://arxiv.org/abs/2510.14331">preprint</a>). With roughly 200 examples, it recovers exact rules for parity, palindromes, Dyck-2, and primality, generalizing far beyond training lengths; SGD-trained transformers collapse to chance even with 100k examples.
       </div>
-
-      <div class="contrib-item">
-        <div class="contrib-num">02</div>
-        <div class="contrib-body">
-          <div class="contrib-title">Distribution-Aware Programming<span style="font-weight:400;color:var(--text2);"> · learning solvers from a task distribution</span></div>
-          <div class="contrib-desc">
-            Most optimization problems are solved over and over on instances drawn from the same hidden distribution — so the solver itself should be learned. <i>Distribution-aware programming</i> learns reusable structure from sample instances and compiles it into specialized solver code, treating runtime as part of generalization
-            (<a href="https://arxiv.org/abs/2605.14141">preprint</a>). Samples don't just reveal the answer; they reveal the computational shortcuts that make every future instance faster to solve.
-          </div>
-          <div class="contrib-meta">
-            <span class="tag tag-venue">Preprint</span>
-            <span class="tag">Distribution-Aware Programming</span>
-            <span class="tag">Algorithm Design</span>
-            <span class="tag">LLM Agents</span>
-          </div>
-        </div>
+      <div class="contrib-meta">
+        <span class="tag tag-venue">Preprint</span>
+        <span class="tag">LLMs</span>
+        <span class="tag">Program Learning</span>
+        <span class="tag">Reasoning</span>
       </div>
-
-      <div class="contrib-item">
-        <div class="contrib-num">03</div>
-        <div class="contrib-body">
-          <div class="contrib-title">Agentic Boosting<span style="font-weight:400;color:var(--text2);"> · weak reasoners, boosted to frontier performance</span></div>
-          <div class="contrib-desc">
-            A committee of weak reasoning-model calls can match a far stronger model — but only when selection is backed by a real soundness signal (execution, tests, proof or type checking), not by adding agents alone, which we prove and bound
-            (<a href="https://arxiv.org/abs/2605.14163">preprint</a>). On SWE-bench Verified, one GPT-5.4 nano proposal solves 67.0% of tasks; the same nano model under our critic–comparator orchestration reaches 76.4% at k=8 — matching standalone Gemini 3 Pro and Claude Opus 4.5 Thinking, and approaching the 79.0% oracle ceiling. The right patches are already in the weak model's pool; the bottleneck is selection.
-          </div>
-          <div class="contrib-meta">
-            <span class="tag tag-venue">Preprint 2026</span>
-            <span class="tag">LLM Agents</span>
-            <span class="tag">Reasoning</span>
-            <span class="tag">Boosting</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="contrib-item">
-        <div class="contrib-num">04</div>
-        <div class="contrib-body">
-          <div class="contrib-title">CDNV<span style="font-weight:400;color:var(--text2);"> · a geometric predictor of transfer</span></div>
-          <div class="contrib-desc">
-            We introduced <i>Class-Distance Normalized Variance (CDNV)</i> and proved it upper-bounds few-shot transfer error — turning the empirical phenomenon of neural collapse into a predictive theory of when pretrained features transfer to unseen classes
-            (<a href="https://arxiv.org/abs/2112.15121">ICLR 2022</a>, <a href="https://arxiv.org/abs/2212.12532">JMLR 2026</a>). The geometry learned on the source classes carries over to classes never seen in training, which is why foundation models generalize from a handful of examples. CDNV is now widely used as a measure of representation quality.
-          </div>
-          <div class="contrib-meta">
-            <span class="tag tag-venue">ICLR 2022</span>
-            <span class="tag tag-venue">ICML WS 2022</span>
-            <span class="tag tag-venue">JMLR 2026</span>
-            <span class="tag">Neural Collapse</span>
-            <span class="tag">Transfer Learning</span>
-            <span class="tag">CDNV</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="contrib-item">
-        <div class="contrib-num">05</div>
-        <div class="contrib-body">
-          <div class="contrib-title">NSCL<span style="font-weight:400;color:var(--text2);"> · contrastive learning is approximately supervised learning</span></div>
-          <div class="contrib-desc">
-            We proved that standard self-supervised contrastive learning implicitly optimizes a supervised objective — the <i>negatives-only supervised contrastive loss (NSCL)</i> — with a gap that provably vanishes as the number of classes grows, under a bound that is label-agnostic and architecture-independent
-            (<a href="https://openreview.net/forum?id=mf4V1SK0np">NeurIPS 2025</a>, <a href="https://openreview.net/forum?id=JkitQScjuL">ICLR 2026</a>). This closes a long-standing conceptual gap, explaining why label-free pretraining recovers semantic structure as cleanly as supervised training.
-          </div>
-          <div class="contrib-meta">
-            <span class="tag tag-venue">NeurIPS 2025</span>
-            <span class="tag tag-venue">ICLR 2026</span>
-            <span class="tag">Self-Supervised Learning</span>
-            <span class="tag">Representation Theory</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="contrib-item">
-        <div class="contrib-num">06</div>
-        <div class="contrib-body">
-          <div class="contrib-title">Directional Neural Collapse<span style="font-weight:400;color:var(--text2);"> · collapse only where it matters</span></div>
-          <div class="contrib-desc">
-            Self-supervised features don't collapse everywhere — they collapse along the directions that separate classes. We isolated <i>directional CDNV</i> as the quantity that governs few-shot transfer and showed contrastive training drives it down by roughly an order of magnitude while leaving overall variance largely intact
-            (<a href="https://arxiv.org/abs/2506.04411">NeurIPS 2025</a>, <a href="https://arxiv.org/abs/2603.03530">ICML 2026</a>). The same lens explains <i>task orthogonalization</i>: distinct tasks occupy near-orthogonal decision axes, so they barely interfere.
-          </div>
-          <div class="contrib-meta">
-            <span class="tag tag-venue">NeurIPS 2025</span>
-            <span class="tag tag-venue">ICML 2026</span>
-            <span class="tag">Self-Supervised Learning</span>
-            <span class="tag">Neural Collapse</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="contrib-item">
-        <div class="contrib-num">07</div>
-        <div class="contrib-body">
-          <div class="contrib-title">Implicit Rank Minimization<span style="font-weight:400;color:var(--text2);"> · SGD's hidden low-rank bias</span></div>
-          <div class="contrib-desc">
-            Mini-batch SGD with weight decay imposes a hidden bias toward low-rank weight matrices across modern architectures, and we proved the effect strengthens with smaller batches, larger learning rates, and stronger weight decay
-            (<a href="https://openreview.net/forum?id=0LzE9AROwD">CPAL 2025</a>). Compressibility isn't a lucky byproduct of training — it's something the optimizer is actively driving.
-          </div>
-          <div class="contrib-meta">
-            <span class="tag tag-venue">CPAL 2025</span>
-            <span class="tag">Implicit Regularization</span>
-            <span class="tag">Generalization</span>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
+
+  <div class="contrib-item">
+    <div class="contrib-num">02</div>
+    <div class="contrib-body">
+      <div class="contrib-title">Distribution-Aware Programming<span style="font-weight:400;color:var(--text2);"> · learning solvers from a task distribution</span></div>
+      <div class="contrib-desc">
+        Hard optimization problems are rarely solved once; they recur from the same hidden distribution. <i>Distribution-aware programming</i> learns the shortcut behind that distribution and compiles it into solver code
+        (<a href="https://arxiv.org/abs/2605.14141">preprint</a>). Across 21 structured optimization distributions, synthesized solvers reach 0.971 mean normalized quality while running 564.9× faster than strong heuristics, 345.1× faster than Gurobi, and 16.9× faster than selected exact backends.
+      </div>
+      <div class="contrib-meta">
+        <span class="tag tag-venue">Preprint</span>
+        <span class="tag">Distribution-Aware Programming</span>
+        <span class="tag">Algorithm Design</span>
+        <span class="tag">LLM Agents</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="contrib-item">
+    <div class="contrib-num">03</div>
+    <div class="contrib-body">
+      <div class="contrib-title">Agentic Boosting<span style="font-weight:400;color:var(--text2);"> · weak reasoners, boosted to frontier performance</span></div>
+      <div class="contrib-desc">
+        The right answer is often already inside a weak model's sample pool; the hard part is selecting it. <i>Agentic boosting</i> shows that weak LLM calls can be amplified only when selection is backed by a real soundness signal — execution, tests, proofs, or type checks
+        (<a href="https://arxiv.org/abs/2605.14163">preprint</a>). On SWE-bench Verified, GPT-5.4 nano rises from 67.0% to 76.4% at k=8, matching standalone Gemini 3 Pro and Claude Opus 4.5 Thinking, and approaching the 79.0% oracle ceiling.
+      </div>
+      <div class="contrib-meta">
+        <span class="tag tag-venue">Preprint 2026</span>
+        <span class="tag">LLM Agents</span>
+        <span class="tag">Reasoning</span>
+        <span class="tag">Boosting</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="contrib-item">
+    <div class="contrib-num">04</div>
+    <div class="contrib-body">
+      <div class="contrib-title">CDNV<span style="font-weight:400;color:var(--text2);"> · a geometric predictor of transfer</span></div>
+      <div class="contrib-desc">
+        We introduced <i>Class-Distance Normalized Variance (CDNV)</i>, a single geometric quantity that predicts few-shot transfer from pretrained features
+        (<a href="https://arxiv.org/abs/2112.15121">ICLR 2022</a>, <a href="https://arxiv.org/abs/2212.12532">JMLR 2026</a>). CDNV upper-bounds transfer error, turns neural collapse into a theory of transfer, and explains why pretrained representations can generalize from a handful of examples.
+      </div>
+      <div class="contrib-meta">
+        <span class="tag tag-venue">ICLR 2022</span>
+        <span class="tag tag-venue">ICML WS 2022</span>
+        <span class="tag tag-venue">JMLR 2026</span>
+        <span class="tag">Neural Collapse</span>
+        <span class="tag">Transfer Learning</span>
+        <span class="tag">CDNV</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="contrib-item">
+    <div class="contrib-num">05</div>
+    <div class="contrib-body">
+      <div class="contrib-title">NSCL<span style="font-weight:400;color:var(--text2);"> · contrastive learning is approximately supervised learning</span></div>
+      <div class="contrib-desc">
+        Self-supervised contrastive learning secretly optimizes a supervised objective. We prove it is equivalent to the <i>negatives-only supervised contrastive loss (NSCL)</i> up to a gap that vanishes as the number of classes grows
+        (<a href="https://openreview.net/forum?id=mf4V1SK0np">NeurIPS 2025</a>, <a href="https://openreview.net/forum?id=JkitQScjuL">ICLR 2026</a>). The bound is label-agnostic and architecture-independent, explaining why label-free pretraining can recover semantic structure.
+      </div>
+      <div class="contrib-meta">
+        <span class="tag tag-venue">NeurIPS 2025</span>
+        <span class="tag tag-venue">ICLR 2026</span>
+        <span class="tag">Self-Supervised Learning</span>
+        <span class="tag">Representation Theory</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="contrib-item">
+    <div class="contrib-num">06</div>
+    <div class="contrib-body">
+      <div class="contrib-title">Directional Neural Collapse<span style="font-weight:400;color:var(--text2);"> · collapse only where it matters</span></div>
+      <div class="contrib-desc">
+        Self-supervised features do not collapse everywhere. They collapse along the directions that separate classes. We isolate <i>directional CDNV</i> as the quantity governing few-shot transfer and show contrastive training reduces it by roughly an order of magnitude while leaving global variance intact
+        (<a href="https://arxiv.org/abs/2506.04411">NeurIPS 2025</a>, <a href="https://arxiv.org/abs/2603.03530">ICML 2026</a>).
+      </div>
+      <div class="contrib-meta">
+        <span class="tag tag-venue">NeurIPS 2025</span>
+        <span class="tag tag-venue">ICML 2026</span>
+        <span class="tag">Self-Supervised Learning</span>
+        <span class="tag">Neural Collapse</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="contrib-item">
+    <div class="contrib-num">07</div>
+    <div class="contrib-body">
+      <div class="contrib-title">Implicit Rank Minimization<span style="font-weight:400;color:var(--text2);"> · SGD's hidden low-rank bias</span></div>
+      <div class="contrib-desc">
+        Modern networks become compressible not by accident, but because SGD pushes them there. We prove that mini-batch SGD with weight decay implicitly favors low-rank weight matrices, with the effect strengthened by smaller batches, larger learning rates, and stronger weight decay
+        (<a href="https://openreview.net/forum?id=0LzE9AROwD">CPAL 2025</a>).
+      </div>
+      <div class="contrib-meta">
+        <span class="tag tag-venue">CPAL 2025</span>
+        <span class="tag">Implicit Regularization</span>
+        <span class="tag">Generalization</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+  </div>
 </section>
+
 
     <!-- TEACHING -->
     <section class="two-col">
