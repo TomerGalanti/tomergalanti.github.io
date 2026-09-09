@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tomer Galanti | Deep Learning Fundamentals Lab · Texas A&M</title>
-  <meta name="description" content="Tomer Galanti — Assistant Professor at Texas A&M CSE. Research on the theoretical and algorithmic foundations of deep learning and large language models." />
+  <meta name="description" content="Tomer Galanti — Assistant Professor at Texas A&amp;M CSE. Research on reusable intelligence, program learning, verified reasoning, and reusable representations." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -76,14 +76,6 @@
     }
     .brand { display: flex; align-items: center; gap: .85rem; text-decoration: none; color: var(--text); }
     .brand:hover { text-decoration: none; }
-    .brand-mark {
-      width: 36px; height: 36px;
-      background: var(--accent);
-      border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .brand-mark svg { width: 20px; height: 20px; }
     .brand-name { font-family: var(--serif); font-weight: 600; font-size: 17px; letter-spacing: .01em; line-height: 1.2; }
     .brand-sub { font-size: 11px; font-weight: 400; color: var(--text3); letter-spacing: .04em; text-transform: uppercase; }
     nav { display: flex; align-items: center; gap: .1rem; }
@@ -291,14 +283,6 @@
   <header>
     <div class="header-inner">
       <a href="index.html" class="brand">
-        <div class="brand-mark">
-          <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="5" cy="5" r="2.5" fill="rgba(255,255,255,0.4)"/>
-            <circle cx="15" cy="5" r="2.5" fill="rgba(255,255,255,0.4)"/>
-            <circle cx="5" cy="15" r="2.5" fill="rgba(255,255,255,0.4)"/>
-            <circle cx="15" cy="15" r="3.5" fill="rgba(255,255,255,0.9)"/>
-          </svg>
-        </div>
         <div>
           <div class="brand-name">DL Fundamentals Lab</div>
           <div class="brand-sub">Texas A&M University</div>
@@ -354,7 +338,7 @@
             Google Scholar
           </a>
         </div>
-        <p class="hero-bio">Tomer Galanti is an Assistant Professor in the Department of Computer Science and Engineering at <a href="https://engineering.tamu.edu/cse/index.html">Texas A&amp;M University</a>. Prior to joining Texas A&amp;M, he was a postdoctoral associate at MIT's <a href="https://cbmm.mit.edu">Center for Brains, Minds &amp; Machines</a>, working with <a href="https://scholar.google.com/citations?user=WgAGy7wAAAAJ&amp;hl=en">Tomaso Poggio</a>. He received his Ph.D. from <a href="https://en-exact-sciences.tau.ac.il/computer">Tel Aviv University</a>, advised by <a href="https://scholar.google.co.il/citations?user=UbFrXTsAAAAJ&amp;hl=en">Lior Wolf</a>, and interned as a Research Scientist at <a href="https://www.deepmind.com/">Google DeepMind</a> in 2021.</p>
+        <p class="hero-bio">Tomer Galanti is an Assistant Professor of Computer Science and Engineering at <a href="https://engineering.tamu.edu/cse/index.html">Texas A&amp;M University</a>. His research studies the foundations of <strong>reusable intelligence</strong>: how learning systems discover representations that transfer, recover executable programs from data, and turn repeated reasoning into reliable computation. Prior to joining Texas A&amp;M, he was a postdoctoral associate at MIT's <a href="https://cbmm.mit.edu">Center for Brains, Minds &amp; Machines</a> with <a href="https://scholar.google.com/citations?user=WgAGy7wAAAAJ&amp;hl=en">Tomaso Poggio</a>. He spent the summer of 2021 at <a href="https://www.deepmind.com/">Google DeepMind</a> and the summer of 2026 at Apple Machine Learning Research (MLR). He received his Ph.D. from <a href="https://en-exact-sciences.tau.ac.il/computer">Tel Aviv University</a>, advised by <a href="https://scholar.google.co.il/citations?user=UbFrXTsAAAAJ&amp;hl=en">Lior Wolf</a>.</p>
       </div>
       <div class="portrait-wrap">
         <img class="portrait" src="images/Tomer Galanti - talk.jpg" alt="Tomer Galanti" loading="eager" />
@@ -362,148 +346,113 @@
     </section>
 
     <!-- RESEARCH STATEMENT -->
-<section class="two-col">
-  <div class="col-label">Research Focus</div>
-<div class="col-content">
-  <h2>Foundations of reusable intelligence</h2>
-  <p>Our research develops foundations for <i>reusable intelligence</i>: AI systems that discover latent structure and turn it into reliable computation. We study when learning recovers information that can be reused beyond the training problem: transferred across tasks, amplified through reasoning, verified for correctness, or compiled into efficient procedures. Our work advances this agenda through two technical programs: <i>geometric laws of representation reuse</i> in supervised pretraining and neural collapse, and in self-supervised pretraining and directional collapse; and <i>distribution-aware programming</i>, where samples from a task distribution are used to synthesize efficient, specialized algorithms.</p>
-</div>
-</section>
+    <section class="two-col">
+      <div class="col-label">Research Background</div>
+      <div class="col-content">
+        <h2>Learning reusable representations and programs</h2>
+        <p>Our research studies how learning systems discover <strong>reusable structure</strong>: structure that remains useful beyond the problem on which it was learned. We study two complementary forms of reuse: <strong>reusable computation</strong>, where experience is transformed into programs, algorithms, and verified reasoning procedures; and <strong>reusable representations</strong>, where learned features acquire a geometry that supports new tasks with little additional data. This has led to work on <a href="http://arxiv.org/abs/2510.14331">program learning</a>, <a href="https://arxiv.org/abs/2605.14141">learning algorithms from distributions</a>, <a href="https://arxiv.org/abs/2605.14163">verifier-guided reasoning</a>, and a geometric theory of transfer spanning <a href="https://arxiv.org/abs/2212.12532">supervised</a> and <a href="https://arxiv.org/abs/2603.03530">self-supervised learning</a>.</p>
+        <p>Tomer Galanti is an Assistant Professor of Computer Science and Engineering at <a href="https://engineering.tamu.edu/cse/index.html">Texas A&amp;M University</a>. His research studies the foundations of <strong>reusable intelligence</strong>: how learning systems discover representations that transfer, recover executable programs from data, and turn repeated reasoning into reliable computation. Prior to joining Texas A&amp;M, he was a postdoctoral associate at MIT's <a href="https://cbmm.mit.edu">Center for Brains, Minds &amp; Machines</a> with <a href="https://scholar.google.com/citations?user=WgAGy7wAAAAJ&amp;hl=en">Tomaso Poggio</a>. He spent the summer of 2021 at <a href="https://www.deepmind.com/">Google DeepMind</a> and the summer of 2026 at Apple Machine Learning Research (MLR). He received his Ph.D. from <a href="https://en-exact-sciences.tau.ac.il/computer">Tel Aviv University</a>, advised by <a href="https://scholar.google.co.il/citations?user=UbFrXTsAAAAJ&amp;hl=en">Lior Wolf</a>.</p>
+      </div>
+    </section>
 
-<!-- SELECTED RESEARCH CONTRIBUTIONS -->
+    <section style="padding: 3rem 0 0;">
+      <div style="padding-bottom: 3.5rem; border-bottom: 1px solid var(--border);">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1.5rem;">
+          <div style="font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-gold);">Contributions</div>
+          <a href="publications.html" style="font-size:.83rem;color:var(--text3);">All publications →</a>
+        </div>
 
-<section style="padding: 3rem 0 0;">
-  <div style="padding-bottom: 3.5rem; border-bottom: 1px solid var(--border);">
-    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1.5rem;">
-      <div style="font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-gold);">Selected Research Contributions</div>
-      <a href="https://dlfundamentals.github.io/publications.html" style="font-size:.83rem;color:var(--text3);">All publications →</a>
-    </div>
+        <div class="contributions">
 
-<div class="contributions">
+          <div class="contrib-item">
+            <div class="contrib-num">01</div>
+            <div class="contrib-body">
+              <div class="contrib-title">Program Learning · Recovering Executable Rules from Examples</div>
+              <div class="contrib-desc">
+                Can a learning algorithm recover the underlying rule, rather than merely interpolate the training data? We study <a href="http://arxiv.org/abs/2510.14331">program learning</a>, where the learned hypothesis is an executable program. Our propose-and-verify approach uses pretrained language models as structured priors over programs and held-out data to select among candidates, making ERM-style learning over program classes computationally practical without gradient updates or exhaustive enumeration. On algorithmic tasks, the resulting programs can recover exact rules from a few hundred examples and generalize far beyond the training regime, while gradient-trained models can fit vastly more data yet fail to extrapolate.
+              </div>
+              <div class="contrib-meta">
+                <span class="tag tag-venue">ICML 2026</span>
+                <span class="tag">Program Learning</span>
+                <span class="tag">Learning Theory</span>
+                <span class="tag">LLMs</span>
+              </div>
+            </div>
+          </div>
 
-  <div class="contrib-item">
-    <div class="contrib-num">01</div>
-    <div class="contrib-body">
-      <div class="contrib-title">LLM-PV<span style="font-weight:400;color:var(--text2);"> · propose-and-verify program learning</span></div>
-      <div class="contrib-desc">
-        A central question in program learning is whether a model has recovered the underlying rule or merely interpolated the observed examples. Classical theory shows that short programs can be identified from few samples, but the required search is computationally expensive; gradient-based training avoids explicit search, but can require dramatically more data. <i>LLM-PV</i> addresses this gap by using a pretrained LLM as a structured program prior and independent verification as the final selection criterion — without gradient updates or exhaustive enumeration
-        (<a href="https://arxiv.org/abs/2510.14331">ICML 2025</a>). From roughly 200 examples, the method recovers exact rules for parity, palindromes, Dyck-2, and primality, and generalizes well beyond the training lengths, while SGD-trained transformers fail to generalize reliably even with 100k examples.
-      </div>
-      <div class="contrib-meta">
-        <span class="tag tag-venue">ICML 2025</span>
-        <span class="tag">LLMs</span>
-        <span class="tag">Program Learning</span>
-        <span class="tag">Reasoning</span>
-      </div>
-    </div>
-  </div>
+        <div class="contrib-item">
+          <div class="contrib-num">02</div>
+          <div class="contrib-body">
+            <div class="contrib-title">Learning Algorithms from Distributions · Turning Recurring Problems into Specialized Code</div>
+            <div class="contrib-desc">
+              General-purpose algorithms are designed to solve broad classes of inputs, while real computational workloads often consist of repeated draws from much narrower distributions. We introduced <a href="https://arxiv.org/abs/2605.14141">distribution-aware programming</a>, where examples from a deployment distribution reveal recurring computational structure that can be compiled into specialized solver code. Across structured optimization problems spanning multiple problem classes, the resulting programs preserve near-baseline solution quality while substantially reducing computation. The broader principle is that <strong>algorithms themselves can be learned from the distributions on which they will run.</strong>
+            </div>
+            <div class="contrib-meta">
+              <span class="tag tag-venue">2026</span>
+              <span class="tag">Program Synthesis</span>
+              <span class="tag">Algorithm Design</span>
+              <span class="tag">LLM Agents</span>
+            </div>
+          </div>
+        </div>
 
-  <div class="contrib-item">
-    <div class="contrib-num">02</div>
-    <div class="contrib-body">
-      <div class="contrib-title">Distribution-Aware Programming<span style="font-weight:400;color:var(--text2);"> · learning solvers from a task distribution</span></div>
-      <div class="contrib-desc">
-        Many computational problems arise not as isolated instances, but as repeated draws from a stable deployment distribution. Standard algorithms are typically designed for worst-case correctness over broad input classes, and therefore do not exploit the recurring structure present in a particular operational setting. <i>Distribution-aware programming</i> formalizes an alternative: examples from the deployment distribution are used to infer reusable structure and compile it into specialized solver code
-        (<a href="https://arxiv.org/abs/2605.14141">preprint</a>). Across 21 structured optimization distributions, the synthesized solvers achieve 0.971 mean normalized quality while running 564.9× faster than strong heuristics, 345.1× faster than Gurobi, and 16.9× faster than exact backends.
-      </div>
-      <div class="contrib-meta">
-        <span class="tag tag-venue">Preprint 2026</span>
-        <span class="tag">Distribution-Aware Programming</span>
-        <span class="tag">Algorithm Design</span>
-        <span class="tag">LLM Agents</span>
-      </div>
-    </div>
-  </div>
+        <div class="contrib-item">
+          <div class="contrib-num">03</div>
+          <div class="contrib-body">
+            <div class="contrib-title">Verified Reasoning · Turning Weak Models into Stronger Systems</div>
+            <div class="contrib-desc">
+              Scaling the underlying model is not the only way to improve reasoning. We study when <a href="https://arxiv.org/abs/2605.14163">generation plus verification</a> can transform weak model calls into substantially stronger systems. Our analysis separates the ability to generate a correct candidate from the ability to identify it, showing that repeated sampling alone is insufficient: reliable amplification requires an independent soundness signal such as execution, tests, proof checking, type checking, or constraint solving. On software-engineering tasks, verifier-backed orchestration substantially improves weak-model performance and approaches the model's best-of-many oracle ceiling. The broader principle is that <strong>verification can convert latent capability into reliable performance.</strong>
+            </div>
+            <div class="contrib-meta">
+              <span class="tag tag-venue">2026</span>
+              <span class="tag">Reasoning</span>
+              <span class="tag">Verification</span>
+              <span class="tag">Agents</span>
+              <span class="tag"><a href="https://arxiv.org/abs/2505.12366">DisCO</a></span>
+            </div>
+          </div>
+        </div>
 
-  <div class="contrib-item">
-    <div class="contrib-num">03</div>
-    <div class="contrib-body">
-      <div class="contrib-title">Agentic Boosting<span style="font-weight:400;color:var(--text2);"> · weak reasoners, boosted to frontier performance</span></div>
-      <div class="contrib-desc">
-        Weak language-model agents often generate correct solutions among their samples, but lack a reliable mechanism for selecting them. This suggests that the main obstacle is not always generation quality, but verification and selection. <i>Agentic boosting</i> turns weak model calls into stronger systems by aggregating candidates only when selection is supported by an independent soundness signal, such as execution, tests, proofs, or type checks
-        (<a href="https://arxiv.org/abs/2605.14163">preprint</a>). On SWE-bench Verified, GPT-5.4 nano improves from 67.0% to 76.4% at k=8, matching standalone Gemini 3 Pro and Claude Opus 4.5 Thinking, and approaching the 79.0% oracle ceiling.
-      </div>
-      <div class="contrib-meta">
-        <span class="tag tag-venue">Preprint 2026</span>
-        <span class="tag">LLM Agents</span>
-        <span class="tag">Reasoning</span>
-        <span class="tag">Boosting</span>
-      </div>
-    </div>
-  </div>
+        <div class="contrib-item">
+          <div class="contrib-num">04</div>
+          <div class="contrib-body">
+            <div class="contrib-title">Geometry of Transfer · What Makes Representations Reusable</div>
+            <div class="contrib-desc">
+              Why do pretrained representations support new tasks from only a few examples? Our work develops a geometric theory of transfer spanning supervised and self-supervised learning. We introduced <a href="https://openreview.net/forum?id=SwIp410B6aQ">CDNV</a> to quantify class collapse and its connection to few-shot transfer, and later showed that in SSL the key quantity is <a href="https://arxiv.org/abs/2603.03530">directional CDNV</a>: variability must shrink along downstream decision directions, not everywhere. This explains both strong few-shot transfer and the emergence of nearly orthogonal semantic directions. Complementary work shows how SSL can acquire this geometry by behaving increasingly like supervised learning in representation space.
+            </div>
+            <div class="contrib-meta">
+              <span class="tag tag-venue">ICLR 2022</span>
+              <span class="tag tag-venue">NeurIPS 2023</span>
+              <span class="tag tag-venue">NeurIPS 2025</span>
+              <span class="tag tag-venue">ICLR 2026</span>
+              <span class="tag tag-venue">ICML 2026</span>
+              <span class="tag tag-venue">JMLR 2026</span>
+              <span class="tag"><a href="https://arxiv.org/abs/2212.12532">Few-Shot Transfer</a></span>
+              <span class="tag"><a href="https://arxiv.org/abs/2506.04411">Self-Supervised Learning</a></span>
+              <span class="tag"><a href="https://arxiv.org/abs/2510.08852">SSL Alignment</a></span>
+            </div>
+          </div>
+        </div>
 
-  <div class="contrib-item">
-    <div class="contrib-num">04</div>
-    <div class="contrib-body">
-      <div class="contrib-title">CDNV<span style="font-weight:400;color:var(--text2);"> · a geometric predictor of transfer</span></div>
-      <div class="contrib-desc">
-        Pretrained representations can support accurate few-shot transfer to novel classes, but the geometric conditions enabling this behavior were not well understood. We identified <i>Class-Distance Normalized Variance (CDNV)</i> as a central quantity governing transfer: it measures within-class concentration relative to between-class separation and yields an upper bound on few-shot transfer error
-        (<a href="https://arxiv.org/abs/2112.15121">ICLR 2022</a>, <a href="https://arxiv.org/abs/2212.12532">JMLR 2026</a>). This provides a predictive theory connecting neural-collapse geometry to the transfer behavior of learned representations.
-      </div>
-      <div class="contrib-meta">
-        <span class="tag tag-venue">ICLR 2022</span>
-        <span class="tag tag-venue">JMLR 2026</span>
-        <span class="tag">Neural Collapse</span>
-        <span class="tag">Transfer Learning</span>
-        <span class="tag">CDNV</span>
-      </div>
-    </div>
-  </div>
+        <div class="contrib-item">
+          <div class="contrib-num">05</div>
+          <div class="contrib-body">
+            <div class="contrib-title">Representation Formation · Why Deep Networks Organize Themselves</div>
+            <div class="contrib-desc">
+              Why do deep networks spontaneously develop low-dimensional and highly structured internal representations? Our work studies the optimization mechanisms responsible for this organization. We showed that stochastic gradient descent with weight decay has an intrinsic bias toward <a href="https://openreview.net/forum?id=0LzE9AROwD#discussion">low-rank solutions</a>, with the effect strengthening under smaller batches, larger learning rates, and stronger regularization. In complementary work, we introduced the <a href="https://openreview.net/forum?id=Njx1NjHIx4&amp;noteId=MYV5SMYpzo">Canonical Representation Hypothesis</a>, which identifies systematic alignment among representations, weights, and gradients and connects phenomena including neural collapse and the neural feature ansatz. The goal is a predictive theory of how optimization produces the structured representations on which generalization and transfer depend.
+            </div>
+            <div class="contrib-meta">
+              <span class="tag tag-venue">ICLR 2025 Spotlight</span>
+              <span class="tag tag-venue">CPAL 2025</span>
+              <span class="tag">Optimization</span>
+              <span class="tag">Deep Learning Theory</span>
+            </div>
+          </div>
+        </div>
 
-  <div class="contrib-item">
-    <div class="contrib-num">05</div>
-    <div class="contrib-body">
-      <div class="contrib-title">NSCL<span style="font-weight:400;color:var(--text2);"> · contrastive learning is approximately supervised learning</span></div>
-      <div class="contrib-desc">
-        Self-supervised contrastive learning often recovers semantic representations comparable to those learned with labels, but the source of this supervision-like behavior remained theoretically unclear. We showed that contrastive learning is closely related to a supervised contrastive objective with only negative labels, formalized as the <i>negatives-only supervised contrastive loss (NSCL)</i>. The gap between the two objectives vanishes as the number of classes grows, under a bound that is label-agnostic and architecture-independent
-        (<a href="https://openreview.net/forum?id=mf4V1SK0np">NeurIPS 2025</a>, <a href="https://openreview.net/forum?id=JkitQScjuL">ICLR 2026</a>).
+        </div>
       </div>
-      <div class="contrib-meta">
-        <span class="tag tag-venue">NeurIPS 2025</span>
-        <span class="tag tag-venue">ICLR 2026</span>
-        <span class="tag">Self-Supervised Learning</span>
-        <span class="tag">Representation Theory</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="contrib-item">
-    <div class="contrib-num">06</div>
-    <div class="contrib-body">
-      <div class="contrib-title">Directional Neural Collapse<span style="font-weight:400;color:var(--text2);"> · collapse only where it matters</span></div>
-      <div class="contrib-desc">
-        The geometry of supervised neural collapse does not directly explain self-supervised representations, whose features retain substantial global variance while still enabling strong few-shot transfer. We showed that the relevant phenomenon is directional: features concentrate along the class-separating directions, even when they do not collapse globally. The resulting quantity, <i>directional CDNV</i>, predicts transfer performance and is reduced by contrastive training by roughly an order of magnitude, while global variance remains largely intact
-        (<a href="https://arxiv.org/abs/2506.04411">NeurIPS 2025</a>, <a href="https://arxiv.org/abs/2603.03530">ICML 2026</a>).
-      </div>
-      <div class="contrib-meta">
-        <span class="tag tag-venue">NeurIPS 2025</span>
-        <span class="tag tag-venue">ICML 2026</span>
-        <span class="tag">Self-Supervised Learning</span>
-        <span class="tag">Neural Collapse</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="contrib-item">
-    <div class="contrib-num">07</div>
-    <div class="contrib-body">
-      <div class="contrib-title">Implicit Rank Minimization<span style="font-weight:400;color:var(--text2);"> · SGD's hidden low-rank bias</span></div>
-      <div class="contrib-desc">
-        Low-rank structure is pervasive in modern neural networks and underlies practical techniques such as compression and LoRA-style adaptation, yet its origins are often treated as empirical. We proved that mini-batch SGD with weight decay induces an implicit bias toward low-rank weights across a broad class of modern architectures. The effect becomes stronger with smaller batch sizes, larger learning rates, and stronger weight decay, providing a mechanism for the emergence of low-rank structure during training
-        (<a href="https://openreview.net/forum?id=0LzE9AROwD">CPAL 2025</a>).
-      </div>
-      <div class="contrib-meta">
-        <span class="tag tag-venue">CPAL 2025</span>
-        <span class="tag">Implicit Regularization</span>
-        <span class="tag">Generalization</span>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-  </div>
-</section>
+    </section>
 
 
 
@@ -514,15 +463,11 @@
         <div class="teaching-list">
           <div class="teaching-item">
             <strong>Special Topics in Recent Developments in Deep Learning &amp; LLMs</strong>
-            <span>Texas A&amp;M University · Fall 2025</span>
+            <span>Texas A&amp;M University · Fall 2024, Fall 2025, Fall 2026</span>
           </div>
           <div class="teaching-item">
             <strong>Introduction to Machine Learning</strong>
-            <span>Texas A&amp;M University · Spring 2025</span>
-          </div>
-          <div class="teaching-item">
-            <strong>Special Topics in Recent Developments in Deep Learning &amp; LLMs</strong>
-            <span>Texas A&amp;M University · Fall 2024</span>
+            <span>Texas A&amp;M University · Spring 2025, Spring 2026</span>
           </div>
           <div class="teaching-item">
             <strong><a href="https://poggio-lab.mit.edu/F23-9-520">Statistical Learning Theory and its Applications</a></strong>
