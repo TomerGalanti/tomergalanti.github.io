@@ -64,7 +64,6 @@
     header {
       position: sticky; top: 0; z-index: 100;
       height: var(--hh);
-      border-bottom: 1px solid var(--border);
       background: var(--bg);
     }
     @supports (backdrop-filter: blur(14px)) {
@@ -100,7 +99,7 @@
     .icon-btn img.scholar-icon { width: 17px; height: 17px; display: block; border-radius: 3px; }
     .hamburger { display: none; background: none; border: 0; padding: .4rem; color: var(--text); cursor: pointer; }
     @media (max-width: 720px) {
-      nav { display: none; position: absolute; left: 0; right: 0; top: var(--hh); background: var(--bg); border-bottom: 1px solid var(--border); padding: .5rem 1rem; flex-direction: column; align-items: stretch; }
+      nav { display: none; position: absolute; left: 0; right: 0; top: var(--hh); background: var(--bg); padding: .5rem 1rem; flex-direction: column; align-items: stretch; }
       nav.open { display: flex; }
       .hamburger { display: inline-flex; }
       .brand-sub { display: none; }
@@ -116,7 +115,6 @@
       grid-template-columns: 1fr 200px;
       gap: 3.5rem;
       align-items: center;
-      border-bottom: 1px solid var(--border);
     }
     @media (max-width: 640px) {
       .hero { grid-template-columns: 1fr; gap: 2rem; text-align: center; padding: 2.5rem 0 2.5rem; }
@@ -181,7 +179,6 @@
       grid-template-columns: 220px 1fr;
       gap: 4rem;
       padding: 3.5rem 0;
-      border-bottom: 1px solid var(--border);
     }
     @media (max-width: 720px) { .two-col { grid-template-columns: 1fr; gap: 1.5rem; } }
     .col-label {
@@ -208,13 +205,11 @@
       grid-template-columns: 36px 1fr;
       gap: 0 1.25rem;
       padding: 1.25rem 0;
-      border-bottom: 1px solid var(--border);
       align-items: start;
       text-decoration: none;
       color: var(--text);
       transition: background .12s;
     }
-    .contrib-item:last-child { border-bottom: 0; }
     .contrib-item:hover { text-decoration: none; }
     .contrib-item:hover .contrib-title { color: var(--link); }
     .contrib-num {
@@ -262,8 +257,7 @@
 
     /* ── TEACHING ── */
     .teaching-list { display: flex; flex-direction: column; gap: 0; }
-    .teaching-item { padding: .65rem 0; border-bottom: 1px solid var(--border); }
-    .teaching-item:last-child { border-bottom: 0; }
+    .teaching-item { padding: .65rem 0; }
     .teaching-item strong { font-weight: 500; font-size: .92rem; display: block; margin-bottom: .1rem; }
     .teaching-item span { font-size: .83rem; color: var(--text3); }
 
@@ -357,7 +351,7 @@
     </section>
 
     <section style="padding: 3rem 0 0;">
-      <div style="padding-bottom: 3.5rem; border-bottom: 1px solid var(--border);">
+      <div style="padding-bottom: 3.5rem;">
         <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1.5rem;">
           <div style="font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-gold);">Contributions</div>
           <a href="publications.html" style="font-size:.83rem;color:var(--text3);">All publications →</a>
