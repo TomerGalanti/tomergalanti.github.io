@@ -506,11 +506,28 @@
       document.documentElement.setAttribute('data-theme', t);
       localStorage.setItem('theme', t);
     }
-    const saved = localStorage.getItem('theme');
+    const themeHosts = new Set(['tomergalanti.github.io', 'dlfundamentals.github.io']);
+    const themeParam = new URLSearchParams(location.search).get('theme');
+    const saved = themeParam === 'dark' || themeParam === 'light' ? themeParam : localStorage.getItem('theme');
     if (saved) applyTheme(saved);
+    function currentTheme() {
+      return document.documentElement.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
+    }
+    function syncThemeLinks() {
+      const theme = currentTheme();
+      document.querySelectorAll('a[href]').forEach((a) => {
+        let url;
+        try { url = new URL(a.getAttribute('href'), location.href); } catch { return; }
+        if (!themeHosts.has(url.hostname) || url.hostname === location.hostname) return;
+        url.searchParams.set('theme', theme);
+        a.href = url.toString();
+      });
+    }
+    syncThemeLinks();
     document.getElementById('themeBtn')?.addEventListener('click', () => {
-      const c = document.documentElement.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
+      const c = currentTheme();
       applyTheme(c === 'dark' ? 'light' : 'dark');
+      syncThemeLinks();
     });
   </script>
 </body>
