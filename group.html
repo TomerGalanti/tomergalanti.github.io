@@ -37,7 +37,7 @@
     a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
     /* ── HEADER ── */
-    header { position: sticky; top: 0; z-index: 100; height: var(--hh); border-bottom: 1px solid var(--border); background: var(--bg); }
+    header { position: sticky; top: 0; z-index: 100; height: var(--hh); background: var(--bg); }
     @supports (backdrop-filter: blur(14px)) { header { background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(14px); } }
     .header-inner { max-width: var(--max); margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 100%; }
     .brand { display: flex; align-items: center; gap: .85rem; text-decoration: none; color: var(--text); }
@@ -56,7 +56,7 @@
     .icon-btn img.scholar-icon { width: 17px; height: 17px; display: block; border-radius: 3px; }
     .hamburger { display: none; background: none; border: 0; padding: .4rem; color: var(--text); cursor: pointer; }
     @media (max-width: 720px) {
-      nav { display: none; position: absolute; left: 0; right: 0; top: var(--hh); background: var(--bg); border-bottom: 1px solid var(--border); padding: .5rem 1rem; flex-direction: column; align-items: stretch; }
+      nav { display: none; position: absolute; left: 0; right: 0; top: var(--hh); background: var(--bg); padding: .5rem 1rem; flex-direction: column; align-items: stretch; }
       nav.open { display: flex; }
       .hamburger { display: inline-flex; }
       .brand-sub { display: none; }
@@ -66,12 +66,12 @@
     main { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
 
     /* ── PAGE HEADER ── */
-    .page-header { padding: 3.5rem 0 2.5rem; border-bottom: 1px solid var(--border); }
+    .page-header { padding: 3.5rem 0 2.5rem; }
     .eyebrow { font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: .6rem; }
     .page-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 500; line-height: 1.1; }
 
     /* ── SECTIONS ── */
-    .two-col { display: grid; grid-template-columns: 220px 1fr; gap: 4rem; padding: 3rem 0; border-bottom: 1px solid var(--border); }
+    .two-col { display: grid; grid-template-columns: 220px 1fr; gap: 4rem; padding: 3rem 0; }
     @media (max-width: 720px) { .two-col { grid-template-columns: 1fr; gap: 1.5rem; } }
     .col-label { font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-gold); padding-top: .25rem; }
 
@@ -268,7 +268,7 @@
       </div>
     </section>
 
-    <section class="two-col" style="border-bottom: 0;">
+    <section class="two-col">
       <div class="col-label">Join the Lab</div>
       <div class="join-content">
         <p><strong>PhD applicants</strong> — Apply through the <a href="https://engineering.tamu.edu/cse/academics/degrees/graduate/phd.html">TAMU CSE PhD program</a>. In your statement, describe your fit with the lab's research areas and mention Prof. Galanti as a potential advisor.</p>
